@@ -21,5 +21,5 @@ in {
   };
   config.home.packages = lib.optional (config.gtk.monospace-font != null)
     config.gtk.monospace-font.package;
-#  config.gtk.gtk2.
+  #  config.gtk.gtk2.
 }

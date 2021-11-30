@@ -1,17 +1,12 @@
 { config, pkgs, lib, ... }:
-let editor = "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
+let
+  editor =
+    "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
 in {
   imports = [ ./hm-modules/gnome.nix ];
 
   programs.home-manager.enable = true;
 
-  home.enableNixpkgsReleaseCheck = false;
-
-  home.username = "anselmschueler";
-  home.homeDirectory = "/home/anselmschueler";
-
-  home.stateVersion = "21.11";
-  
   programs = {
     kitty = {
       enable = true;
@@ -107,9 +102,12 @@ in {
     };
     exa.enable = true;
   };
-  gnome.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator user-themes ];
+  gnome.enabledExtensions = with pkgs.gnomeExtensions; [
+    appindicator
+    user-themes
+  ];
   gtk = let
-    yaru = pkgs.yaru-theme.overrideAttrs ({...}: {
+    yaru = pkgs.yaru-theme.overrideAttrs ({ ... }: {
       src = pkgs.fetchFromGitHub {
         owner = "ubuntu";
         repo = "yaru";
@@ -146,48 +144,47 @@ in {
     "org/gnome/desktop/interface".monospace-font-name = "JetBrains Mono 10";
   };
   home = {
-    sessionVariables = {
-      EDITOR = editor;
-    };
-    packages = with pkgs; [
-      libqalculate
-      lutris
-      minecraft
-      discord
-      element-desktop
-      tdesktop
-      musescore
-      inkscape
-      audacity
-      vscode
-      kdenlive
-      # (pkgs.blender.override { cudaSupport = true; })
-      virt-manager
-      qbittorrent
-      obs-studio
-      asciinema
-      gnomeExtensions.appindicator
-    ] ++ [
-      gh
-      steamPackages.steamcmd
-      steam-run
-      bind.dnsutils
-      whois
-      nixfmt
-      sqlite
-      sl
-      figlet
-      toilet
-      lolcat
-      weechat
-      nnn
-      links2
-      unicode-paracode
-      bat
-      lr
-      procs
-      bit
-      gitui
-    ];
+    sessionVariables = { EDITOR = editor; };
+    packages = with pkgs;
+      [
+        libqalculate
+        lutris
+        minecraft
+        discord
+        element-desktop
+        tdesktop
+        musescore
+        inkscape
+        audacity
+        vscode
+        kdenlive
+        # (pkgs.blender.override { cudaSupport = true; })
+        virt-manager
+        qbittorrent
+        obs-studio
+        asciinema
+        gnomeExtensions.appindicator
+      ] ++ [
+        gh
+        steamPackages.steamcmd
+        steam-run
+        bind.dnsutils
+        whois
+        nixfmt
+        sqlite
+        sl
+        figlet
+        toilet
+        lolcat
+        weechat
+        nnn
+        links2
+        unicode-paracode
+        bat
+        lr
+        procs
+        bit
+        gitui
+      ];
   };
 }
