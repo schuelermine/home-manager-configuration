@@ -1,0 +1,84 @@
+{
+  "nodes": {
+    "home-manager": {
+      "inputs": {
+        "nixpkgs": [
+          "system-config",
+          "nixos"
+        ]
+      },
+      "locked": {
+        "lastModified": 1638150501,
+        "narHash": "sha256-aWH3MRmjUtx8ciSGLegBJC5mhymsuroHPs74ZldrNTU=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "9de77227d7780518cfeaee5a917970247f3ecc56",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nix-symlink": {
+      "locked": {
+        "lastModified": 1638042710,
+        "narHash": "sha256-dTkTkJWpkUtdsg3689Z+vuO4GFV/5kF2dSQCEMhXT18=",
+        "owner": "schuelermine",
+        "repo": "nix-symlink",
+        "rev": "1d4c24b446fcbbbd12c3fd13ecc4e516e4b7d48c",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "ref": "b0",
+        "repo": "nix-symlink",
+        "type": "github"
+      }
+    },
+    "nixos": {
+      "locked": {
+        "lastModified": 1637841632,
+        "narHash": "sha256-QYqiKHdda0EOnLGQCHE+GluD/Lq2EJj4hVTooPM55Ic=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "73369f8d0864854d1acfa7f1e6217f7d6b6e3fa1",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "nixos-unstable",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
+    "root": {
+      "inputs": {
+        "home-manager": "home-manager",
+        "system-config": "system-config"
+      }
+    },
+    "system-config": {
+      "inputs": {
+        "nix-symlink": "nix-symlink",
+        "nixos": "nixos"
+      },
+      "locked": {
+        "lastModified": 1638137436,
+        "narHash": "sha256-I7QSY40b+HFNpxVfN9ykYoHKoC0jM8tXsa4iSUtrw4U=",
+        "ref": "b0",
+        "rev": "fbcdcda9bb3254e72d284b3c88826111581de91e",
+        "revCount": 14,
+        "type": "git",
+        "url": "file:///etc/nixos"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///etc/nixos"
+      }
+    }
+  },
+  "root": "root",
+  "version": 7
+}
