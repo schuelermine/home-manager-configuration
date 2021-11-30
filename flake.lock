@@ -2,7 +2,10 @@
   "nodes": {
     "home-manager": {
       "inputs": {
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": [
+          "system-config",
+          "nixos"
+        ]
       },
       "locked": {
         "lastModified": 1638150501,
@@ -48,20 +51,6 @@
         "ref": "nixos-unstable",
         "repo": "nixpkgs",
         "type": "github"
-      }
-    },
-    "nixpkgs": {
-      "locked": {
-        "lastModified": 1638296294,
-        "narHash": "sha256-liV2HPChBEv8T9DIuYgBoreER4jLYD1ooG+gzuIyG70=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "aae62adc6e429e6846cc9720e3d283240f98d3be",
-        "type": "github"
-      },
-      "original": {
-        "id": "nixpkgs",
-        "type": "indirect"
       }
     },
     "root": {
