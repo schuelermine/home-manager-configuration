@@ -5,6 +5,8 @@ let
 in {
   imports = [ ./hm-modules/gnome.nix ];
 
+  nixpkgs.config.allowUnfree = true;
+  
   programs.home-manager.enable = true;
 
   programs = {
