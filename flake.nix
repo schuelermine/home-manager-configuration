@@ -13,7 +13,7 @@
           homeDirectory = "/home/anselmschueler";
           username = "anselmschueler";
           stateVersion = "21.11";
-          configuration = /hm-modules-config/home.nix;
+          configuration = ./hm-modules-config/home.nix;
         };
     };
 }
