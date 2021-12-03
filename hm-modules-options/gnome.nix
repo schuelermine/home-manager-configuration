@@ -9,5 +9,5 @@ lib.mkMerge [{
   };
   config.dconf.settings."org/gnome/shell".enabledExtensions =
     map (pkg: pkg.extensionUuid) config.gnome.enabledExtensions;
-
+  config.home.packages = config.gnome.enabledExtensions;
 }]
