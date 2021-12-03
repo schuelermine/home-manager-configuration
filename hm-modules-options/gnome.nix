@@ -1,4 +1,5 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, ... }:
+lib.mkMerge [{
   options.gnome.enabledExtensions = lib.mkOption {
     type = lib.types.listOf lib.types.package;
     default = [ ];
@@ -8,4 +9,5 @@
   };
   config.dconf.settings."org/gnome/shell".enabledExtensions =
     map (pkg: pkg.extensionUuid) config.gnome.enabledExtensions;
-}
+  config.home.packages = config.gnome.enabledExtensions;
+}]
