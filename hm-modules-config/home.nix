@@ -1,6 +1,5 @@
 { config, pkgs, lib, ... }: {
   imports = [
-    ../hm-modules-options/gnome.nix
     ./desktop.nix
     ./shell.nix
   ];

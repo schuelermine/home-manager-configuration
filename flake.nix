@@ -14,6 +14,7 @@
           username = "anselmschueler";
           stateVersion = "21.11";
           configuration = ./hm-modules-config/home.nix;
+          extraModules = ./hm-modules-options/gnome.nix;
         };
     };
 }
