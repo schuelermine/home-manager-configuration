@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  imports = [ ./hm-modules-config/kitty.nix ];
+  imports = [ ./kitty.nix ];
   gnome.enabledExtensions = with pkgs.gnomeExtensions; [
     appindicator
     user-themes

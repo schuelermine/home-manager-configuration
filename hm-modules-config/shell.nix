@@ -3,7 +3,7 @@ let
   editor =
     "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
 in {
-  imports = [ ./hm-modules-config/git.nix ];
+  imports = [ ./git.nix ];
   programs = {
     zoxide = {
       enable = true;
