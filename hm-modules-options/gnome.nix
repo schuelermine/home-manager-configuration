@@ -1,5 +1,3 @@
-
-
 { config, pkgs, lib, ... }: {
   options.gnome.enabledExtensions = lib.mkOption {
     type = lib.types.listOf lib.types.package;
