@@ -18,8 +18,8 @@ in {
         ls = "exa";
         cd = "z";
       };
-      functions = { "..." = builtins.readFile /source/....fish; };
-      shellInit = builtins.readFile /source/colors.fish;
+      functions = { "..." = builtins.readFile ../source/....fish; };
+      shellInit = builtins.readFile ../source/colors.fish;
     };
   };
   home = {
