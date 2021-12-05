@@ -11,8 +11,8 @@
         homeDirectory = "/home/anselmschueler";
         username = "anselmschueler";
         stateVersion = "21.11";
-        configuration = ./hm-modules-config/home.nix;
-        extraModules = [ ./hm-modules-options/gnome.nix ];
+        configuration = ./modules/home.nix;
+        extraModules = [ ./modules/gnome.nix ];
       };
   };
 }
