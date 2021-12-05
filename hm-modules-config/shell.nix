@@ -17,6 +17,7 @@ in {
         sl = "sl -e";
         ls = "exa";
         cd = "z";
+        c = "bat";
       };
       functions = { "..." = builtins.readFile ../source/....fish; };
       shellInit = builtins.readFile ../source/colors.fish;
