@@ -18,6 +18,8 @@ in {
         ls = "exa";
         cd = "z";
         c = "bat";
+        icat = "kitty +kitten icat";
+        uni = "kitty +kitten unicode_input";
       };
       functions = { "..." = builtins.readFile ../source/....fish; };
       shellInit = builtins.readFile ../source/colors.fish;
