@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, pkgs-alt, lib, ... }: {
   imports = [ ./kitty.nix ];
   gnome.enabledExtensions = with pkgs.gnomeExtensions; [
     appindicator
@@ -42,7 +42,7 @@
     musescore
     inkscape
     audacity
-    vscode
+    pkgs-alt.vscode
     kdenlive
     virt-manager
     qbittorrent
