@@ -33,6 +33,7 @@
     "org/gnome/desktop/interface".monospace-font-name = "JetBrains Mono 10";
   };
   home.packages = with pkgs; [
+    gnome.dconf-editor
     libqalculate
     lutris
     minecraft
