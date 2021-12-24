@@ -65,11 +65,11 @@
         "nixos": "nixos"
       },
       "locked": {
-        "lastModified": 1640351484,
-        "narHash": "sha256-a1yYzEyCa6fAJTNuGzLtdSWPSjZdQq9jqS2YRMygptI=",
+        "lastModified": 1640356066,
+        "narHash": "sha256-aJV2ydB6AKqKMkOvMci4I9rfh6nZYlihKD53Gaa4F70=",
         "ref": "b0",
-        "rev": "7bf447583492db662ca91de74b26327c194e6234",
-        "revCount": 21,
+        "rev": "daa9f86826f8cf782b75542c11d39a54237760f2",
+        "revCount": 22,
         "type": "git",
         "url": "file:///etc/nixos"
       },
