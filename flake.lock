@@ -23,11 +23,11 @@
     },
     "nix-symlink": {
       "locked": {
-        "lastModified": 1638042710,
-        "narHash": "sha256-dTkTkJWpkUtdsg3689Z+vuO4GFV/5kF2dSQCEMhXT18=",
+        "lastModified": 1640521420,
+        "narHash": "sha256-R6qYEpMt5RU8si9iGa4N7uEfZ3gyGRFHJL2d9z7D4Ho=",
         "owner": "schuelermine",
         "repo": "nix-symlink",
-        "rev": "1d4c24b446fcbbbd12c3fd13ecc4e516e4b7d48c",
+        "rev": "731907586979ae1be85675c4e37eb3a65d9d3bfb",
         "type": "github"
       },
       "original": {
@@ -39,11 +39,11 @@
     },
     "nixos": {
       "locked": {
-        "lastModified": 1640319671,
-        "narHash": "sha256-ZkKmakwaOaLiZOpIZWbeJZwap5CzJ30s4UJTfydYIYc=",
+        "lastModified": 1640408860,
+        "narHash": "sha256-h2uF3+a8bVfM8SjcS4hLbsOzOuG3qsxuImC0BucWs1Q=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "eac07edbd20ed4908b98790ba299250b5527ecdf",
+        "rev": "cb372c3b8880e504b06946e8fb2ca9777c685505",
         "type": "github"
       },
       "original": {
@@ -65,11 +65,11 @@
         "nixos": "nixos"
       },
       "locked": {
-        "lastModified": 1640366332,
-        "narHash": "sha256-28NLl+Zt04PJl2WmDdKEVLH5z8XIJCtRuNw8Xp5Wykc=",
+        "lastModified": 1640628762,
+        "narHash": "sha256-0x6HGBr/4DZyAaraSqJbEYVQTWBCnqJ8tzxhbUuVwLM=",
         "ref": "b0",
-        "rev": "1f4c3068161b2abdd47c29bfb8db0aa671aab2cf",
-        "revCount": 23,
+        "rev": "4e0bc7a7cf82da504d93f212b71bf22632e90845",
+        "revCount": 24,
         "type": "git",
         "url": "file:///etc/nixos"
       },
