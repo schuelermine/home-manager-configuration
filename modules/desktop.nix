@@ -50,5 +50,6 @@
     obs-studio
     asciinema
     gitui
+    apostrophe
   ];
 }
