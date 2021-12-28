@@ -15,6 +15,7 @@ in {
       shellAliases = {
         nano = editor;
         sl = "sl -e";
+        l = "ls -a";
         ls = "exa";
         cd = "z";
         c = "bat";
