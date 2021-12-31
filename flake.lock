@@ -4,7 +4,7 @@
       "inputs": {
         "nixpkgs": [
           "system-config",
-          "nixos"
+          "nixpkgs"
         ]
       },
       "locked": {
@@ -37,7 +37,7 @@
         "type": "github"
       }
     },
-    "nixos": {
+    "nixpkgs": {
       "locked": {
         "lastModified": 1640871638,
         "narHash": "sha256-ty6sGnJUQEkCd43At5U3DRQZD7rPARz5VginSW6hZ3k=",
@@ -62,14 +62,14 @@
     "system-config": {
       "inputs": {
         "nix-symlink": "nix-symlink",
-        "nixos": "nixos"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1640969510,
-        "narHash": "sha256-R27ttu84O4O4qJ9yCx/t8/SAzJuAqfaKQWhOTSK0LuU=",
+        "lastModified": 1640970529,
+        "narHash": "sha256-Kbl1sLEtwz67uu48dGcfYMxVvYPpmES5iIyae3tYO8o=",
         "ref": "b0",
-        "rev": "0e39c2e7991b8138e52e808ed5935a936a129e13",
-        "revCount": 33,
+        "rev": "6816c75189026c44013cb820ee7402fe2dc62fe5",
+        "revCount": 36,
         "type": "git",
         "url": "file:///etc/nixos"
       },
