@@ -3,7 +3,7 @@
     system-config.url = "git+file:///etc/nixos";
     home-manager = {
       url = "github:nix-community/home-manager";
-      inputs.nixpkgs.follows = "system-config/nixos";
+      inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
   };
   outputs = { system-config, home-manager, self }: {
