@@ -6,7 +6,7 @@
     description =
       "List of packages that provide extensions that are to be enabled";
   };
-  config.dconf.settings."org/gnome/shell".enabledExtensions =
+  config.dconf.settings."org/gnome/shell".enabled-extensions =
     map (pkg: pkg.extensionUuid) config.gnome.enabledExtensions;
   config.home.packages = config.gnome.enabledExtensions;
 }
