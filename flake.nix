@@ -14,9 +14,7 @@
         username = "anselmschueler";
         stateVersion = "21.11";
         configuration = ./modules/home.nix;
-        extraModules =
-          [ ./modules/gnome.nix { nixpkgs.overlays = [ self.overlay ]; } ];
+        extraModules = [ ./modules/gnome.nix ];
       };
-    overlay = import ./overlay.nix;
   };
 }
