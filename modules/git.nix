@@ -5,7 +5,7 @@
       userName = "Anselm Schüler";
       enable = true;
       delta.enable = true;
-      package = pkgs.gitAndTools.gitFull;
+      package = pkgs.gitFull;
     };
     gh = {
       enable = true;
