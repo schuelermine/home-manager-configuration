@@ -65,8 +65,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1641323434,
+        "lastModified": 1641323878,
         "narHash": "sha256-tJdxwXaNaMKY5xsgeKNzcVVgNxhUg37Sk4wP/mK8CnY=",
+        "ref": "b0",
+        "rev": "44fa3fa15cc80d6532e805287faa54a2a97ff06b",
+        "revCount": 43,
         "type": "git",
         "url": "file:///etc/nixos"
       },
