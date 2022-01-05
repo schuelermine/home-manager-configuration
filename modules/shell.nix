@@ -48,6 +48,7 @@ in {
       lr
       procs
       bit
+      glow
     ];
   };
 }
