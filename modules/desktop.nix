@@ -46,7 +46,7 @@
     vscode
     kdenlive
     virt-manager
-    qbittorrent
+    transmission-gtk
     obs-studio
     asciinema
     gitui
