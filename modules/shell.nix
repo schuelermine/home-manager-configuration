@@ -22,7 +22,10 @@ in {
         icat = "kitty +kitten icat";
         uni = "kitty +kitten unicode_input";
       };
-      functions = { "..." = builtins.readFile ../source/....fish; };
+      functions = {
+        "..." = builtins.readFile ../source/....fish;
+        "fish_prompt" = builtins.readFile ../source/fish_prompt.fish;
+      };
       shellInit = builtins.readFile ../source/colors.fish;
     };
   };
