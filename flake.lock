@@ -3,11 +3,11 @@
     "fish-functions": {
       "flake": false,
       "locked": {
-        "lastModified": 1642087958,
-        "narHash": "sha256-5+ytDgyJzx7OKzWvea2khpl0KD9Z8bM11JrievhLLWk=",
+        "lastModified": 1642193848,
+        "narHash": "sha256-o1fGpfs3+ij1huRQnK2lSEB7ar444BOngGOf1mJwK/8=",
         "owner": "schuelermine",
         "repo": "fish-functions",
-        "rev": "f40464dee98ab0221c7ccbab9eae1acb65227bec",
+        "rev": "1100d785468853b995d09bccd17dced1617b6200",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1641459437,
-        "narHash": "sha256-z0IOcc6LLbVhyri/aTyWzRqJs3p1pBK9idOiMwCWiqs=",
+        "lastModified": 1642117744,
+        "narHash": "sha256-/SvxBe/m6JiRSlKIrgD6LQxee9GGewFyq+lsPxoViMY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "c751aeb19e84a0a777f36fd5ea73482a066bb406",
+        "rev": "a5dd5d5f197724f3065fd39c59c7ccea3c8dcb8f",
         "type": "github"
       },
       "original": {
