@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, fish-functions, nix-lib, ... }:
 let
   editor =
     "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
@@ -22,10 +22,16 @@ in {
         icat = "kitty +kitten icat";
         uni = "kitty +kitten unicode_input";
       };
-      functions = {
-        "..." = builtins.readFile ../source/....fish;
-        "fish_prompt" = builtins.readFile ../source/fish_prompt.fish;
-      };
+      functions = nix-lib.attrs.mapX (filename: type:
+        if type != regular then
+          let matches = builtins.match "(.+)\\.fish" filename;
+          in if builtins.length matches == 1 then {
+            ${builtins.elemAt 0 matches} =
+              builtins.readFile "${fish-functions}/${filename}";
+          } else
+            { }
+        else
+          { }) (nix-lib.file.readDirRecursiveSep "." "${fish_functions}");
       shellInit = builtins.readFile ../source/colors.fish;
     };
   };
