@@ -31,7 +31,7 @@ in {
           } else
             { }
         else
-          { }) (nix-lib.file.readDirRecursiveSep "." "${fish_functions}");
+          { }) (nix-lib.file.readDirRecursiveSep "." "${fish-functions}");
       shellInit = builtins.readFile ../source/colors.fish;
     };
   };
