@@ -1,5 +1,21 @@
 {
   "nodes": {
+    "fish-functions": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1642087958,
+        "narHash": "sha256-5+ytDgyJzx7OKzWvea2khpl0KD9Z8bM11JrievhLLWk=",
+        "owner": "schuelermine",
+        "repo": "fish-functions",
+        "rev": "f40464dee98ab0221c7ccbab9eae1acb65227bec",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "repo": "fish-functions",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -18,6 +34,21 @@
       "original": {
         "owner": "nix-community",
         "repo": "home-manager",
+        "type": "github"
+      }
+    },
+    "nix-lib": {
+      "locked": {
+        "lastModified": 1642187498,
+        "narHash": "sha256-nXAeB+IyU8siuHTH6J6FDeVuoCWNQkotZXGSExIRdtE=",
+        "owner": "schuelermine",
+        "repo": "nix-lib",
+        "rev": "851102f083d569bd791f104ee92acce19f5e2286",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "repo": "nix-lib",
         "type": "github"
       }
     },
@@ -55,7 +86,9 @@
     },
     "root": {
       "inputs": {
+        "fish-functions": "fish-functions",
         "home-manager": "home-manager",
+        "nix-lib": "nix-lib",
         "system-config": "system-config"
       }
     },
