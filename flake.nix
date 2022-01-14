@@ -11,7 +11,7 @@
       url = "github:schuelermine/fish-functions";
     };
   };
-  outputs = { system-config, home-manager, fish-functions, nix-lib }: {
+  outputs = { system-config, home-manager, fish-functions, nix-lib, self }: {
     homeConfigurations.anselmschueler =
       home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
