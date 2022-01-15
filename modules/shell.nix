@@ -25,7 +25,7 @@ in {
       functions = nix-lib.attrs.mapX (filename: type:
         if type == "regular" then
           let matches = builtins.match "(.+)\\.fish" filename;
-          in if builtins.length matches == 1 then {
+          in if matches != null && builtins.length matches == 1 then {
             ${builtins.elemAt matches 0} =
               builtins.readFile "${fish-functions}/${filename}";
           } else
