@@ -43,7 +43,6 @@ in {
       gh
       steamPackages.steamcmd
       steam-run
-      bind.dnsutils
       whois
       nixfmt
       sqlite
