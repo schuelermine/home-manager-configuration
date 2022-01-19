@@ -18,9 +18,10 @@
         homeDirectory = "/home/anselmschueler";
         username = "anselmschueler";
         stateVersion = "21.11";
-        configuration = ./modules/home.nix;
+        configuration = ./config/home.nix;
         extraSpecialArgs = { inherit fish-functions nix-lib; };
-        extraModules = [ ./modules/gnome.nix ];
+        extraModules =
+          [ map (str: ./. + str) (nix-lib.readDirRCollapsed ./options) ];
       };
   };
 }
