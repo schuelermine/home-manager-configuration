@@ -5,6 +5,10 @@ let
 in {
   imports = [ ./git.nix ];
   programs = {
+    haskell.ghc = {
+      enable = true;
+      package = pkgs.haskell.packages.ghc921.ghc;
+    };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
@@ -31,9 +35,8 @@ in {
           } else
             { }
         else
-          { }) (nix-lib.file.readDirRecursive "${fish-functions}") // {
-            fish_prompt = builtins.readFile ../source/fish_prompt.fish;
-          };
+          { }) (nix-lib.file.readDirRCollapsed "${fish-functions}");
+      prompt = builtins.readFile ../source/fish_prompt.fish;
       shellInit = builtins.readFile ../source/colors.fish;
     };
   };

@@ -1,7 +1,7 @@
 {
   inputs = {
     system-config.url = "git+file:///etc/nixos";
-    nix-lib.url = "github:schuelermine/nix-lib";
+    nix-lib.url = "github:schuelermine/nix-lib/b0";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
@@ -20,8 +20,9 @@
         stateVersion = "21.11";
         configuration = ./config/home.nix;
         extraSpecialArgs = { inherit fish-functions nix-lib; };
-        extraModules =
-          [ map (str: ./. + str) (nix-lib.readDirRCollapsed ./options) ];
+        extraModules = map (str: ./options + "/${str}") (builtins.attrNames
+          (nix-lib.attrs.filter (_: t: t == "regular")
+            (nix-lib.file.readDirRCollapsed ./options)));
       };
   };
 }

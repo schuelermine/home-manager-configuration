@@ -39,15 +39,16 @@
     },
     "nix-lib": {
       "locked": {
-        "lastModified": 1642235224,
-        "narHash": "sha256-mZT/3Y/HQcaCJUmvdjpCBLpxO9Bt74/+NSCu/NPcc2c=",
+        "lastModified": 1642604719,
+        "narHash": "sha256-z6tRpr2Mk+45LS/E7WXimlB24icvdxLAmzqYs6haw0E=",
         "owner": "schuelermine",
         "repo": "nix-lib",
-        "rev": "aea472094b557353ab2da1275d1bd571bde19214",
+        "rev": "ee8cffdf2c2423419d025c17e3aef984e2a3af96",
         "type": "github"
       },
       "original": {
         "owner": "schuelermine",
+        "ref": "b0",
         "repo": "nix-lib",
         "type": "github"
       }

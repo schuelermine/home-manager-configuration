@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }: {
   options.programs.fish.prompt = lib.mkOption {
-    type = lib.types.string;
+    type = lib.types.str;
     default = null;
     example = ''
       set -l last_pipestatus $pipestatus
