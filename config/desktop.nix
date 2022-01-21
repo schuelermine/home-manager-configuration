@@ -3,7 +3,7 @@
   gnome.enabledExtensions = with pkgs.gnomeExtensions; [
     appindicator
     user-themes
-    animation-tweaks
+    impatience
   ];
   gtk = {
     enable = true;
