@@ -1,6 +1,7 @@
 { config, pkgs, lib, ... }: {
   imports = [ ./kitty.nix ];
   gnome.enabledExtensions = with pkgs.gnomeExtensions; [
+    dash-to-dock
     appindicator
     user-themes
   ];
