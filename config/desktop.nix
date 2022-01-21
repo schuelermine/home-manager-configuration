@@ -3,7 +3,6 @@
   gnome.enabledExtensions = with pkgs.gnomeExtensions; [
     appindicator
     user-themes
-    impatience
   ];
   gtk = {
     enable = true;
