@@ -3,6 +3,7 @@
   gnome.enabledExtensions = with pkgs.gnomeExtensions; [
     appindicator
     user-themes
+    animation-tweaks
   ];
   gtk = {
     enable = true;
