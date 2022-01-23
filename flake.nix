@@ -1,4 +1,7 @@
 {
+  # name = "anselm-schueler-home-manager-configuration";
+  description = "Home manager configuration by Anselm Schüler";
+  # license = builtins.readFile ./LICENSE;
   inputs = {
     system-config.url = "git+file:///etc/nixos";
     nix-lib.url = "github:schuelermine/nix-lib/b0";
