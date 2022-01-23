@@ -8,6 +8,7 @@ in {
     haskell.ghc = {
       enable = true;
       package = pkgs.haskell.packages.ghc921.ghc;
+      packages = hkgs: [ hkgs.primes ];
     };
     zoxide = {
       enable = true;
