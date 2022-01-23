@@ -7,7 +7,7 @@ with lib; {
   };
   config = let font = config.gnome.monospaceFont;
   in {
-    dconf.settings."org/gnome/desktop/interface/".monospace-font-name =
+    dconf.settings."org/gnome/desktop/interface".monospace-font-name =
       mkIf (font != null) (font.name + (if font.size != null then
         " ${builtins.toString font.size}"
       else
