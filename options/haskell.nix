@@ -45,10 +45,17 @@ in {
       package = mkPackageOption "Stack" { default = "stack"; };
     };
   };
-  config.home.packages = let cfg = config.programs.haskell;
-  in optional cfg.cabal.enable cfg.cabal.package ++ optional cfg.ghc.enable
-  (if cfg.ghc.package ? withPackages then
-    cfg.ghc.package.withPackages cfg.ghc.packages
-  else
-    cfg.ghc.package) ++ optional cfg.stack.enable cfg.stack.package;
+  config = let cfg = config.programs.haskell;
+  in {
+    home.packages = optional cfg.cabal.enable cfg.cabal.package
+      ++ optional cfg.ghc.enable (if cfg.ghc.package ? withPackages then
+        cfg.ghc.package.withPackages cfg.ghc.packages
+      else
+        cfg.ghc.package) ++ optional cfg.stack.enable cfg.stack.package;
+    warnings = if !cfg.ghc.package ? withPackages then [''
+      You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
+      This disables specifying packages via programs.haskell.ghc.packages.
+    ''] else
+      [ ];
+  };
 }

@@ -4,12 +4,16 @@
     enabledExtensions = with pkgs.gnomeExtensions; [
       dash-to-dock
       appindicator
-      user-themes
     ];
     monospaceFont = {
       package = pkgs.fira-code;
       name = "Fira Code";
       size = 10;
+    };
+    shellTheme = {
+      enable = true;
+      package = pkgs.yaru-theme;
+      name = "Yaru";
     };
   };
   gtk = {
@@ -36,7 +40,6 @@
       name = "adwaita-dark";
     };
   };
-  dconf.settings = { "org/gnome/shell/extensions/user-theme".name = "Yaru"; };
   home.packages = with pkgs; [
     gnome.dconf-editor
     libqalculate
