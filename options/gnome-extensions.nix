@@ -9,7 +9,7 @@ with lib; {
       description =
         "List of packages that provide extensions that are to be enabled.";
     };
-    extra-extension = mkOption {
+    extraExtensions = mkOption {
       type = types.listOf types.package;
       default = [ ];
       defaultText = "[ ]";
@@ -22,5 +22,5 @@ with lib; {
     disable-user-extensions = builtins.length config.gnome.enabledExtensions
       == 0;
   };
-  config.home.packages = config.gnome.enabledExtensions;
+  config.home.packages = config.gnome.enabledExtensions + config.gnome.extraExtensions;
 }
