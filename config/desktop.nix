@@ -31,7 +31,7 @@
   };
   dconf.settings = {
     "org/gnome/shell/extensions/user-theme".name = "Yaru";
-    "org/gnome/desktop/interface".monospace-font-name = "JetBrains Mono 10";
+    "org/gnome/desktop/interface".monospace-font-name = "Fira Code";
   };
   home.packages = with pkgs; [
     gnome.dconf-editor
