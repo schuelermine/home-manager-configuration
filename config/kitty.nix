@@ -2,8 +2,8 @@
   programs.kitty = {
     enable = true;
     font = {
-      package = pkgs.jetbrains-mono;
-      name = "JetBrains Mono";
+      package = pkgs.fira-code;
+      name = "Fira Code";
       size = 13;
     };
     keybindings = {
