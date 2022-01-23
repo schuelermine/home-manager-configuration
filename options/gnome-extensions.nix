@@ -16,11 +16,13 @@ with lib; {
       description = "Extra extension packages to install (but not enable).";
     };
   };
-  config.dconf.settings."org/gnome/shell" = {
-    enabled-extensions =
-      map (pkg: pkg.extensionUuid) config.gnome.enabledExtensions;
-    disable-user-extensions = builtins.length config.gnome.enabledExtensions
-      == 0;
+  config = {
+    dconf.settings."org/gnome/shell" = {
+      enabled-extensions =
+        map (pkg: pkg.extensionUuid) config.gnome.enabledExtensions;
+      disable-user-extensions = builtins.length config.gnome.enabledExtensions
+        == 0;
+    };
+    home.packages = config.gnome.enabledExtensions + config.gnome.extraExtensions;
   };
-  config.home.packages = config.gnome.enabledExtensions + config.gnome.extraExtensions;
 }
