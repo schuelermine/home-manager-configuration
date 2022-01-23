@@ -36,10 +36,7 @@
       name = "adwaita-dark";
     };
   };
-  dconf.settings = {
-    "org/gnome/shell/extensions/user-theme".name = "Yaru";
-    "org/gnome/desktop/interface".monospace-font-name = "Fira Code";
-  };
+  dconf.settings = { "org/gnome/shell/extensions/user-theme".name = "Yaru"; };
   home.packages = with pkgs; [
     gnome.dconf-editor
     libqalculate
