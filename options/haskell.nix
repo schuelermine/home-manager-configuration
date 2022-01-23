@@ -17,9 +17,6 @@ let
           example);
     };
   mkPackageOption = mkPackageOption' pkgs;
-  ifEnabled = pkg: optional pkg.enable pkg.package;
-  onlyEnabled = pkgs: builtins.concatLists (map ifEnabled pkgs);
-  cfg = config.programs.haskell;
 in {
   options.programs.haskell = {
     cabal = {
@@ -35,11 +32,23 @@ in {
         default = [ "ghc" ];
         example = "pkgs.haskell.packages.ghc921.ghc";
       };
+      packages = mkOption {
+        type = types.functionTo (types.listOf types.package);
+        description = "Haskell packages ";
+        default = hkgs: [ ];
+        example = hkgs: [ hkgs.primes ];
+        exampleText = literalExpression "hkgs: [ hkgs.primes ]";
+      };
     };
     stack = {
       enable = mkEnableOption "the Haskell Tool Stack";
       package = mkPackageOption "Stack" { default = "stack"; };
     };
   };
-  config.home.packages = onlyEnabled (with cfg; [ cabal ghc stack ]);
+  config.home.packages = let cfg = option config.programs.haskell;
+  in cfg.cabal.enable cfg.cabal.package ++ optional cfg.ghc.enable
+  (if cfg.ghc.package ? withPackages then
+    cfg.ghc.package.withPackages cfg.ghc.packages
+  else
+    cfg.ghc.package) ++ optional cfg.stack.enable cfg.stack.package;
 }

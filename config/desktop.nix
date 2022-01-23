@@ -1,10 +1,17 @@
 { config, pkgs, lib, ... }: {
   imports = [ ./kitty.nix ];
-  gnome.enabledExtensions = with pkgs.gnomeExtensions; [
-    dash-to-dock
-    appindicator
-    user-themes
-  ];
+  gnome = {
+    enabledExtensions = with pkgs.gnomeExtensions; [
+      dash-to-dock
+      appindicator
+      user-themes
+    ];
+    monospaceFont = {
+      package = pkgs.fira-code;
+      name = "Fira Code";
+      size = 10;
+    };
+  };
   gtk = {
     enable = true;
     font = {
