@@ -8,8 +8,10 @@ with lib; {
   config = let font = config.gnome.monospaceFont;
   in {
     dconf.settings."org/gnome/desktop/interface/".monospace-font-name =
-      mkIf (font != null)
-      (font.name + (if font.size != null then " ${font.size}" else ""));
-    home.packages = optional (cfg.package != null) cfg.package;
+      mkIf (font != null) (font.name + (if font.size != null then
+        " ${builtins.toString font.size}"
+      else
+        ""));
+    home.packages = optional (font.package != null) font.package;
   };
 }

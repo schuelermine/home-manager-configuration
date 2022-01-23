@@ -36,8 +36,8 @@ in {
         type = types.functionTo (types.listOf types.package);
         description = "Haskell packages ";
         default = hkgs: [ ];
-        example = hkgs: [ hkgs.primes ];
-        exampleText = literalExpression "hkgs: [ hkgs.primes ]";
+        defaultText = literalExpression "hkgs: [ ]";
+        example = literalExpression "hkgs: [ hkgs.primes ]";
       };
     };
     stack = {
@@ -45,8 +45,8 @@ in {
       package = mkPackageOption "Stack" { default = "stack"; };
     };
   };
-  config.home.packages = let cfg = option config.programs.haskell;
-  in cfg.cabal.enable cfg.cabal.package ++ optional cfg.ghc.enable
+  config.home.packages = let cfg = config.programs.haskell;
+  in optional cfg.cabal.enable cfg.cabal.package ++ optional cfg.ghc.enable
   (if cfg.ghc.package ? withPackages then
     cfg.ghc.package.withPackages cfg.ghc.packages
   else
