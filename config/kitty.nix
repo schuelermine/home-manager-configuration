@@ -1,11 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.kitty = {
     enable = true;
-    font = {
-      package = pkgs.fira-code;
-      name = "Fira Code";
-      size = 13;
-    };
+    font = config.gnome.monospaceFont;
     keybindings = {
       "ctrl+tab" = "next_tab";
       "ctrl+shift+tab" = "previous_tab";
