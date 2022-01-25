@@ -56,6 +56,10 @@ in {
       figlet
       toilet
       lolcat
+      cowsay
+      with-shell
+      pick
+      fzf
       weechat
       nnn
       links2
@@ -65,6 +69,8 @@ in {
       procs
       bit
       glow
+      jq
+      jc
     ];
   };
 }
