@@ -49,6 +49,7 @@ in {
       bat
       bit
       cowsay
+      deno
       figlet
       fzf
       gh
@@ -60,8 +61,11 @@ in {
       lr
       nixfmt
       nnn
+      node
       pick
+      powershell
       procs
+      python310
       sl
       sqlite
       steam-run
