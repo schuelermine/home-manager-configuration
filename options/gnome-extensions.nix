@@ -23,6 +23,6 @@ with lib; {
       disable-user-extensions = builtins.length config.gnome.enabledExtensions
         == 0;
     };
-    home.packages = config.gnome.enabledExtensions + config.gnome.extraExtensions;
+    home.packages = config.gnome.enabledExtensions ++ config.gnome.extraExtensions;
   };
 }
