@@ -21,9 +21,9 @@ in {
         nano = editor;
         sl = "sl -e";
         ls = "exa --grid";
-        la = "exa --grid --classify --long --all";
         ll = "exa --grid --classify --long";
-        l = "exa --grid --classify --all";
+        la = "exa --grid --classify --all";
+        l- = "exa --grid --classify --long --all";
         cd = "z";
         c = "bat";
         icat = "kitty +kitten icat";
