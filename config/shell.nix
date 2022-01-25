@@ -61,7 +61,7 @@ in {
       lr
       nixfmt
       nnn
-      node
+      nodejs_latest
       pick
       powershell
       procs
