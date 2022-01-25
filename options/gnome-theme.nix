@@ -16,7 +16,7 @@ with lib; {
       type = types.str;
       default = "";
       defaultText = ''""'';
-      example = literalExpression "Yaru";
+      example = literalExpression ''"Yaru"'';
       description = "Name of the custom theme.";
     };
   };
