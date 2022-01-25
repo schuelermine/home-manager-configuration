@@ -46,31 +46,31 @@ in {
   home = {
     sessionVariables.EDITOR = editor;
     packages = with pkgs; [
-      gh
-      steamPackages.steamcmd
-      steam-run
-      whois
-      nixfmt
-      sqlite
-      sl
-      figlet
-      toilet
-      lolcat
-      cowsay
-      with-shell
-      pick
-      fzf
-      weechat
-      nnn
-      links2
-      unicode-paracode
       bat
-      lr
-      procs
       bit
+      cowsay
+      figlet
+      fzf
+      gh
       glow
-      jq
       jc
+      jq
+      links2
+      lolcat
+      lr
+      nixfmt
+      nnn
+      pick
+      procs
+      sl
+      sqlite
+      steam-run
+      steamPackages.steamcmd
+      toilet
+      unicode-paracode
+      weechat
+      whois
+      with-shell
     ];
   };
 }
