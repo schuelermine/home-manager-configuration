@@ -20,8 +20,10 @@ in {
       shellAliases = {
         nano = editor;
         sl = "sl -e";
-        l = "ls -a";
-        ls = "exa";
+        ls = "exa --grid";
+        la = "exa --grid --classify --long --all";
+        ll = "exa --grid --classify --long";
+        l = "exa --grid --classify --all";
         cd = "z";
         c = "bat";
         icat = "kitty +kitten icat";
