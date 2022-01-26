@@ -3,11 +3,11 @@
     "fish-functions": {
       "flake": false,
       "locked": {
-        "lastModified": 1643099336,
-        "narHash": "sha256-U2KppW2za9yqQnIJMChRLjnaz4zcq1W4gFlXSEd28JI=",
+        "lastModified": 1643222969,
+        "narHash": "sha256-sORS3XlcucC0T9UAYbOn8w1bm3jb2GhyYXOGZtkr2lw=",
         "owner": "schuelermine",
         "repo": "fish-functions",
-        "rev": "19b5b25245ae8865518bf86e996add4390ff7a7f",
+        "rev": "cdf5e40823a52fc19b18ec1887b98f2c9e223e9e",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1643066491,
-        "narHash": "sha256-wIgqFCJ6v7COpgNY0lMHDnU9RP2dJgasa2jKkB0zhWw=",
+        "lastModified": 1643151280,
+        "narHash": "sha256-sVlOWjDm+QU9vIjY+awfOwB5T/Sl8R+LkP9sNXhVCw4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "462d4a7abdfb8cb762584745a480ad01c207570e",
+        "rev": "990ca662c4b92636053ea399f5fb80702830522c",
         "type": "github"
       },
       "original": {
@@ -101,6 +101,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-fix": {
+      "locked": {
+        "lastModified": 1643133765,
+        "narHash": "sha256-AoaXumvN5tVxi07TNcVkrbJpMpqqebsAmzB1Eqqb8EY=",
+        "owner": "midchildan",
+        "repo": "nixpkgs",
+        "rev": "f8832996d883756c4ae0a1487173e46438d53a04",
+        "type": "github"
+      },
+      "original": {
+        "owner": "midchildan",
+        "ref": "fix/noto-cjk-src",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "fish-functions": "fish-functions",
@@ -113,14 +129,15 @@
       "inputs": {
         "nix-lib": "nix-lib_2",
         "nix-symlink": "nix-symlink",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs",
+        "nixpkgs-fix": "nixpkgs-fix"
       },
       "locked": {
-        "lastModified": 1643131708,
-        "narHash": "sha256-9xmZTmfo9/8R9Nzhgk+1Otzd1pT5ziIj0rVc2O8yMRQ=",
+        "lastModified": 1643211746,
+        "narHash": "sha256-RN9MsEF3DvTjVRs7X5tKptMZeZfh1EfuqjdgDm2EsoQ=",
         "ref": "b0",
-        "rev": "edf9ee7c1e419e1d2894b8805aba2258c67b4d76",
-        "revCount": 56,
+        "rev": "008f7e317e719b41e88ca3feb2f97eccff0f3665",
+        "revCount": 64,
         "type": "git",
         "url": "file:///etc/nixos"
       },
