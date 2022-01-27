@@ -3,11 +3,11 @@
     "fish-functions": {
       "flake": false,
       "locked": {
-        "lastModified": 1643223230,
-        "narHash": "sha256-XD3f4cq7klqlMNt+zsy7gcm71EU2ZivjVNfRTgJ47kY=",
+        "lastModified": 1643306893,
+        "narHash": "sha256-uCs+PHP+A3hcMuKaA7CWfFzoXXcfmPcm05UHAJkG21E=",
         "owner": "schuelermine",
         "repo": "fish-functions",
-        "rev": "18459925172f83f6605fa0e9820c6dee24545d3b",
+        "rev": "af4bfab24f899d03c5a6984bbf2830e70f222d82",
         "type": "github"
       },
       "original": {
@@ -24,11 +24,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1643297255,
-        "narHash": "sha256-fKkSbAk2+9iFVhFkVpxi/x0K7Jn7bprtv8axt4duPBo=",
+        "lastModified": 1643307345,
+        "narHash": "sha256-xiu7i6Q3Dqu4lLfDNaAL/f2DVewBxL+ysMuAyJiGv+4=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "8d3fe1366b8b6c4748a847d1e3b41a73269caaee",
+        "rev": "4e92ec84f93a293042a64c3ed56ac8aee62fb6e1",
         "type": "github"
       },
       "original": {
@@ -133,11 +133,11 @@
         "nixpkgs-fix": "nixpkgs-fix"
       },
       "locked": {
-        "lastModified": 1643272186,
+        "lastModified": 1643307214,
         "narHash": "sha256-YU8iE5M+hAjSi0jhO3g/BF77xG8pmZaNr5a7QJMroYA=",
         "ref": "b0",
-        "rev": "53296699cdab01c8ebb576c1172f170199402eef",
-        "revCount": 65,
+        "rev": "20495e1d039cf6ee49d29301478fbf1b940353e5",
+        "revCount": 67,
         "type": "git",
         "url": "file:///etc/nixos"
       },
