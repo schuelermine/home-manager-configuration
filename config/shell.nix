@@ -46,7 +46,7 @@ in {
   home = {
     sessionVariables.EDITOR = editor;
     packages = with pkgs; [
-      tetris.defaultPackage
+      tetris.defaultPackage.x86_64-linux
       bat
       bit
       cowsay
