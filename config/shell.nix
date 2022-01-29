@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fish-functions, nix-lib, ... }:
+{ config, pkgs, lib, fish-functions, nix-lib, tetris, ... }:
 let
   editor =
     "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
@@ -46,6 +46,7 @@ in {
   home = {
     sessionVariables.EDITOR = editor;
     packages = with pkgs; [
+      tetris.defaultPackage.x86_64-linux
       bat
       bit
       cowsay
