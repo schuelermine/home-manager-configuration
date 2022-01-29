@@ -3,7 +3,7 @@
   description = "Home manager configuration by Anselm Schüler";
   # license = builtins.readFile ./LICENSE;
   inputs = {
-    system-config.url = "git+file:///etc/nixos";
+    system-config.url = "git+file:///etc/nixos?ref=b0";
     nix-lib.url = "github:schuelermine/nix-lib/b0";
     home-manager = {
       url = "github:nix-community/home-manager";
