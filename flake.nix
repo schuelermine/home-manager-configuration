@@ -13,7 +13,10 @@
       flake = false;
       url = "github:schuelermine/fish-functions";
     };
-    tetris.url = "github:schuelermine/tetris";
+    tetris = {
+      url = "github:schuelermine/tetris/add-nix-build";
+      inputs.nixpkgs.follows = "system-config/nixpkgs";
+    };
   };
   outputs = { system-config, home-manager, fish-functions, nix-lib, self, tetris }: {
     homeConfigurations.anselmschueler =
