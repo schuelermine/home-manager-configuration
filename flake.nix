@@ -13,8 +13,9 @@
       flake = false;
       url = "github:schuelermine/fish-functions";
     };
+    tetris.url = "github:schuelermine/tetris";
   };
-  outputs = { system-config, home-manager, fish-functions, nix-lib, self }: {
+  outputs = { system-config, home-manager, fish-functions, nix-lib, self, tetris }: {
     homeConfigurations.anselmschueler =
       home-manager.lib.homeManagerConfiguration {
         system = "x86_64-linux";
@@ -22,7 +23,7 @@
         username = "anselmschueler";
         stateVersion = "21.11";
         configuration = ./config/home.nix;
-        extraSpecialArgs = { inherit fish-functions nix-lib; };
+        extraSpecialArgs = { inherit fish-functions nix-lib tetris; };
         extraModules = map (str: ./options + "/${str}") (builtins.attrNames
           (nix-lib.attrs.filter (_: t: t == "regular")
             (nix-lib.file.readDirRCollapsed ./options)));
