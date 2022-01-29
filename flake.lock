@@ -16,6 +16,21 @@
         "type": "github"
       }
     },
+    "flake-utils": {
+      "locked": {
+        "lastModified": 1642700792,
+        "narHash": "sha256-XqHrk7hFb+zBvRg6Ghl+AZDq03ov6OshJLiSWOoX5es=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "846b2ae0fc4cc943637d3d1def4454213e203cba",
+        "type": "github"
+      },
+      "original": {
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "type": "github"
+      }
+    },
     "home-manager": {
       "inputs": {
         "nixpkgs": [
@@ -122,7 +137,8 @@
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
-        "system-config": "system-config"
+        "system-config": "system-config",
+        "tetris": "tetris"
       }
     },
     "system-config": {
@@ -144,6 +160,29 @@
       "original": {
         "type": "git",
         "url": "file:///etc/nixos"
+      }
+    },
+    "tetris": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": [
+          "system-config",
+          "nixpkgs"
+        ]
+      },
+      "locked": {
+        "lastModified": 1643473302,
+        "narHash": "sha256-rYiCAr95vOO67BCnJzFICan6t5XA8ndUX9wMsoElySg=",
+        "owner": "schuelermine",
+        "repo": "tetris",
+        "rev": "695b226a2d684421c528639610df7692b614d01d",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "ref": "add-nix-build",
+        "repo": "tetris",
+        "type": "github"
       }
     }
   },
