@@ -47,6 +47,7 @@ in {
     sessionVariables.EDITOR = editor;
     packages = with pkgs; [
       tetris.defaultPackage.x86_64-linux
+      ripgrep
       bat
       bit
       cowsay
