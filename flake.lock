@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1643933104,
-        "narHash": "sha256-NZPuFxRsZKN8pjRuHPpzlMyt6JQhcjiduBG8bMghSjE=",
+        "lastModified": 1644346464,
+        "narHash": "sha256-hS8hwbr/PflMIfTWTmB7Xo5jIrsWhSAqtz5XXxPa0zQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "63dccc4e60422c1db2c3929b2fd1541f36b7e664",
+        "rev": "e2aa1f598674aa9c06f28f5db60b89f37f1e961b",
         "type": "github"
       },
       "original": {
@@ -102,32 +102,16 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1643169865,
-        "narHash": "sha256-+KIpNRazbc8Gac9jdWCKQkFv9bjceaLaLhlwqUEYu8c=",
+        "lastModified": 1644359234,
+        "narHash": "sha256-u/sBnRgrFrn9W8gZMS6vN3ZnJsoTvbws968TpqwlDJQ=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "945ec499041db73043f745fad3b2a3a01e826081",
+        "rev": "c5051e2b5fe9fab43a64f0e0d06b62c81a890b90",
         "type": "github"
       },
       "original": {
         "owner": "NixOS",
         "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs-fix": {
-      "locked": {
-        "lastModified": 1643133765,
-        "narHash": "sha256-AoaXumvN5tVxi07TNcVkrbJpMpqqebsAmzB1Eqqb8EY=",
-        "owner": "midchildan",
-        "repo": "nixpkgs",
-        "rev": "f8832996d883756c4ae0a1487173e46438d53a04",
-        "type": "github"
-      },
-      "original": {
-        "owner": "midchildan",
-        "ref": "fix/noto-cjk-src",
         "repo": "nixpkgs",
         "type": "github"
       }
@@ -145,15 +129,14 @@
       "inputs": {
         "nix-lib": "nix-lib_2",
         "nix-symlink": "nix-symlink",
-        "nixpkgs": "nixpkgs",
-        "nixpkgs-fix": "nixpkgs-fix"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1644137508,
-        "narHash": "sha256-k2SFw8lioDRA8J2G9NSg40sMxZOv7ACjLL3d4OJjHEs=",
+        "lastModified": 1644422116,
+        "narHash": "sha256-wSOiVLUt8qzEgexNxQuOpeaFOBss0vHQRq8QbFb5ELc=",
         "ref": "b0",
-        "rev": "c9719616c95e4634b304b56550c8eb095a6bbc88",
-        "revCount": 70,
+        "rev": "bb481da702260159cade2ac4419c1d7d43ce129c",
+        "revCount": 73,
         "type": "git",
         "url": "file:///etc/nixos"
       },
