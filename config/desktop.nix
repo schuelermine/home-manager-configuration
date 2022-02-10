@@ -51,7 +51,7 @@
     musescore
     inkscape
     audacity
-    vscode
+    vscode-fhs
     kdenlive
     virt-manager
     transmission-gtk
