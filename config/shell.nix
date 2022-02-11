@@ -62,6 +62,7 @@ in {
       lolcat
       lr
       nixfmt
+      nixpkgs-fmt
       nnn
       nodejs_latest
       pick
