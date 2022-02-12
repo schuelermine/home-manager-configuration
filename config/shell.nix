@@ -15,6 +15,7 @@ in {
       enableFishIntegration = true;
     };
     exa.enable = true;
+    direnv.enable = true;
     fish = {
       enable = true;
       shellAliases = {
