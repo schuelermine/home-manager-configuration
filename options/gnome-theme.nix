@@ -22,7 +22,7 @@ with lib; {
   };
   config = let cfg = config.gnome.shellTheme;
   in mkIf cfg.enable {
-    gnome.enabledExtensions = cfg.enable [ pkgs.gnomeExtensions.user-themes ];
+    gnome.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];
     dconf.settings."org/gnome/shell/extensions/user-theme".name = cfg.name;
     home.packages = optional (cfg.package != null) cfg.package;
   };
