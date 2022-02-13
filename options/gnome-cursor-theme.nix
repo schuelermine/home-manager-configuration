@@ -12,15 +12,15 @@ with lib; {
       '';
     };
     name = mkOption {
-      type = types.nullOr types.str;
-      default = null;
+      type = types.str;
+      default = "Adwaita";
       defaultText = literalExpression ''""'';
       example = literalExpression ''"Yaru"'';
       description = "Name of the custom theme.";
     };
   };
-  config = let cfg = config.gnome.cursorTheme;
-  in mkIf (cfg.name != null) {
-    dconf.settings."org.gnome.desktop.interface".cursor-theme = cfg.name;
+  config = {
+    dconf.settings."org.gnome.desktop.interface".cursor-theme =
+      config.gnome.cursorTheme.name;
   };
 }
