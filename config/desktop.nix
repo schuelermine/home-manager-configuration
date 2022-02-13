@@ -12,6 +12,7 @@
       package = pkgs.yaru-theme;
       name = "Yaru";
     };
+    cursorTheme.name = "Adwaita";
   };
   gtk = {
     enable = true;
