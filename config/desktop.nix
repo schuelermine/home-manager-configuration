@@ -1,9 +1,7 @@
 { config, pkgs, lib, ... }: {
   imports = [ ./kitty.nix ];
   gnome = {
-    enabledExtensions = with pkgs.gnomeExtensions; [
-      appindicator
-    ];
+    enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
     monospaceFont = {
       package = pkgs.fira-code;
       name = "Fira Code";

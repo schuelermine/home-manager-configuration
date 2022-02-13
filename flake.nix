@@ -18,18 +18,19 @@
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
   };
-  outputs = { system-config, home-manager, fish-functions, nix-lib, self, tetris }: {
-    homeConfigurations.anselmschueler =
-      home-manager.lib.homeManagerConfiguration {
-        system = "x86_64-linux";
-        homeDirectory = "/home/anselmschueler";
-        username = "anselmschueler";
-        stateVersion = "21.11";
-        configuration = ./config/home.nix;
-        extraSpecialArgs = { inherit fish-functions nix-lib tetris; };
-        extraModules = map (str: ./options + "/${str}") (builtins.attrNames
-          (nix-lib.attrs.filter (_: t: t == "regular")
-            (nix-lib.file.readDirRCollapsed ./options)));
-      };
-  };
+  outputs =
+    { system-config, home-manager, fish-functions, nix-lib, self, tetris }: {
+      homeConfigurations.anselmschueler =
+        home-manager.lib.homeManagerConfiguration {
+          system = "x86_64-linux";
+          homeDirectory = "/home/anselmschueler";
+          username = "anselmschueler";
+          stateVersion = "21.11";
+          configuration = ./config/home.nix;
+          extraSpecialArgs = { inherit fish-functions nix-lib tetris; };
+          extraModules = map (str: ./options + "/${str}") (builtins.attrNames
+            (nix-lib.attrs.filter (_: t: t == "regular")
+              (nix-lib.file.readDirRCollapsed ./options)));
+        };
+    };
 }

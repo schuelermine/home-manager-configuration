@@ -1,3 +1,7 @@
 {
-    "editor.tabSize": 2
+    "editor.tabSize": 2,
+    "[nix]": {
+        "editor.defaultFormatter": "brettm12345.nixfmt-vscode",
+        "editor.formatOnSave": true
+    }
 }
