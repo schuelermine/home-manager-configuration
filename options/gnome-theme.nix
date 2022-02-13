@@ -19,11 +19,13 @@ with lib; {
       example = literalExpression ''"Yaru"'';
       description = "Name of the custom theme.";
     };
+    userThemesPackage = mkPackageOption pkgs "user-themes extension" {
+      default = [ "gnomeExtensions" "user-themes" ];
+    };
   };
   config = let cfg = config.gnome.shellTheme;
   in {
-    gnome.enabledExtensions =
-      mkIf cfg.enable [ pkgs.gnomeExtensions.user-themes ];
+    gnome.enabledExtensions = mkIf cfg.enable [ cfg.userThemesPackage ];
     dconf.settings."org/gnome/shell/extensions/user-theme".name = cfg.name;
     home.packages = optional (cfg.package != null) cfg.package;
   };
