@@ -19,9 +19,7 @@ with lib; {
       example = literalExpression ''"Yaru"'';
       description = "Name of the custom theme.";
     };
-    userThemesPackage = mkPackageOption pkgs "user-themes extension" {
-      default = [ "gnomeExtensions" "user-themes" ];
-    };
+    userThemesPackage = mkPackageOption pkgs.gnomeExtensions "user-themes" { };
   };
   config = let cfg = config.gnome.shellTheme;
   in {
