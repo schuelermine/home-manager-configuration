@@ -2,7 +2,6 @@
   imports = [ ./kitty.nix ];
   gnome = {
     enabledExtensions = with pkgs.gnomeExtensions; [
-      dash-to-dock
       appindicator
     ];
     monospaceFont = {
