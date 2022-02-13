@@ -4,7 +4,7 @@ with lib; {
     enabledExtensions = mkOption {
       type = types.listOf types.package;
       default = [ ];
-      defaultText = "[ ]";
+      defaultText = literalExpression "[ ]";
       example = literalExpression "[ pkgs.gnomeExtensions.appindicator ]";
       description =
         "List of packages that provide extensions that are to be enabled.";
@@ -12,7 +12,7 @@ with lib; {
     extraExtensions = mkOption {
       type = types.listOf types.package;
       default = [ ];
-      defaultText = "[ ]";
+      defaultText = literalExpression "[ ]";
       description = "Extra extension packages to install (but not enable).";
     };
   };

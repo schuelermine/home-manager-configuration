@@ -5,7 +5,7 @@ with lib; {
     package = mkOption {
       type = types.nullOr types.package;
       default = null;
-      defaultText = "null";
+      defaultText = literalExpression "null";
       example = literalExpression "pkgs.yaru-theme";
       description = ''
         Package that provides the custom shell theme.
@@ -15,15 +15,14 @@ with lib; {
     name = mkOption {
       type = types.str;
       default = "";
-      defaultText = ''""'';
+      defaultText = literalExpression ''""'';
       example = literalExpression ''"Yaru"'';
       description = "Name of the custom theme.";
     };
   };
   config = let cfg = config.gnome.shellTheme;
-  in {
-    gnome.enabledExtensions =
-      mkIf cfg.enable [ pkgs.gnomeExtensions.user-themes ];
+  in mkIf cfg.enable {
+    gnome.enabledExtensions = cfg.enable [ pkgs.gnomeExtensions.user-themes ];
     dconf.settings."org/gnome/shell/extensions/user-theme".name = cfg.name;
     home.packages = optional (cfg.package != null) cfg.package;
   };
