@@ -1,5 +1,9 @@
 { config, pkgs, lib, ... }: {
   imports = [ ./kitty.nix ];
+  fonts = {
+    fontconfig.enable = true;
+    fonts = with pkgs; [ atkinson-hyperlegible ];
+  };
   gnome = {
     enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
     monospaceFont = {

@@ -12,6 +12,6 @@ with lib; {
         " ${builtins.toString font.size}"
       else
         ""));
-    home.packages = optional (font.package != null) font.package;
+    fonts.fonts = optional (font.package != null) font.package;
   };
 }
