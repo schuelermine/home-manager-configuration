@@ -47,34 +47,54 @@ in {
   home = {
     sessionVariables.EDITOR = editor;
     packages = with pkgs; [
-      tetris.defaultPackage.x86_64-linux
-      ripgrep
       bat
       bit
+      boxes
+      browsh
+      btop
+      chafa
+      cmatrix
       cowsay
       deno
+      execline
+      fd
       figlet
+      fq
       fzf
       gh
       glow
+      gnuapl
+      j
+      jacinda
       jc
+      jd
+      jl
+      jp
       jq
       links2
       lolcat
       lr
+      lua
+      moreutils
+      neofetch
       nixfmt
       nixpkgs-fmt
+      nms
       nnn
       nodejs_latest
+      num-utils
       pick
       powershell
       procs
       python310
+      ripgrep
       sl
       sqlite
       steam-run
       steamPackages.steamcmd
+      tetris.defaultPackage.x86_64-linux
       toilet
+      trash-cli
       unicode-paracode
       weechat
       whois
