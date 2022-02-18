@@ -62,5 +62,6 @@
     asciinema
     gitui
     apostrophe
+    drawio
   ];
 }
