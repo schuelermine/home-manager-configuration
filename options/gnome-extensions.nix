@@ -33,7 +33,7 @@ in {
   };
   config = {
     dconf.settings."org/gnome/shell" = {
-      disable-user-extensions = cfg.enable;
+      disable-user-extensions = !cfg.enable;
       enabled-extensions = map (pkg: pkg.extensionUuid) cfg.enabledExtensions;
     };
     home.packages = cfg.enabledExtensions ++ cfg.extraExtensions;
