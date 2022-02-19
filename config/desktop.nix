@@ -5,7 +5,7 @@
     fonts = with pkgs; [ atkinson-hyperlegible ];
   };
   gnome = {
-    extensions.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
+    extensions.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator activate_gnome ];
     monospaceFont = {
       package = pkgs.fira-code;
       name = "Fira Code";
