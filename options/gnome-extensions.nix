@@ -1,11 +1,17 @@
 { config, pkgs, lib, ... }:
-let cfg = config.gnome.extensions;
-in with lib; {
-  imports = map (a:
-    mkRenamedOptionModule ([ "gnome" ] ++ a) ([ "gnome" "extensions" ] ++ a)) [
-      "enabledExtensions"
-      "extraExtensions"
-    ];
+with builtins // lib;
+let
+  wrap = x: if isList x then x else [ x ];
+  mkRenamedSuperoptionModules = n1: n2: k:
+    map (g:
+      let gs = wrap g;
+      in mkRenamedOptionModule (wrap n1 ++ gs) (wrap n2 ++ gs)) (wrap k);
+  cfg = config.gnome.extensions;
+in {
+  imports = mkRenamedSuperoptionModules "gnome" [ "gnome" "extensions" ] [
+    "enabledExtensions"
+    "extraExtensions"
+  ];
   options.gnome.extensions = {
     enable = mkEnableOption "GNOME shell extensions" // {
       default = length cfg.enabledExtensions != 0;
