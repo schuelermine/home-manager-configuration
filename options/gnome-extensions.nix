@@ -1,6 +1,15 @@
 { config, pkgs, lib, ... }:
-with lib; {
-  options.gnome = {
+let cfg = config.gnome.extensions;
+in with lib; {
+  imports = map (a:
+    mkRenamedOptionModule ([ "gnome" ] ++ a) ([ "gnome" "extensions" ] ++ a)) [
+      "enabledExtensions"
+      "extraExtensions"
+    ];
+  options.gnome.extensions = {
+    enable = mkEnableOption "GNOME shell extensions" // {
+      default = length cfg.enabledExtensions != 0;
+    };
     enabledExtensions = mkOption {
       type = types.listOf types.package;
       default = [ ];
@@ -18,12 +27,9 @@ with lib; {
   };
   config = {
     dconf.settings."org/gnome/shell" = {
-      enabled-extensions =
-        map (pkg: pkg.extensionUuid) config.gnome.enabledExtensions;
-      disable-user-extensions = builtins.length config.gnome.enabledExtensions
-        == 0;
+      disable-user-extensions = cfg.enable;
+      enabled-extensions = map (pkg: pkg.extensionUuid) cfg.enabledExtensions;
     };
-    home.packages = config.gnome.enabledExtensions
-      ++ config.gnome.extraExtensions;
+    home.packages = cfg.enabledExtensions ++ cfg.extraExtensions;
   };
 }
