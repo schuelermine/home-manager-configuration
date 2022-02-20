@@ -1,24 +1,15 @@
 { config, pkgs, lib, ... }:
-with lib; {
+let mkProvidesOption = import ../mkProvidesOption.nix lib;
+in with lib; {
   options.gnome.shellTheme = {
     enable = mkEnableOption "custom GNOME shell themes";
-    package = mkOption {
-      type = types.nullOr types.package;
-      default = null;
-      defaultText = literalExpression "null";
-      example = literalExpression "pkgs.yaru-theme";
-      description = ''
-        Package that provides the custom shell theme.
-        If not declared, it's assumed an already installed package provides it.
-      '';
-    };
-    name = mkOption {
-      type = types.str;
-      default = "";
-      defaultText = literalExpression ''""'';
-      example = literalExpression ''"Yaru"'';
-      description = "Name of the custom theme.";
-    };
+  } // mkProvidesOption {
+    providedText = "the custom shell theme";
+    packageExample = "pkgs.yaru-theme";
+    keyType = types.str;
+    defaultKey = "";
+    defaultKeyText = ''""'';
+    keyExample = ''"Yaru"'';
   };
   config = let cfg = config.gnome.shellTheme;
   in mkIf cfg.enable {
