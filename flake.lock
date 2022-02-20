@@ -3,11 +3,11 @@
     "fish-functions": {
       "flake": false,
       "locked": {
-        "lastModified": 1645297359,
-        "narHash": "sha256-oVQ0I+5iPztTAzl7HEb/N0zJGGr5RGCCD4vLPin3+7Y=",
+        "lastModified": 1645367609,
+        "narHash": "sha256-bpLVz5RkSsxsyhx9OO0bfN6PU6xViEhS9fNEjnLV9XU=",
         "owner": "schuelermine",
         "repo": "fish-functions",
-        "rev": "6d57f3ba57d713ea66977cade3df0a18b44582bc",
+        "rev": "edb62384cab85260af3d3c1f90456838294eec74",
         "type": "github"
       },
       "original": {
