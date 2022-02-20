@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
-with lib; {
+let cfg = config.gnome.cursorTheme;
+in with lib; {
   options.gnome.cursorTheme = {
     package = mkOption {
       type = types.nullOr types.package;
@@ -20,7 +21,7 @@ with lib; {
     };
   };
   config = {
-    dconf.settings."org.gnome.desktop.interface".cursor-theme =
-      config.gnome.cursorTheme.name;
+    dconf.settings."org.gnome.desktop.interface".cursor-theme = cfg.name;
+    home.packages = optional (cfg.package != null) cfg.package;
   };
 }
