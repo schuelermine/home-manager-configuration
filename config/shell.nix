@@ -22,9 +22,9 @@ in {
         nano = editor;
         sl = "sl -e";
         ls = "exa --grid";
-        ll = "exa --grid --classify --long";
-        la = "exa --grid --classify --all";
-        l- = "exa --grid --classify --long --all";
+        ll = "exa --grid --long";
+        la = "exa --grid --all";
+        l- = "exa --grid --long --all";
         cd = "z";
         c = "bat";
         icat = "kitty +kitten icat";
