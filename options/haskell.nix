@@ -1,20 +1,18 @@
 { config, pkgs, lib, ... }:
-with lib;
-let
-  mkPackageOption' = import ../mkPackageOption.nix lib;
-  mkPackageOption = mkPackageOption' pkgs;
+with lib // import ../alib.nix lib;
+let mkPackageOption' = mkPackageOption pkgs;
 in {
   options.programs.haskell = {
     cabal = {
       enable = mkEnableOption "the Haskell Cabal (build system)";
-      package = mkPackageOption "Cabal" { default = [ "cabal-install" ]; };
+      package = mkPackageOption' "Cabal" { default = [ "cabal-install" ]; };
     };
     ghc = {
       enable = mkEnableOption
         "the Glorious Glasgow Haskell Compilation System (compiler)" // {
           default = true;
         };
-      package = mkPackageOption "GHC" {
+      package = mkPackageOption' "GHC" {
         default = [ "ghc" ];
         example = "pkgs.haskell.packages.ghc921.ghc";
       };
@@ -28,7 +26,7 @@ in {
     };
     stack = {
       enable = mkEnableOption "the Haskell Tool Stack";
-      package = mkPackageOption "Stack" { default = "stack"; };
+      package = mkPackageOption' "Stack" { default = "stack"; };
     };
   };
   config = let cfg = config.programs.haskell;

@@ -1,12 +1,6 @@
 { config, pkgs, lib, ... }:
-with builtins // lib;
-let
-  wrap = x: if isList x then x else [ x ];
-  mkRenamedSuperoptionModules = n1: n2: k:
-    map (g:
-      let gs = wrap g;
-      in mkRenamedOptionModule (wrap n1 ++ gs) (wrap n2 ++ gs)) (wrap k);
-  cfg = config.gnome.extensions;
+with builtins // lib // import ../alib.nix lib;
+let cfg = config.gnome.extensions;
 in {
   imports = mkRenamedSuperoptionModules "gnome" [ "gnome" "extensions" ] [
     "enabledExtensions"

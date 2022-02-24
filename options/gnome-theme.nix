@@ -1,9 +1,8 @@
 { config, pkgs, lib, ... }:
-let mkProvidesOption = import ../mkProvidesOption.nix lib;
-in with lib; {
+with lib // import ../alib.nix lib; {
   options.gnome.shellTheme = {
     enable = mkEnableOption "custom GNOME shell themes";
-  } // mkProvidesOption {
+  } // mkProvidesModule {
     providedText = "the custom shell theme";
     packageExample = "pkgs.yaru-theme";
     keyType = types.str;
