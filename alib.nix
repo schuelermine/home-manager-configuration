@@ -29,15 +29,19 @@ with nixpkgs-lib // builtins; rec {
     , defaultPackageText ? "null", packageExample ? null, keyName ? "name"
     , keyType ? types.nullOr types.str, defaultKey ? null
     , defaultKeyText ? ''""'', keyExample ? null, keyText ? keyName
-    , initialKeyText ? capitalize keyText }:
+    , initialKeyText ? capitalize keyText, extraModules ? [ ] }:
     mkOption {
       description = ''
         ${initialProvidedText} to use.
       '';
       type = mkProvidesType args;
     };
-  mkProvidesType = args:
-    types.submoduleWith { modules = [{ options = mkProvidesModule args; }]; };
+  mkProvidesType = args@{ extraModules ? [ ], ... }:
+    types.submoduleWith {
+      modules =
+        [{ options = mkProvidesModule (removeAttrs args [ "extraModules" ]); }]
+        ++ extraModules;
+    };
   mkProvidesModule = args@{ providedText
     , initialProvidedText ? capitalize providedText, defaultPackage ? null
     , defaultPackageText ? "null", packageExample ? null, keyName ? "name"
