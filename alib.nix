@@ -59,7 +59,8 @@ with nixpkgs-lib // builtins; rec {
         default = defaultKey;
         defaultText = literalExpression defaultKeyText;
         ${guardKeyNull keyExample "example"} = literalExpression keyExample;
-        description = "${initialKeyText} of ${provided} within the package.";
+        description =
+          "${initialKeyText} of ${providedText} within the package.";
       };
     };
   mkPackageOption = pkgs: name:
