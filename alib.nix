@@ -36,7 +36,8 @@ with nixpkgs-lib // builtins; rec {
       '';
       type = mkProvidesType args;
     };
-  mkProvidesType = args: types.submodule (mkProvidesModule args);
+  mkProvidesType = args:
+    types.submoduleWith { modules = [{ options = mkProvidesModule args; }]; };
   mkProvidesModule = args@{ providedText
     , initialProvidedText ? capitalize providedText, defaultPackage ? null
     , defaultPackageText ? "null", packageExample ? null, keyName ? "name"
