@@ -33,4 +33,6 @@ let
         packages = mkIf (isAttrs cfg && cfg.package != null) [ cfg.package ];
       };
     };
-in mkMerge (map mkModule [ { name = "editor"; } { name = "visual editor"; } ])
+in {
+  imports = map mkModule [ { name = "editor"; } { name = "visual editor"; } ];
+}
