@@ -9,6 +9,7 @@ with lib // import ../alib.nix lib; {
       defaultKeyText = ''""'';
       keyExample = ''"Yaru"'';
       prefix = [ "gnome" "shellTheme" ];
+      onlyIf = cfg.enable;
     })
   ];
   options.gnome.shellTheme = {
