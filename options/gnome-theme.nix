@@ -1,5 +1,6 @@
 { config, pkgs, lib, ... }:
-with lib // import ../alib.nix lib; {
+let cfg = config.gnome.shellTheme;
+in with lib // import ../alib.nix lib; {
   imports = [
     (mkProvidesModule {
       providedText = "the custom shell theme";
@@ -14,8 +15,7 @@ with lib // import ../alib.nix lib; {
         [{ options.enable = mkEnableOption "custom GNOME shell themes"; }];
     })
   ];
-  config = let cfg = config.gnome.shellTheme;
-  in mkIf cfg.enable {
+  config = mkIf cfg.enable {
     gnome.extensions.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];
     dconf.settings."org/gnome/shell/extensions/user-theme".name = cfg.name;
   };
