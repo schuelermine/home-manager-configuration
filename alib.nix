@@ -55,10 +55,10 @@ with nixpkgs-lib // builtins; rec {
     , onlyIf ? true, ... }:
     { config, ... }:
     let
-      args' = removeAttrs args [ "prefix" "packagesLoc" ];
+      args' = removeAttrs args [ "prefix" "packagesLoc" "onlyIf" ];
       cfg = attrByPath prefix impossible config;
     in {
-      options = mkNestedAttrs prefix (mkProvidesOptionSet args');
+      options = mkNestedAttrs prefix (mkProvidesOption args');
       config = mkNestedAttrs packagesLoc
         (optional (cfg.package != null && onlyIf) cfg.package);
     };

@@ -46,7 +46,6 @@ in {
   };
   home = {
     editor = editor;
-    visualEditor = "code";
     packages = with pkgs; [
       bat
       bit
