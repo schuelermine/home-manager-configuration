@@ -13,6 +13,12 @@ with nixpkgs-lib // builtins; rec {
   reList = f1: f2: xs: mkList (f1 (head xs)) (f2 (tail xs));
   onList = f: compose21 f head tail;
   mapHead = f: xs: mkList (f (head xs)) (tail xs);
+  mkNestedAttrs = path: value:
+    if path == [ ] then
+      value
+    else {
+      ${head path} = mkNestedAttrs (tail path) value;
+    };
   filterSegments = compose concatLists
     (map (x: if isList x then x else if x == "" then [ ] else [ x ]));
   splitChars = str: filterSegments (split "" str);
@@ -40,11 +46,21 @@ with nixpkgs-lib // builtins; rec {
     };
   mkProvidesType = args@{ extraModules ? [ ], ... }:
     types.submoduleWith {
-      modules =
-        [{ options = mkProvidesModule (removeAttrs args [ "extraModules" ]); }]
-        ++ extraModules;
+      modules = [{
+        options = mkProvidesOptionSet (removeAttrs args [ "extraModules" ]);
+      }] ++ extraModules;
     };
-  mkProvidesModule = args@{ providedText
+  mkProvidesModule =
+    args@{ prefix ? [ ], packagesLoc ? [ "home" "packages" ], ... }:
+    let
+      args' = removeAttrs args [ "prefix" "packagesLoc" ];
+      cfg = attrByPath prefix config;
+    in { config, ... }: {
+      options = mkNestedAttrs prefix (mkProvidesOptionSet args');
+      config =
+        mkNestedAttrs packagesLoc (optional (cfg.package != null) cfg.package);
+    };
+  mkProvidesOptionSet = args@{ providedText
     , initialProvidedText ? capitalize providedText, defaultPackage ? null
     , defaultPackageText ? "null", packageExample ? null, keyName ? "name"
     , keyType ? types.nullOr types.str, defaultKey ? null

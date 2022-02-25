@@ -2,7 +2,7 @@
 with lib // import ../alib.nix lib; {
   options.gnome.shellTheme = {
     enable = mkEnableOption "custom GNOME shell themes";
-  } // mkProvidesModule {
+  } // mkProvidesOptionSet {
     providedText = "the custom shell theme";
     packageExample = "pkgs.yaru-theme";
     keyType = types.str;
