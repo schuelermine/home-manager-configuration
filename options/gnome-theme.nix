@@ -10,11 +10,9 @@ with lib // import ../alib.nix lib; {
       keyExample = ''"Yaru"'';
       prefix = [ "gnome" "shellTheme" ];
       onlyIf = cfg.enable;
+      extraModules = [{ enable = mkEnableOption "custom GNOME shell themes"; }];
     })
   ];
-  options.gnome.shellTheme = {
-    enable = mkEnableOption "custom GNOME shell themes";
-  };
   config = let cfg = config.gnome.shellTheme;
   in mkIf cfg.enable {
     gnome.extensions.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];
