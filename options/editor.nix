@@ -27,7 +27,7 @@ let
       };
       config.home = {
         sessionVariables = {
-          ${guardKeyNull cfg optionName} =
+          ${guardKeyNull cfg varName} =
             if isString cfg then cfg else toString cfg.executable;
         };
         packages = mkIf (isAttrs cfg && cfg.package != null) [ cfg.package ];
