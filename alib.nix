@@ -3,23 +3,25 @@ with nixpkgs-lib // builtins; rec {
   guardKey = cond: name: if cond then name else null;
   guardKeyNull = value: guardKey (value != null);
   id = x: x;
-  compose = f1: f2: x: f1 (f2 g);
+  compose = f1: f2: x: f1 (f2 x);
   compose12 = f: g: x: f (g x x);
   compose21 = g: f1: f2: x: g (f1 x) (f2 x);
   composeN = foldl' compose id;
   dupArgs = f: x: f x x;
   sandwich = x: xs: [ x ] ++ xs ++ [ x ];
   mkList = x: xs: [ x ] ++ xs;
-  reList = f1: f2: xs: mkList (f1 head xs) (f2 tail);
+  reList = f1: f2: xs: mkList (f1 (head xs)) (f2 (tail xs));
   onList = f: compose21 f head tail;
   mapHead = f: xs: mkList (f (head xs)) (tail xs);
-  splitChars = str:
-    concatLists (map (x: if isList x then x else if x == "" then [ ] else [ x ])
-      (split "" str));
-  joinChars = foldl' (c1: c2: c1 + c2) "";
-  asChars = f: str: joinChars (f (splitChars str));
+  filterSegments = compose concatLists
+    (map (x: if isList x then x else if x == "" then [ ] else [ x ]));
+  splitChars = str: filterSegments (split "" str);
+  concatStrings = foldl' (c1: c2: c1 + c2) "";
+  asChars = f: str: concatStrings (f (splitChars str));
   capitalize = asChars (mapHead toUpper);
   wrap = x: if isList x then x else [ x ];
+  words = str: filterSegments (split " " str);
+  snakeCase = str: concatStrings (reList id (map capitalize) (words str));
   mkRenamedSuperoptionModules = n1: n2: k:
     map (g:
       let gs = wrap g;

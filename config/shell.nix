@@ -45,7 +45,8 @@ in {
     };
   };
   home = {
-    sessionVariables.EDITOR = editor;
+    editor = editor;
+    visualEditor = "code";
     packages = with pkgs; [
       bat
       bit
