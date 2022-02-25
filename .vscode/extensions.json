@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "brettm12345.nixfmt-vscode",
-    "jnoortheen.nix-ide"
+    "jnoortheen.nix-ide",
+    "brettm12345.nixfmt-vscode"
   ]
 }
