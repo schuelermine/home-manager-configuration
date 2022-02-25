@@ -52,10 +52,11 @@ with nixpkgs-lib // builtins; rec {
     };
   mkProvidesModule =
     args@{ prefix ? [ ], packagesLoc ? [ "home" "packages" ], ... }:
+    { config, ... }:
     let
       args' = removeAttrs args [ "prefix" "packagesLoc" ];
       cfg = attrByPath prefix config;
-    in { config, ... }: {
+    in {
       options = mkNestedAttrs prefix (mkProvidesOptionSet args');
       config =
         mkNestedAttrs packagesLoc (optional (cfg.package != null) cfg.package);
