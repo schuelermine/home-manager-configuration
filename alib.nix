@@ -51,16 +51,16 @@ with nixpkgs-lib // builtins; rec {
         options = mkProvidesOptionSet (removeAttrs args [ "extraModules" ]);
       }] ++ extraModules;
     };
-  mkProvidesModule =
-    args@{ prefix ? [ ], packagesLoc ? [ "home" "packages" ], ... }:
+  mkProvidesModule = args@{ prefix ? [ ], packagesLoc ? [ "home" "packages" ]
+    , onlyIf ? true, ... }:
     { config, ... }:
     let
       args' = removeAttrs args [ "prefix" "packagesLoc" ];
       cfg = attrByPath prefix impossible config;
     in {
       options = mkNestedAttrs prefix (mkProvidesOptionSet args');
-      config =
-        mkNestedAttrs packagesLoc (optional (cfg.package != null) cfg.package);
+      config = mkNestedAttrs packagesLoc
+        (optional (cfg.package != null && onlyIf) cfg.package);
     };
   mkProvidesOptionSet = args@{ providedText
     , initialProvidedText ? capitalize providedText, defaultPackage ? null

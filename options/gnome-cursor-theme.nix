@@ -8,6 +8,7 @@ in with lib // import ../alib.nix lib; {
     defaultKey = "";
     defaultKeyText = ''""'';
     keyExample = ''"Yaru"'';
+    onlyIf = cfg.enable;
   };
   config = {
     dconf.settings."org.gnome.desktop.interface".cursor-theme = cfg.name;
