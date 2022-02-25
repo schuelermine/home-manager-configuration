@@ -1,5 +1,6 @@
 nixpkgs-lib:
 with nixpkgs-lib // builtins; rec {
+  impossible = throw "This error message should never occur.";
   guardKey = cond: name: if cond then name else null;
   guardKeyNull = value: guardKey (value != null);
   id = x: x;
@@ -55,7 +56,7 @@ with nixpkgs-lib // builtins; rec {
     { config, ... }:
     let
       args' = removeAttrs args [ "prefix" "packagesLoc" ];
-      cfg = attrByPath prefix config;
+      cfg = attrByPath prefix impossible config;
     in {
       options = mkNestedAttrs prefix (mkProvidesOptionSet args');
       config =
