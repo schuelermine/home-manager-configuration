@@ -12,8 +12,7 @@
       size = 10;
     };
     shellTheme = {
-      enable = true;
-      package = pkgs.yaru-theme;
+      enable = true;      
       name = "Yaru";
     };
     cursorTheme.name = "Adwaita";
