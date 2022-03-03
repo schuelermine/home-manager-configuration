@@ -64,7 +64,7 @@ in {
       gh
       glow
       gnuapl
-      j
+      #j
       jacinda
       jc
       jd
