@@ -83,6 +83,7 @@ in {
       nnn
       nodejs_latest
       num-utils
+      openjdk
       pick
       powershell
       procs
