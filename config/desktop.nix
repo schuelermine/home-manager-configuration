@@ -42,6 +42,7 @@
     };
   };
   home.packages = with pkgs; [
+    github-desktop
     gnome.dconf-editor
     libqalculate
     lutris
