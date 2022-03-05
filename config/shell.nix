@@ -45,7 +45,7 @@ in {
     };
   };
   home = {
-    editor = editor;
+    inherit editor;
     packages = with pkgs; [
       bat
       bit
