@@ -3,11 +3,11 @@
     "fish-functions": {
       "flake": false,
       "locked": {
-        "lastModified": 1645475400,
-        "narHash": "sha256-IXSmsHOB1WBxeQ1nG//yYFY9QpP71lmq5abIY1fXOGc=",
+        "lastModified": 1646838715,
+        "narHash": "sha256-0lTXr+Z3gSMB+QDZ308Hw4Q1BiXuIYqoXbRqG1S5pAg=",
         "owner": "schuelermine",
         "repo": "fish-functions",
-        "rev": "c16b528e3d5777ef277a1ecd6d18187dee8efefe",
+        "rev": "f83dc9c72dab701503a148f7391cdb0eca56add7",
         "type": "github"
       },
       "original": {
@@ -132,11 +132,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1646743685,
-        "narHash": "sha256-AaprrrQm8dKyUMZePYxlNkQA+TwJSnCTuAJIjy+d+oc=",
+        "lastModified": 1646763292,
+        "narHash": "sha256-a+e/wCgIQnLooWAUGIfHTvC2byJcPH/7oyPfXc0hCZk=",
         "ref": "b0",
-        "rev": "99cfac114ac1016e79c0374abb71d2c53ca94fb1",
-        "revCount": 82,
+        "rev": "e353a6a98d80c2d38bb08008cec70ca94d0951df",
+        "revCount": 83,
         "type": "git",
         "url": "file:///etc/nixos"
       },
