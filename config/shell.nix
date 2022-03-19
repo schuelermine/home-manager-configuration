@@ -21,10 +21,10 @@ in {
       shellAliases = {
         nano = editor;
         sl = "sl -e";
-        ls = "exa";
-        ll = "exa --classify --long";
-        la = "exa --classify --all";
-        l- = "exa --classify --long --all";
+        ls = "exa --sort=type";
+        ll = "ls --classify --long";
+        la = "ls --classify --all";
+        l- = "ls --classify --long --all";
         cd = "z";
         c = "bat";
         icat = "kitty +kitten icat";
