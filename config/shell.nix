@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fish-functions, nix-lib, tetris, ... }:
+{ config, pkgs, lib, fish-functions, nix-lib, tetris, nixpkgs-haskell, ... }:
 let
   editor =
     "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
@@ -7,7 +7,7 @@ in {
   programs = {
     haskell.ghc = {
       enable = true;
-      package = pkgs.haskell.packages.ghc921.ghc;
+      package = nixpkgs-haskell.legacyPackages.x86_64-linux.haskell.packages.ghc922.ghc;
       packages = hkgs: [ hkgs.primes ];
     };
     zoxide = {

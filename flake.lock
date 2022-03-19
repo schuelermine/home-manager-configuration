@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1647545448,
-        "narHash": "sha256-Y6W0Pl+M8ewr1TFhi5dsrs0dTlE3AeGFesnpva1xSLM=",
+        "lastModified": 1647644064,
+        "narHash": "sha256-RdZl1uIZslc8ViQwBJAJbkKpJN8J3y/U4xjZuLyFaMY=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "e01facc34045cf0026ba61d04e69c61e11f99408",
+        "rev": "7cf15b19a931b99f9a918887fc488d577fd07516",
         "type": "github"
       },
       "original": {
@@ -116,11 +116,28 @@
         "type": "github"
       }
     },
+    "nixpkgs-haskell": {
+      "locked": {
+        "lastModified": 1647701398,
+        "narHash": "sha256-k6iMFa2B2JOdkFuJ+HPhuZmap1WsYUWASJk7/XEl9Zo=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "9e5ac8625ea28c58601cfe1053a38b927d32c245",
+        "type": "github"
+      },
+      "original": {
+        "owner": "NixOS",
+        "ref": "haskell-updates",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
+        "nixpkgs-haskell": "nixpkgs-haskell",
         "system-config": "system-config",
         "tetris": "tetris"
       }
@@ -155,11 +172,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1643473302,
-        "narHash": "sha256-rYiCAr95vOO67BCnJzFICan6t5XA8ndUX9wMsoElySg=",
+        "lastModified": 1647691996,
+        "narHash": "sha256-QzGFKxZyfrNUscfASoq/DfIycpGoz/TwO0CsG3CnWCs=",
         "owner": "schuelermine",
         "repo": "tetris",
-        "rev": "695b226a2d684421c528639610df7692b614d01d",
+        "rev": "3c5c73ad4bccea10473f76abae9b368c34035993",
         "type": "github"
       },
       "original": {
