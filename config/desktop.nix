@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, nixpkgs-yaru, ... }: {
   imports = [ ./kitty.nix ];
   fonts = {
     fontconfig.enable = true;
@@ -25,11 +25,11 @@
       size = 11;
     };
     iconTheme = {
-      package = pkgs.yaru-theme;
+      package = nixpkgs-yaru.legacyPackages.x86_64-linux.yaru-theme;
       name = "Yaru";
     };
     theme = {
-      package = pkgs.yaru-theme;
+      package = nixpkgs-yaru.legacyPackages.x86_64-linux.yaru-theme;
       name = "Yaru-dark";
     };
   };
