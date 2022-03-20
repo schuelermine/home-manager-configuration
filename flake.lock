@@ -134,16 +134,16 @@
     },
     "nixpkgs-yaru": {
       "locked": {
-        "lastModified": 1647776863,
-        "narHash": "sha256-5t6fU3UrbDgYeIrrDalm2gUiBvItKnqvNaD8lBFsBDo=",
-        "owner": "schuelermine",
+        "lastModified": 1647490331,
+        "narHash": "sha256-Jcc+vHNDN3KDWuzGNTl3A24ICGovPneJDejiN2t57QI=",
+        "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "9da5c78ae4343642ea694004c1fe0896e2d60157",
+        "rev": "2c66a7a6e036971c4847cca424125f55b9eb0b0b",
         "type": "github"
       },
       "original": {
-        "owner": "schuelermine",
-        "ref": "update-yaru-theme-22.04.2",
+        "owner": "NixOS",
+        "ref": "nixos-21.11",
         "repo": "nixpkgs",
         "type": "github"
       }

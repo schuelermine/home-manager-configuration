@@ -18,7 +18,7 @@
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
     nixpkgs-haskell.url = "github:NixOS/nixpkgs/haskell-updates";
-    nixpkgs-yaru.url = "github:schuelermine/nixpkgs/update-yaru-theme-22.04.2";
+    nixpkgs-yaru.url = "github:NixOS/nixpkgs/nixos-21.11";
   };
   outputs =
     { system-config, home-manager, fish-functions, nix-lib, self, tetris, nixpkgs-haskell, nixpkgs-yaru }: {
