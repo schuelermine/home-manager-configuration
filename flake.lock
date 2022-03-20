@@ -132,12 +132,29 @@
         "type": "github"
       }
     },
+    "nixpkgs-yaru": {
+      "locked": {
+        "lastModified": 1647776863,
+        "narHash": "sha256-5t6fU3UrbDgYeIrrDalm2gUiBvItKnqvNaD8lBFsBDo=",
+        "owner": "schuelermine",
+        "repo": "nixpkgs",
+        "rev": "9da5c78ae4343642ea694004c1fe0896e2d60157",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "ref": "update-yaru-theme-22.04.2",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
         "nixpkgs-haskell": "nixpkgs-haskell",
+        "nixpkgs-yaru": "nixpkgs-yaru",
         "system-config": "system-config",
         "tetris": "tetris"
       }
