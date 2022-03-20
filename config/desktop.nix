@@ -13,7 +13,7 @@
     };
     shellTheme = {
       enable = true;      
-      name = "Yaru-dark";
+      name = "Yaru";
     };
     cursorTheme.name = "Adwaita";
   };
