@@ -41,7 +41,12 @@ in {
         else
           { }) (nix-lib.file.readDirRCollapsed "${fish-functions}");
       prompt = builtins.readFile ../source/fish_prompt.fish;
-      shellInit = builtins.readFile ../source/colors.fish;
+      shellInit = concatStringSep "\n" [
+        (builtins.readFile ../source/colors.fish)
+        ''
+          set fish_features stderr-nocaret qmark-noglob regex-easyesc ampersand-nobg-in-token
+        ''
+      ];
     };
   };
   home = {
