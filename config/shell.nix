@@ -44,7 +44,7 @@ in {
       shellInit = builtins.concatStringsSep "\n" [
         (builtins.readFile ../source/colors.fish)
         ''
-          set fish_features stderr-nocaret qmark-noglob regex-easyesc ampersand-nobg-in-token
+          set -U fish_features stderr-nocaret qmark-noglob regex-easyesc ampersand-nobg-in-token
         ''
       ];
     };
