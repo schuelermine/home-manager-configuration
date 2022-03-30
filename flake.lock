@@ -132,29 +132,12 @@
         "type": "github"
       }
     },
-    "nixpkgs-yaru": {
-      "locked": {
-        "lastModified": 1647992509,
-        "narHash": "sha256-AG40Nt5OWz0LBs5p457emOuwLKOvTtcv/2fUdnEN3Ws=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "d2caa9377539e3b5ff1272ac3aa2d15f3081069f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "nixos-21.11",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
         "nixpkgs-haskell": "nixpkgs-haskell",
-        "nixpkgs-yaru": "nixpkgs-yaru",
         "system-config": "system-config",
         "tetris": "tetris"
       }
