@@ -2,31 +2,25 @@
   imports = [ ./kitty.nix ];
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
+    font = {
+      package = pkgs.fira;
+      name = "Fira Sans";
+      size = 11;
+    };
     monospaceFont = {
       package = pkgs.fira-code;
       name = "Fira Code";
-      size = 10;
-    };
-    shellTheme = {
-      enable = true;
-      name = "Yaru-dark";
-    };
-    cursorTheme.name = "Adwaita";
-  };
-  gtk = {
-    enable = true;
-    font = {
-      package = pkgs.ibm-plex;
-      name = "IBM Plex Sans Text";
       size = 11;
     };
-    iconTheme = {
-      package = pkgs.yaru-theme;
-      name = "Yaru";
+    documentFont = {
+      package = pkgs.fira;
+      name = "Fira Sans";
+      size = 11;
     };
-    theme = {
-      package = pkgs.yaru-theme;
-      name = "Yaru-dark";
+    legacyTitlebarFont = {
+      package = pkgs.fira;
+      name = "Fira Sans weight=450";
+      size = 11;
     };
   };
   qt = {
