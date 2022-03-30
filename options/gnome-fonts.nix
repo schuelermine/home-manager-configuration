@@ -1,4 +1,5 @@
 { config, pkgs, lib, ... }:
+with lib;
 let
   mkFontOption = desc:
     mkOption {
@@ -11,7 +12,7 @@ let
       + (if font.size != null then " ${builtins.toString font.size}" else ""));
   optionalFontPkg = font:
     if font != null && font.package != null then [ font.package ] else [ ];
-in with lib; {
+in {
   options.gnome = {
     font =
       mkFontOption "The font used by default in GNOME and GTK applications";
