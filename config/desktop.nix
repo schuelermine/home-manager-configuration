@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nixpkgs-yaru, ... }: {
+{ config, pkgs, lib, ... }: {
   imports = [ ./kitty.nix ];
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
@@ -8,8 +8,8 @@
       size = 10;
     };
     shellTheme = {
-      enable = true;      
-      name = "Yaru";
+      enable = true;
+      name = "Yaru-dark";
     };
     cursorTheme.name = "Adwaita";
   };
@@ -21,11 +21,11 @@
       size = 11;
     };
     iconTheme = {
-      package = nixpkgs-yaru.legacyPackages.x86_64-linux.yaru-theme;
+      package = pkgs.yaru-theme;
       name = "Yaru";
     };
     theme = {
-      package = nixpkgs-yaru.legacyPackages.x86_64-linux.yaru-theme;
+      package = pkgs.yaru-theme;
       name = "Yaru-dark";
     };
   };
