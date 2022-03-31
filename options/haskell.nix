@@ -18,7 +18,7 @@ in {
       };
       packages = mkOption {
         type = types.functionTo (types.listOf types.package);
-        description = "Haskell packages ";
+        description = "Haskell packages";
         default = hkgs: [ ];
         defaultText = literalExpression "hkgs: [ ]";
         example = literalExpression "hkgs: [ hkgs.primes ]";

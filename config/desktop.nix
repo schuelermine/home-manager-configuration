@@ -41,6 +41,7 @@
     discord
     element-desktop
     tdesktop
+    signal-desktop
     musescore
     inkscape
     audacity
