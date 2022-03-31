@@ -1,7 +1,10 @@
 { config, pkgs, lib, ... }: {
   imports = [ ./kitty.nix ];
   gnome = {
-    extensions.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
+    extensions.enabledExtensions = with pkgs.gnomeExtensions; [
+      appindicator
+      tiling-assistant
+    ];
     font = {
       package = pkgs.fira;
       name = "Fira Sans";
