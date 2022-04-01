@@ -3,5 +3,15 @@
     "[nix]": {
         "editor.defaultFormatter": "brettm12345.nixfmt-vscode",
         "editor.formatOnSave": true
-    }
+    },
+    "cSpell.words": [
+        "builtins",
+        "dconf",
+        "nixos",
+        "nixpkgs",
+        "pkgs"
+    ],
+    "cSpell.enableFiletypes": [
+        "nix"
+    ]
 }
