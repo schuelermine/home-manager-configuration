@@ -10,7 +10,7 @@ in with lib // import ../alib.nix lib; {
     keyExample = ''"Yaru"'';
   };
   config = {
-    dconf.settings."org.gnome.desktop.interface".cursor-theme = cfg.name;
+    dconf.settings."org/gnome/desktop/interface".cursor-theme = cfg.name;
     home.packages = optional (cfg.package != null) cfg.package;
   };
 }
