@@ -22,6 +22,18 @@
       name = "Fira Sans weight=450";
       size = 11;
     };
+    shellTheme = {
+      package = pkgs.flat-remix-gnome;
+      name = "Flat Remix";
+    };
+    appTheme = {
+      package = pkgs.flat-remix-gtk;
+      name = "Flat Remix";
+    };
+    iconTheme = {
+      package = pkgs.flat-remix-icon-theme;
+      name = "Flat Remix";
+    };
   };
   qt = {
     enable = true;
