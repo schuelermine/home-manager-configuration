@@ -14,6 +14,8 @@ in with lib // import ../alib.nix lib; {
       extraModules =
         [{ options.enable = mkEnableOption "custom GNOME shell themes"; }];
     })
+    (mkAliasOptionModule [ "gnome" "appTheme" ] [ "gtk" "theme" ])
+    (mkAliasOptionModule [ "gnome" "iconTheme" ] [ "gtk" "iconTheme" ])
   ];
   config = mkIf cfg.enable {
     gnome.extensions.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];
