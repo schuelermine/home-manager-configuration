@@ -39,7 +39,7 @@ with nixpkgs-lib // builtins; rec {
     , keyType ? types.nullOr types.str, defaultKey ? null
     , defaultKeyText ? ''""'', keyExample ? null, keyText ? keyName
     , initialKeyText ? capitalize keyText, extraModules ? [ ] }:
-    mkOption {
+    mkOption { # TODO: Add custom description
       description = ''
         ${initialProvidedText} to use.
       '';
