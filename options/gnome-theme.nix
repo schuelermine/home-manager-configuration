@@ -20,7 +20,8 @@ in with lib // import ../alib.nix lib; {
   config = mkMerge [
     (mkIf cfg.shellTheme.enable {
       gnome.extensions.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];
-      dconf.settings."org/gnome/shell/extensions/user-theme".name = cfg.name;
+      dconf.settings."org/gnome/shell/extensions/user-theme".name =
+        cfg.shellTheme.name;
     })
     (mkIf (cfg.appTheme != null || cfg.iconTheme != null) {
       gtk.enable = true;
