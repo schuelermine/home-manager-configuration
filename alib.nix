@@ -44,6 +44,7 @@ with nixpkgs-lib // builtins; rec {
         ${initialProvidedText} to use.
       '';
       type = mkProvidesType args;
+      default = { };
     };
   mkProvidesType = args@{ extraModules ? [ ], ... }:
     types.submoduleWith {
