@@ -33,7 +33,7 @@
     };
     iconTheme = {
       package = pkgs.yaru-theme;
-      name = "Yaru-dark";
+      name = "Yaru";
     };
   };
   qt = {
