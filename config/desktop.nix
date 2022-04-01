@@ -23,17 +23,17 @@
       size = 11;
     };
     shellTheme = {
-      package = pkgs.flat-remix-gnome;
-      name = "Flat Remix";
+      package = pkgs.yaru-theme;
+      name = "Yaru-dark";
       enable = true;
     };
     appTheme = {
-      package = pkgs.flat-remix-gtk;
-      name = "Flat Remix";
+      package = pkgs.yaru-theme;
+      name = "Yaru-dark";
     };
     iconTheme = {
-      package = pkgs.flat-remix-icon-theme;
-      name = "Flat Remix";
+      package = pkgs.yaru-theme;
+      name = "Yaru-dark";
     };
   };
   qt = {
