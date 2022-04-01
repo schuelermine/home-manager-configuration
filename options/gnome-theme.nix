@@ -10,7 +10,7 @@ in with lib // import ../alib.nix lib; {
       defaultKeyText = ''""'';
       keyExample = ''"Yaru"'';
       prefix = [ "gnome" "shellTheme" ];
-      onlyIf = cfg.enable;
+      onlyIf = cfg.shellTheme.enable;
       extraModules =
         [{ options.enable = mkEnableOption "custom GNOME shell themes"; }];
     })
