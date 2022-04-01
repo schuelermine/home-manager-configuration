@@ -25,6 +25,7 @@
     shellTheme = {
       package = pkgs.flat-remix-gnome;
       name = "Flat Remix";
+      enable = true;
     };
     appTheme = {
       package = pkgs.flat-remix-gtk;

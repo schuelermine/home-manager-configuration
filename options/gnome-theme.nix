@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }:
-let cfg = config.gnome.shellTheme;
+let cfg = config.gnome;
 in with lib // import ../alib.nix lib; {
   imports = [
     (mkProvidesModule {
@@ -17,8 +17,13 @@ in with lib // import ../alib.nix lib; {
     (mkAliasOptionModule [ "gnome" "appTheme" ] [ "gtk" "theme" ])
     (mkAliasOptionModule [ "gnome" "iconTheme" ] [ "gtk" "iconTheme" ])
   ];
-  config = mkIf cfg.enable {
-    gnome.extensions.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];
-    dconf.settings."org/gnome/shell/extensions/user-theme".name = cfg.name;
-  };
+  config = mkMerge [
+    (mkIf cfg.shellTheme.enable {
+      gnome.extensions.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];
+      dconf.settings."org/gnome/shell/extensions/user-theme".name = cfg.name;
+    })
+    (mkIf (cfg.appTheme != null || cfg.iconTheme != null) {
+      gtk.enable = true;
+    })
+  ];
 }
