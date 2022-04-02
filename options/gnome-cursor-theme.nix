@@ -9,7 +9,7 @@ in with lib // import ../alib.nix lib; {
       defaultKey = "Adwaita";
       defaultKeyText = ''"Adwaita"'';
       keyExample = ''"Yaru"'';
-      prefix = [ "options" "gnome" "cursorTheme" ];
+      prefix = [ "gnome" "cursorTheme" ];
     })
   ];
   config.dconf.settings."org/gnome/desktop/interface".cursor-theme =
