@@ -108,8 +108,8 @@ in {
       with-shell
     ];
     file.jdk-link = {
-      source = ".openjdk";
-      target = "${pkgs.openjdk}";
+      target = ".openjdk";
+      source = "${pkgs.openjdk}";
     };
   };
 }
