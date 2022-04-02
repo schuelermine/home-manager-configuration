@@ -7,7 +7,8 @@ in {
   programs = {
     haskell.ghc = {
       enable = true;
-      package = nixpkgs-haskell.legacyPackages.x86_64-linux.haskell.packages.ghc922.ghc;
+      package =
+        nixpkgs-haskell.legacyPackages.x86_64-linux.haskell.packages.ghc922.ghc;
       packages = hkgs: [ hkgs.primes ];
     };
     zoxide = {
@@ -106,5 +107,9 @@ in {
       whois
       with-shell
     ];
+    file.jdk-link = {
+      source = ".openjdk";
+      target = pkgs.openjdk;
+    };
   };
 }

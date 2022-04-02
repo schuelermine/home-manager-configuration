@@ -19,8 +19,8 @@
     };
     nixpkgs-haskell.url = "github:NixOS/nixpkgs/haskell-updates";
   };
-  outputs =
-    { system-config, home-manager, fish-functions, nix-lib, self, tetris, nixpkgs-haskell }: {
+  outputs = { system-config, home-manager, fish-functions, nix-lib, self, tetris
+    , nixpkgs-haskell }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
@@ -28,7 +28,9 @@
           username = "anselmschueler";
           stateVersion = "21.11";
           configuration = ./config/home.nix;
-          extraSpecialArgs = { inherit fish-functions nix-lib tetris nixpkgs-haskell; };
+          extraSpecialArgs = {
+            inherit fish-functions nix-lib tetris nixpkgs-haskell;
+          };
           extraModules = map (str: ./options + "/${str}") (builtins.attrNames
             (nix-lib.attrs.filter (_: t: t == "regular")
               (nix-lib.file.readDirRCollapsed ./options)));
