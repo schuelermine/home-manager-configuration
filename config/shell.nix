@@ -109,7 +109,7 @@ in {
     ];
     file.jdk-link = {
       source = ".openjdk";
-      target = pkgs.openjdk;
+      target = "${pkgs.openjdk}";
     };
   };
 }
