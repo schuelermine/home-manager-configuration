@@ -7,8 +7,7 @@ in {
   programs = {
     haskell.ghc = {
       enable = true;
-      package =
-        nixpkgs-haskell.legacyPackages.x86_64-linux.haskell.packages.ghc922.ghc;
+      package = pkgs.haskell.packages.ghc922.ghc;
       packages = hkgs: [ hkgs.primes ];
     };
     zoxide = {
