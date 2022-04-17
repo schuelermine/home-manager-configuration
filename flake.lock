@@ -116,22 +116,6 @@
         "type": "github"
       }
     },
-    "nixpkgs-haskell": {
-      "locked": {
-        "lastModified": 1650067936,
-        "narHash": "sha256-rHNhkm048/FGurrseipoD73e6imPn3Wqz/t6VmSSILw=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "d2a3434bd4720a186f4bd7dc7f0e0f5a0424350f",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "haskell-updates",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "nixpkgs-master": {
       "locked": {
         "lastModified": 1650107726,
@@ -153,7 +137,6 @@
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
-        "nixpkgs-haskell": "nixpkgs-haskell",
         "nixpkgs-master": "nixpkgs-master",
         "system-config": "system-config",
         "tetris": "tetris"
