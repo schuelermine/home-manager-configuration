@@ -21,7 +21,7 @@ let
         type = nullOr (oneOf [ str moduleType ]);
         default = null;
         description = ''
-          The ${name} to use. This sets the <code>$${varName}</code> variable.
+          The ${name} to use. This sets the <code>${varName}</code> variable.
           Can be a string or a submodule specifying a <code>package</code> and an <code>executable</code>.
         '';
       };
