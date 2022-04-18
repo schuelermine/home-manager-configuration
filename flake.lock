@@ -39,11 +39,11 @@
         ]
       },
       "locked": {
-        "lastModified": 1650059391,
-        "narHash": "sha256-2kYYStLpPCcYToW+uZTP0jxmdR95URCret/vfpzJn4s=",
+        "lastModified": 1650234580,
+        "narHash": "sha256-wTmlRedCrDl+XYJom65GMfI3RgA3eZE/w03lD28Txoc=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "7add9ce2e5c517fcc4b25b3ed13e7e28cd325034",
+        "rev": "742c6cb3e9d866e095c629162fe5faf519adeb26",
         "type": "github"
       },
       "original": {
@@ -102,11 +102,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1649986882,
-        "narHash": "sha256-cNsInUFq1MbuvaEmv8x6jetWnmAU+osMpnwKumtjksI=",
+        "lastModified": 1650161686,
+        "narHash": "sha256-70ZWAlOQ9nAZ08OU6WY7n4Ij2kOO199dLfNlvO/+pf8=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5181d5945eda382ff6a9ca3e072ed6ea9b547fee",
+        "rev": "1ffba9f2f683063c2b14c9f4d12c55ad5f4ed887",
         "type": "github"
       },
       "original": {
@@ -118,11 +118,11 @@
     },
     "nixpkgs-master": {
       "locked": {
-        "lastModified": 1650107726,
-        "narHash": "sha256-DMEkW91IZYVsBNBiTT4tcLl7FRNVLlINzYjD5Wq0WoQ=",
+        "lastModified": 1650290512,
+        "narHash": "sha256-/fw+FSXRxIoW6lFjPhkm1G9HcvWH0Xskm87+dIVsk/g=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "077d187a4b37ba81ebe9f6985c1dbd0b19f6d33d",
+        "rev": "b4d1b975e41ed78ca940e7fafea1a61930265fb5",
         "type": "github"
       },
       "original": {
@@ -149,11 +149,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1650101816,
-        "narHash": "sha256-1AAeiQy6nm39lSekwKjFXQzMp/GjzpZGuXTNVh42afM=",
+        "lastModified": 1650290324,
+        "narHash": "sha256-Zf/mTSjkA3GgJRJtSuJRldpkONzlv/QM931qpQSJGUY=",
         "ref": "b0",
-        "rev": "8b011d75e9c3a6a0befa37d17bcd8ac6a29e5db4",
-        "revCount": 119,
+        "rev": "f783b8e3a2ea0c4c03b4d177a5097189c6de26ed",
+        "revCount": 120,
         "type": "git",
         "url": "file:///etc/nixos"
       },
