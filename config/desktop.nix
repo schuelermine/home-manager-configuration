@@ -32,7 +32,7 @@
       name = "Yaru-dark";
     };
     iconTheme = {
-      package = pkgs.yaru-them;
+      package = pkgs.yaru-theme;
       name = "Yaru";
     };
   };
