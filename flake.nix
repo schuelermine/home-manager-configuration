@@ -18,8 +18,8 @@
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
   };
-  outputs = { system-config, home-manager, fish-functions, nix-lib, self, tetris
-    , nixpkgs-master }: {
+  outputs =
+    { system-config, home-manager, fish-functions, nix-lib, self, tetris }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
