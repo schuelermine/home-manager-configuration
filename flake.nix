@@ -17,7 +17,6 @@
       url = "github:schuelermine/tetris/add-nix-build";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
-    nixpkgs-master.url = "github:NixOS/nixpkgs/master";
   };
   outputs = { system-config, home-manager, fish-functions, nix-lib, self, tetris
     , nixpkgs-master }: {
@@ -28,9 +27,7 @@
           username = "anselmschueler";
           stateVersion = "21.11";
           configuration = ./config/home.nix;
-          extraSpecialArgs = {
-            inherit fish-functions nix-lib tetris nixpkgs-master;
-          };
+          extraSpecialArgs = { inherit fish-functions nix-lib tetris; };
           extraModules = map (str: ./options + "/${str}") (builtins.attrNames
             (nix-lib.attrs.filter (_: t: t == "regular")
               (nix-lib.file.readDirRCollapsed ./options)));

@@ -1,7 +1,6 @@
 { config, pkgs, lib, nixpkgs-master, ... }: {
   imports = [ ./kitty.nix ];
-  gnome = let yaru = nixpkgs-master.legacyPackages.x86_64-linux.yaru-theme;
-  in {
+  gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
     font = {
       package = pkgs.fira;
@@ -24,16 +23,16 @@
       size = 11;
     };
     shellTheme = {
-      package = yaru;
+      package = pkgs.yaru-theme;
       name = "Yaru-dark";
       enable = true;
     };
     appTheme = {
-      package = yaru;
+      package = pkgs.yaru-theme;
       name = "Yaru-dark";
     };
     iconTheme = {
-      package = yaru;
+      package = pkgs.yaru-them;
       name = "Yaru";
     };
   };
