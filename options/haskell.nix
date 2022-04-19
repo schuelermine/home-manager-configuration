@@ -54,11 +54,11 @@ in {
       })
     ({ config, ... }:
       mkIf config.programs.haskell.stack.enable {
-        config.home.packages = [ cfg.stack.package ];
+        config.home.packages = [ config.programs.haskell.stack.package ];
       })
     ({ config, ... }:
       mkIf config.programs.haskell.hls.enable {
-        config.home.packages = [ cfg.hls.package ];
+        config.home.packages = [ config.programs.haskell.hls.package ];
       })
   ];
 }
