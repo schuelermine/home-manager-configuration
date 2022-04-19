@@ -33,20 +33,32 @@ in {
       package = mkPackageOption' "HLS" { default = "haskell-language-server"; };
     };
   };
-  config = let cfg = config.programs.haskell;
-  in mkMerge [
-    (mkIf cfg.ghc.enable (if cfg.ghc.package ? withPackages then {
-      config.home.packages =
-        [ (cfg.ghc.package.withPackages cfg.ghc.packages) ];
-    } else {
-      config.home.packages = [ cfg.ghc.package ];
-      warnings = [''
-        You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
-        This disables specifying packages via programs.haskell.ghc.packages.
-      ''];
-    }))
-    (mkIf cfg.cabal.enable { config.home.packages = [ cfg.cabal.package ]; })
-    (mkIf cfg.stack.enable { config.home.packages = [ cfg.stack.package ]; })
-    (mkIf cfg.hls.enable { config.home.packages = [ cfg.hls.package ]; })
+  config = mkMerge [
+    ({ config }:
+      mkIf config.programs.haskell.ghc.enable
+      (if config.programs.haskell.ghc.package ? withPackages then {
+        config.home.packages = [
+          (config.programs.haskell.ghc.package.withPackages
+            config.programs.haskell.packages)
+        ];
+      } else {
+        config.home.packages = [ config.programs.haskell.ghc.package ];
+        warnings = [''
+          You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
+          This disables specifying packages via programs.haskell.ghc.packages.
+        ''];
+      }))
+    ({ config }:
+      mkIf config.programs.haskell.cabal.enable {
+        config.home.packages = [ config.programs.haskell.cabal.package ];
+      })
+    ({ config }:
+      mkIf config.programs.haskell.stack.enable {
+        config.home.packages = [ cfg.stack.package ];
+      })
+    ({ config }:
+      mkIf config.programs.haskell.hls.enable {
+        config.home.packages = [ cfg.hls.package ];
+      })
   ];
 }
