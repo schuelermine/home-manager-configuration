@@ -28,18 +28,27 @@ in {
       enable = mkEnableOption "the Haskell Tool Stack";
       package = mkPackageOption' "Stack" { default = "stack"; };
     };
+    hls = {
+      enable = mkEnableOption "the Haskell Language Server";
+      package = mkPackageOption' "HLS" { default = "haskell-language-server"; };
+    };
   };
   config = let cfg = config.programs.haskell;
-  in {
-    home.packages = optional cfg.cabal.enable cfg.cabal.package
-      ++ optional cfg.ghc.enable (if cfg.ghc.package ? withPackages then
-        cfg.ghc.package.withPackages cfg.ghc.packages
-      else
-        cfg.ghc.package) ++ optional cfg.stack.enable cfg.stack.package;
-    warnings = if !cfg.ghc.package ? withPackages then [''
-      You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
-      This disables specifying packages via programs.haskell.ghc.packages.
-    ''] else
-      [ ];
+  in mkMerge {
+    modules = [
+      (mkIf cfg.ghc.enable (if cfg.ghc.package ? withPackages then {
+        config.home.packages =
+          [ (cfg.ghc.package.withPackages cfg.ghc.packages) ];
+      } else {
+        config.home.packages = [ cfg.ghc.package ];
+        warnings = [''
+          You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
+          This disables specifying packages via programs.haskell.ghc.packages.
+        ''];
+      }))
+      (mkIf cfg.cabal.enable { config.home.packages = [ cfg.cabal.package ]; })
+      (mkIf cfg.stack.enable { config.home.packages = [ cfg.stack.package ]; })
+      (mkIf cfg.hls.enable { config.home.packages = [ cfg.hls.package ]; })
+    ];
   };
 }
