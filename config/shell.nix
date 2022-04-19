@@ -8,6 +8,7 @@ in {
     haskell = {
       ghc.enable = true;
       cabal.enable = true;
+      hls.enable = true;
     };
     zoxide = {
       enable = true;
