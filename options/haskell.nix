@@ -34,7 +34,7 @@ in {
     };
   };
   config = mkMerge [
-    ({ config }:
+    ({ config, ... }:
       mkIf config.programs.haskell.ghc.enable
       (if config.programs.haskell.ghc.package ? withPackages then {
         config.home.packages = [
@@ -48,15 +48,15 @@ in {
           This disables specifying packages via programs.haskell.ghc.packages.
         ''];
       }))
-    ({ config }:
+    ({ config, ... }:
       mkIf config.programs.haskell.cabal.enable {
         config.home.packages = [ config.programs.haskell.cabal.package ];
       })
-    ({ config }:
+    ({ config, ... }:
       mkIf config.programs.haskell.stack.enable {
         config.home.packages = [ cfg.stack.package ];
       })
-    ({ config }:
+    ({ config, ... }:
       mkIf config.programs.haskell.hls.enable {
         config.home.packages = [ cfg.hls.package ];
       })
