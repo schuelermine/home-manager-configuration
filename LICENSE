@@ -344,4 +344,6 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ====
 
-The files that make up the history of this repository are licenced under the same licence terms, except that a section in the file “options/fish-prompt.nix” copied verbatim from the Fish Shell source code enclosed by “''” on both sides is licenced under the GNU General Public Licence Version 2.
+The files that make up the history of this repository are stored in the “.git” directory, and are licenced under the same licence terms, except that a section in the file “options/fish-prompt.nix” copied verbatim from the Fish Shell source code enclosed by “''” on both sides is licenced under the GNU General Public Licence Version 2.
+
+If you are unsure about the licencing of the past versions of this repository, please refrain from copying it.

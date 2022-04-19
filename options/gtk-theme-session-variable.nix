@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }: {
   config = lib.mkIf (config.gtk.enable
     && !builtins.elem config.gtk.theme.name or null [ null "" ]) {
-      home.sessionVariables.GTK_THEME = config.gtk.theme.name;
+      systemd.user.sessionVariables.GTK_THEME = config.gtk.theme.name;
     };
 }
