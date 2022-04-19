@@ -34,21 +34,19 @@ in {
     };
   };
   config = let cfg = config.programs.haskell;
-  in mkMerge {
-    modules = [
-      (mkIf cfg.ghc.enable (if cfg.ghc.package ? withPackages then {
-        config.home.packages =
-          [ (cfg.ghc.package.withPackages cfg.ghc.packages) ];
-      } else {
-        config.home.packages = [ cfg.ghc.package ];
-        warnings = [''
-          You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
-          This disables specifying packages via programs.haskell.ghc.packages.
-        ''];
-      }))
-      (mkIf cfg.cabal.enable { config.home.packages = [ cfg.cabal.package ]; })
-      (mkIf cfg.stack.enable { config.home.packages = [ cfg.stack.package ]; })
-      (mkIf cfg.hls.enable { config.home.packages = [ cfg.hls.package ]; })
-    ];
-  };
+  in mkMerge [
+    (mkIf cfg.ghc.enable (if cfg.ghc.package ? withPackages then {
+      config.home.packages =
+        [ (cfg.ghc.package.withPackages cfg.ghc.packages) ];
+    } else {
+      config.home.packages = [ cfg.ghc.package ];
+      warnings = [''
+        You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
+        This disables specifying packages via programs.haskell.ghc.packages.
+      ''];
+    }))
+    (mkIf cfg.cabal.enable { config.home.packages = [ cfg.cabal.package ]; })
+    (mkIf cfg.stack.enable { config.home.packages = [ cfg.stack.package ]; })
+    (mkIf cfg.hls.enable { config.home.packages = [ cfg.hls.package ]; })
+  ];
 }
