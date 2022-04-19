@@ -5,10 +5,9 @@ let
 in {
   imports = [ ./git.nix ];
   programs = {
-    haskell.ghc = {
-      enable = true;
-      package = pkgs.haskell.packages.ghc902.ghc;
-      packages = hkgs: [ hkgs.primes ];
+    haskell = {
+      ghc.enable = true;
+      cabal.enable = true;
     };
     zoxide = {
       enable = true;
