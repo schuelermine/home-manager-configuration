@@ -33,23 +33,33 @@ in {
       package = mkPackageOption' "HLS" { default = "haskell-language-server"; };
     };
   };
-  imports = optional config.programs.haskell.ghc.enable
-    (if config.programs.haskell.ghc.package ? withPackages then {
-      config.home.packages = [
-        (config.programs.haskell.ghc.package.withPackages
-          config.programs.haskell.packages)
-      ];
-    } else {
-      config.home.packages = [ config.programs.haskell.ghc.package ];
-      warnings = [''
-        You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
-        This disables specifying packages via programs.haskell.ghc.packages.
-      ''];
-    }) ++ optional config.programs.haskell.cabal.enable {
-      config.home.packages = [ config.programs.haskell.cabal.package ];
-    } ++ optional config.programs.haskell.stack.enable {
-      config.home.packages = [ config.programs.haskell.stack.package ];
-    } ++ optional config.programs.haskell.hls.enable {
-      config.home.packages = [ config.programs.haskell.hls.package ];
-    };
+  config = [
+    ({ config, ... }:
+      mkIf config.programs.haskell.ghc.enable
+      (if config.programs.haskell.ghc.package ? withPackages then {
+        config.home.packages = [
+          (config.programs.haskell.ghc.package.withPackages
+            config.programs.haskell.packages)
+        ];
+      } else {
+        config.home.packages = [ config.programs.haskell.ghc.package ];
+        warnings = [''
+          You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
+          This disables specifying packages via programs.haskell.ghc.packages.
+        ''];
+      }))
+    ({ config, ... }:
+      mkIf config.programs.haskell.cabal.enable {
+        config.home.packages = [ config.programs.haskell.cabal.package ];
+      })
+    ({ config, ... }:
+      mkIf config.programs.haskell.stack.enable {
+        config.home.packages = [ config.programs.haskell.stack.package ];
+      })
+    ({ config, ... }:
+      mkIf config.programs.haskell.hls.enable {
+        config.home.packages = [ config.programs.haskell.hls.package ];
+      })
+  ];
+
 }
