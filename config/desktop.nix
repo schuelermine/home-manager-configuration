@@ -1,7 +1,10 @@
 { config, pkgs, lib, nixpkgs-master, ... }: {
   imports = [ ./kitty.nix ];
   gnome = {
-    extensions.enabledExtensions = with pkgs.gnomeExtensions; [ appindicator ];
+    extensions.enabledExtensions = with pkgs.gnomeExtensions; [
+      appindicator
+      gsconnect
+    ];
     font = {
       package = pkgs.fira;
       name = "Fira Sans";
