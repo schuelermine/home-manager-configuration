@@ -8,7 +8,7 @@ in {
     haskell = {
       ghc.enable = true;
       cabal.enable = true;
-      hls.enable = true;
+      language-server.enable = true;
     };
     zoxide = {
       enable = true;
