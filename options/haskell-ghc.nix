@@ -1,4 +1,4 @@
-{ config, pkgs, lib }:
+{ config, pkgs, lib, ... }:
 with lib // import ../alib.nix lib;
 let
   mkPackageFunction' = mkPackageFunction pkgs;
