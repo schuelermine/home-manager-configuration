@@ -29,7 +29,7 @@ in {
       else
         cfg.package)
     ];
-    warnings = mkIf (cfg.enable && pkgsConfigurable) [''
+    warnings = mkIf (cfg.enable && !pkgsConfigurable) [''
       You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
       This disables specifying packages via programs.haskell.ghc.packages.
     ''];
