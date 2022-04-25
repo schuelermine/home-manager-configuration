@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }:
 with lib // import ../alib.nix lib;
 let
-  mkPackageOption' = mkPackageFunction pkgs;
+  mkPackageOption' = mkPackageOption pkgs;
   cfg = config.programs.haskell.language-server;
 in {
   options.programs.haskell.language-server = {
