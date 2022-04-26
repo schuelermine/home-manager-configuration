@@ -72,4 +72,7 @@
     apostrophe
     drawio
   ];
+  fonts.fonts = with pkgs; [
+    zilla-slab
+  ];
 }
