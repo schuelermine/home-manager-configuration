@@ -80,6 +80,7 @@ in {
       lolcat
       lr
       lua
+      unzip
       moreutils
       neofetch
       nixfmt
