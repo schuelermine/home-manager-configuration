@@ -75,4 +75,5 @@
   fonts.fonts = with pkgs; [
     zilla-slab
   ];
+  fonts.fontconfig.enable;
 }
