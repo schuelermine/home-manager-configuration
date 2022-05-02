@@ -11,8 +11,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.fira-code;
-      name = "Fira Code";
+      package = pkgs.agave;
+      name = "Agave";
       size = 11;
     };
     documentFont = {
@@ -72,8 +72,6 @@
     apostrophe
     drawio
   ];
-  fonts.fonts = with pkgs; [
-    zilla-slab
-  ];
+  fonts.fonts = with pkgs; [ zilla-slab ];
   fonts.fontconfig.enable = true;
 }
