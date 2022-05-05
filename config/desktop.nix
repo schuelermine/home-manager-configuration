@@ -11,8 +11,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.agave;
-      name = "Agave";
+      package = pkgs.fira-code;
+      name = "Fira Code";
       size = 11;
     };
     documentFont = {
