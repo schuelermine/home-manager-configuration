@@ -45,6 +45,7 @@ in {
         (builtins.readFile ../source/colors.fish)
         ''
           set fish_features stderr-nocaret qmark-noglob regex-easyesc ampersand-nobg-in-token
+          fish_add_path ~/Software/*/bin
         ''
       ];
     };
@@ -97,8 +98,6 @@ in {
       ripgrep
       sl
       sqlite
-      steam-run
-      steamPackages.steamcmd
       tetris.defaultPackage.x86_64-linux
       toilet
       trash-cli
