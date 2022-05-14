@@ -1,5 +1,25 @@
 {
   "nodes": {
+    "blender": {
+      "inputs": {
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "dir": "blender",
+        "lastModified": 1651652123,
+        "narHash": "sha256-KMVTYeniQPRAdJXct09ejo0sXry9HyrqszjeObChi8Y=",
+        "owner": "edolstra",
+        "repo": "nix-warez",
+        "rev": "91f2ffee657bf834e4475865ae336e2379282d34",
+        "type": "github"
+      },
+      "original": {
+        "dir": "blender",
+        "owner": "edolstra",
+        "repo": "nix-warez",
+        "type": "github"
+      }
+    },
     "fish-functions": {
       "flake": false,
       "locked": {
@@ -102,6 +122,21 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1632918953,
+        "narHash": "sha256-XY3TKBfhP7wCu/SeqrwIkTWkyYHy5W1yRR8pxyzRY9Y=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ee90403e147b181300dffca5b0afa405e14f1945",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "ref": "nixos-21.05",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1652231724,
         "narHash": "sha256-MjalcXFZgcgchp4QqnF05JTkFBBGad5hbksA1EKoP98=",
         "owner": "NixOS",
@@ -116,7 +151,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1643169865,
         "narHash": "sha256-+KIpNRazbc8Gac9jdWCKQkFv9bjceaLaLhlwqUEYu8c=",
@@ -134,6 +169,7 @@
     },
     "root": {
       "inputs": {
+        "blender": "blender",
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
@@ -145,7 +181,7 @@
       "inputs": {
         "nix-lib": "nix-lib_2",
         "nix-symlink": "nix-symlink",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1652388963,
@@ -165,7 +201,7 @@
     "tetris": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1652558141,
