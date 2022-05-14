@@ -71,7 +71,7 @@
     gitui
     apostrophe
     drawio
-    blender.override { cudaSupport = true; }
+    blender_3_1
   ];
   fonts.fonts = with pkgs; [ zilla-slab ];
   fonts.fontconfig.enable = true;
