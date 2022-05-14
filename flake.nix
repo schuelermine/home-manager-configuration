@@ -14,7 +14,10 @@
       url = "github:schuelermine/fish-functions";
     };
     tetris.url = "github:schuelermine/tetris/add-nix-build";
-    blender.url = "github:edolstra/nix-warez?dir=blender";
+    blender = {
+      url = "github:edolstra/nix-warez?dir=blender";
+      inputs.nixpkgs.follows = "system-config/nixpkgs";
+    };
   };
   outputs = { system-config, home-manager, fish-functions, nix-lib, tetris
     , blender, ... }: {
