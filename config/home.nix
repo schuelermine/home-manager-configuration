@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
   imports = [ ./desktop.nix ./shell.nix ];
-  nixpkgs.config.allowUnfree = true;
+  nixpkgs.config.allowUnfreePredicate = (_: true);
   programs.home-manager.enable = true;
 }
