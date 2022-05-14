@@ -204,11 +204,11 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1652556996,
-        "narHash": "sha256-rabdlbEVTkXJ/3JU9Dwr7GTzsXhG4MqqwbPQ6Fm3hkg=",
+        "lastModified": 1652558076,
+        "narHash": "sha256-AYt1079ntZJqAvmoqmKXyL+h0eAAwcGK7+FY8d+fRoE=",
         "owner": "schuelermine",
         "repo": "tetris",
-        "rev": "29f57028e9300a6283032f02c3458e7bc28e5a0a",
+        "rev": "9e70aa042e2e0af0fe07952007571e8e5751a44b",
         "type": "github"
       },
       "original": {
