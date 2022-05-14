@@ -1,4 +1,4 @@
-{ config, pkgs, lib, blender, ... }: {
+{ config, pkgs, lib, ... }: {
   imports = [ ./kitty.nix ];
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [
