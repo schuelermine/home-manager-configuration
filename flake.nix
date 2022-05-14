@@ -13,13 +13,11 @@
       flake = false;
       url = "github:schuelermine/fish-functions";
     };
-    tetris = {
-      url = "github:schuelermine/tetris/add-nix-build";
-      inputs.nixpkgs.follows = "system-config/nixpkgs";
-    };
+    tetris.url = "github:schuelermine/tetris/add-nix-build";
+    blender.url = "github:edolstra/nix-warez?dir=blender";
   };
-  outputs =
-    { system-config, home-manager, fish-functions, nix-lib, self, tetris }: {
+  outputs = { system-config, home-manager, fish-functions, nix-lib, tetris
+    , blender, ... }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
@@ -27,10 +25,11 @@
           username = "anselmschueler";
           stateVersion = "21.11";
           configuration = ./config/home.nix;
-          extraSpecialArgs = { inherit fish-functions nix-lib tetris; };
+          extraSpecialArgs = { inherit fish-functions nix-lib tetris blender; };
           extraModules = map (str: ./options + "/${str}") (builtins.attrNames
             (nix-lib.attrs.filter (_: t: t == "regular")
               (nix-lib.file.readDirRCollapsed ./options)));
+          # TODO Fix this horrendous mess (& re-develop nix-lib)
         };
     };
 }

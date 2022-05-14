@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nixpkgs-master, ... }: {
+{ config, pkgs, lib, blender, ... }: {
   imports = [ ./kitty.nix ];
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [
@@ -71,6 +71,7 @@
     gitui
     apostrophe
     drawio
+    blender.packages.x86_64-linux.default
   ];
   fonts.fonts = with pkgs; [ zilla-slab ];
   fonts.fontconfig.enable = true;
