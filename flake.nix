@@ -18,23 +18,25 @@
   };
   outputs = { system-config, home-manager, fish-functions, nix-lib, tetris
     , blender, ... }: {
-      homeConfigurations.anselmschueler =
-        home-manager.lib.homeManagerConfiguration {
-          system = "x86_64-linux";
-          homeDirectory = "/home/anselmschueler";
-          username = "anselmschueler";
-          stateVersion = "21.11";
-          configuration = ./config/home.nix;
-          extraSpecialArgs = { inherit fish-functions nix-lib; };
-          extraModules = map (str: ./options + "/${str}") (builtins.attrNames
-            (nix-lib.attrs.filter (_: t: t == "regular")
-              (nix-lib.file.readDirRCollapsed ./options)))
-            ++ # Overlays for packages
-            [{
-              nixpkgs.overlays =
-                [ blender.overlays.default tetris.overlays.default ];
-            }];
-          # TODO Fix this horrendous mess (& re-develop nix-lib)
-        };
+      homeConfigurations.anselmschueler = let system = "x86_64-linux";
+      in home-manager.lib.homeManagerConfiguration {
+        inherit system;
+        homeDirectory = "/home/anselmschueler";
+        username = "anselmschueler";
+        stateVersion = "21.11";
+        configuration = ./config/home.nix;
+        extraSpecialArgs = { inherit fish-functions nix-lib; };
+        extraModules = map (str: ./options + "/${str}") (builtins.attrNames
+          (nix-lib.attrs.filter (_: t: t == "regular")
+            (nix-lib.file.readDirRCollapsed ./options)))
+          ++ # Overlays for packages
+          [{
+            nixpkgs.overlays = [
+              blender.overlays.${system}.default
+              tetris.overlays.${system}.default
+            ];
+          }];
+        # TODO Fix this horrendous mess (& re-develop nix-lib)
+      };
     };
 }
