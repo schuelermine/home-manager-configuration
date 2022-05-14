@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fish-functions, nix-lib, tetris, nixpkgs-haskell, ... }:
+{ config, pkgs, lib, fish-functions, nix-lib, ... }:
 let
   editor =
     "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
@@ -98,7 +98,7 @@ in {
       ripgrep
       sl
       sqlite
-      tetris.defaultPackage.x86_64-linux
+      tetris
       toilet
       trash-cli
       unicode-paracode

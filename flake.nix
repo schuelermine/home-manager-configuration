@@ -25,10 +25,15 @@
           username = "anselmschueler";
           stateVersion = "21.11";
           configuration = ./config/home.nix;
-          extraSpecialArgs = { inherit fish-functions nix-lib tetris blender; };
+          extraSpecialArgs = { inherit fish-functions nix-lib; };
           extraModules = map (str: ./options + "/${str}") (builtins.attrNames
             (nix-lib.attrs.filter (_: t: t == "regular")
-              (nix-lib.file.readDirRCollapsed ./options)));
+              (nix-lib.file.readDirRCollapsed ./options)))
+            ++ # Overlays for packages
+            [{
+              nixpkgs.overlays =
+                [ blender.overlays.default tetris.overlays.default ];
+            }];
           # TODO Fix this horrendous mess (& re-develop nix-lib)
         };
     };

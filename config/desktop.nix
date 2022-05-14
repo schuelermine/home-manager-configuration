@@ -71,7 +71,7 @@
     gitui
     apostrophe
     drawio
-    blender.packages.x86_64-linux.default
+    blender
   ];
   fonts.fonts = with pkgs; [ zilla-slab ];
   fonts.fontconfig.enable = true;
