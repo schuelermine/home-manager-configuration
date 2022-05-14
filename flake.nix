@@ -14,10 +14,8 @@
       url = "github:schuelermine/fish-functions";
     };
     tetris.url = "github:schuelermine/tetris/add-nix-build";
-    blender.url = "github:edolstra/nix-warez?dir=blender";
   };
-  outputs = { system-config, home-manager, fish-functions, nix-lib, tetris
-    , blender, ... }: {
+  outputs = { system-config, home-manager, fish-functions, nix-lib, tetris, ... }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
@@ -32,7 +30,7 @@
             ++ # Overlays for packages
             [{
               nixpkgs.overlays =
-                [ blender.overlays.default tetris.overlays.default ];
+                [ tetris.overlays.default ];
             }];
           # TODO Fix this horrendous mess (& re-develop nix-lib)
         };
