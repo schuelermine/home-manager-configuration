@@ -18,10 +18,9 @@
       url = "github:schuelermine/nix-warez/blender-improved?dir=blender";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
-    my-nixpkgs.url = "git+file:///media/external-data/Code/nixpkgs";
   };
   outputs = { system-config, home-manager, fish-functions, nix-lib, tetris
-    , blender, my-nixpkgs, ... }: {
+    , blender, ... }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
@@ -29,7 +28,7 @@
           username = "anselmschueler";
           stateVersion = "21.11";
           configuration = ./config/home.nix;
-          extraSpecialArgs = { inherit fish-functions nix-lib my-nixpkgs; };
+          extraSpecialArgs = { inherit fish-functions nix-lib; };
           extraModules = map (str: ./options + "/${str}") (builtins.attrNames
             (nix-lib.attrs.filter (_: t: t == "regular")
               (nix-lib.file.readDirRCollapsed ./options)))
