@@ -76,6 +76,21 @@
         "type": "github"
       }
     },
+    "my-nixpkgs": {
+      "locked": {
+        "lastModified": 1652714683,
+        "narHash": "sha256-5bq6sjT768wttYe4FxvXQ1K7hH2NR1BJtsEwTS1HXxk=",
+        "ref": "refs/heads/add/curtail",
+        "rev": "c1bda225fe31e77d1933025682ca5e6139e960cd",
+        "revCount": 377320,
+        "type": "git",
+        "url": "file:///media/external-data/Code/nixpkgs"
+      },
+      "original": {
+        "type": "git",
+        "url": "file:///media/external-data/Code/nixpkgs"
+      }
+    },
     "nix-lib": {
       "locked": {
         "lastModified": 1645734491,
@@ -161,6 +176,7 @@
         "blender": "blender",
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
+        "my-nixpkgs": "my-nixpkgs",
         "nix-lib": "nix-lib",
         "system-config": "system-config",
         "tetris": "tetris"
