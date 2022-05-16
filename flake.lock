@@ -78,11 +78,8 @@
     },
     "my-nixpkgs": {
       "locked": {
-        "lastModified": 1652727559,
-        "narHash": "sha256-G1/RmIgszhanXzD+zmSPtnjnE8A5SES6RMAcT8pCyqM=",
-        "ref": "refs/heads/add/curtail",
-        "rev": "8e4eff3f9080c012346ca03ec3746ce2f2238149",
-        "revCount": 377320,
+        "lastModified": 1652727651,
+        "narHash": "sha256-XLiAfIAhUUmA83phHSiPaItlwCUoJaaOuAUtDcCmovY=",
         "type": "git",
         "url": "file:///media/external-data/Code/nixpkgs"
       },
