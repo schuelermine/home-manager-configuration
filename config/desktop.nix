@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, my-nixpkgs, ... }: {
   imports = [ ./kitty.nix ];
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [
@@ -48,6 +48,7 @@
     };
   };
   home.packages = with pkgs; [
+    my-nixpkgs.legacyPackages.x86_64-linux.curtail
     spotify
     github-desktop
     gnome.dconf-editor
