@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let cfg = config.gnome.cursorTheme;
-in with lib // import ../alib.nix lib; {
+in with lib // import ../lib.nix lib; {
   imports = [
     (mkProvidesModule {
       providedText = "the cursor theme";
