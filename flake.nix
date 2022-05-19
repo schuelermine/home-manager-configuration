@@ -20,7 +20,7 @@
     };
   };
   outputs =
-    { system-config, home-manager, fish-functions, nix-lib, tetris, blender }: {
+    { system-config, home-manager, fish-functions, nix-lib, tetris, blender, ... }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
