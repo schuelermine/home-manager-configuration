@@ -108,29 +108,13 @@
         "type": "github"
       }
     },
-    "nix-symlink": {
-      "locked": {
-        "lastModified": 1640521420,
-        "narHash": "sha256-R6qYEpMt5RU8si9iGa4N7uEfZ3gyGRFHJL2d9z7D4Ho=",
-        "owner": "schuelermine",
-        "repo": "nix-symlink",
-        "rev": "731907586979ae1be85675c4e37eb3a65d9d3bfb",
-        "type": "github"
-      },
-      "original": {
-        "owner": "schuelermine",
-        "ref": "b0",
-        "repo": "nix-symlink",
-        "type": "github"
-      }
-    },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1652572281,
-        "narHash": "sha256-UEsrB5XBOj0blVe2ldc0lHvlhLYZJDHroELMHlg7XxA=",
+        "lastModified": 1652794215,
+        "narHash": "sha256-erVj41IcCPDWdt8CwT60ygD+SY/uhqip3RXwiESOCVk=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "43ff6cb1c027d13dc938b88eb099462210fea52f",
+        "rev": "242efdc5a5aff8222c1152c0e4b9262bd02915b6",
         "type": "github"
       },
       "original": {
@@ -169,15 +153,14 @@
     "system-config": {
       "inputs": {
         "nix-lib": "nix-lib_2",
-        "nix-symlink": "nix-symlink",
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1652865386,
-        "narHash": "sha256-sAvJrOdZ6NmMtFMjfv5FYcKaZto8jAHHeFF8ISmh70I=",
+        "lastModified": 1652984561,
+        "narHash": "sha256-SkOMnNo2kHkoJDcnFxzNMf+2q/mqCbugO6ZA+jIAifc=",
         "ref": "b0",
-        "rev": "f164b71368b751f1a3384ba6c8ef5242f10ddc80",
-        "revCount": 134,
+        "rev": "54fc6467061a79d2b32d7d6db9cf0ab3f2f459bb",
+        "revCount": 139,
         "type": "git",
         "url": "file:///etc/nixos"
       },
