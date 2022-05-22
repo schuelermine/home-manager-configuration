@@ -4,6 +4,7 @@
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [
       appindicator
       gsconnect
+      blur-my-shell
     ];
     font = {
       package = pkgs.fira;
