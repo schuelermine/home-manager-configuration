@@ -16,6 +16,7 @@ in {
     };
     exa.enable = true;
     direnv.enable = true;
+    nushell.enable = true;
     fish = {
       enable = true;
       shellAliases = {
@@ -69,11 +70,10 @@ in {
       gh
       glow
       gnuapl
-      #j
       jacinda
       jc
       jd
-      #jl
+      jl
       jp
       jq
       links2
