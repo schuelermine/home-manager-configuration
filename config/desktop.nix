@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  imports = [ ./kitty.nix ];
+  imports = [ ./kitty.nix ./vscodium.nix ];
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [
       appindicator
