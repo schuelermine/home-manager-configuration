@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }:
-with lib // import ../lib.nix lib;
+with lib // import ../lib2.nix lib;
 let
   mkPackageOption' = mkPackageOption pkgs;
   cfg = config.programs.haskell.cabal;

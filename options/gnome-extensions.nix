@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }:
-with builtins // lib // import ../lib.nix lib;
+with builtins // lib // import ../lib2.nix lib;
 let cfg = config.gnome.extensions;
 in {
   imports = mkRenamedSuperoptionModules "gnome" [ "gnome" "extensions" ] [

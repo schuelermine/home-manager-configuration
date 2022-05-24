@@ -1,5 +1,5 @@
 { pkgs, lib, ... }:
-with lib // builtins // import ../lib.nix lib;
+with lib // builtins // import ../lib2.nix lib;
 let
   mkModule = { name, varName ? toUpper (head (split " " name))
     , optionName ? snakeCase name }:

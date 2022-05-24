@@ -1,6 +1,6 @@
 { config, pkgs, lib, ... }:
 let cfg = config.gnome;
-in with lib // import ../lib.nix lib; {
+in with lib // import ../lib2.nix lib; {
   imports = [
     (mkProvidesModule {
       providedText = "the custom shell theme";
