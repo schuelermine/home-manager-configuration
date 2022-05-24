@@ -62,7 +62,6 @@
     musescore
     inkscape
     audacity
-    vscode-fhs
     rnix-lsp
     kdenlive
     virt-manager
