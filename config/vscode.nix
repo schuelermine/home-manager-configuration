@@ -4,7 +4,7 @@
     userSettings = {
       "update.mode" = "none";
 
-      "editor.fontFamily" = config.gnome.monospaceFont;
+      "editor.fontFamily" = config.gnome.monospaceFont.name;
       "editor.fontLigatures" = true;
 
       "window.titleBarStyle" = "custom";
