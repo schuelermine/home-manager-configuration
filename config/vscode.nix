@@ -7,6 +7,7 @@
       "editor.fontFamily" = config.gnome.monospaceFont.name;
       "editor.fontLigatures" = true;
 
+      "window.zoomLevel" = 1;
       "window.titleBarStyle" = "custom";
       "window.menuBarVisibility" = "compact";
 
