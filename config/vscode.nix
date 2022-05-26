@@ -23,6 +23,7 @@
       "haskell.serverExecutablePath" =
         "${pkgs.haskell-language-server}/bin/haskell-language-server";
       "makefile.makePath" = "${pkgs.gnumake}/bin/make";
+      "powershell.powerShellAdditionalExePaths" = "${pkgs.powershell}/bin/pwsh";
 
       "files.insertFinalNewline" = true;
 
