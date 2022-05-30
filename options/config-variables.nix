@@ -34,5 +34,9 @@ let
       };
     };
 in {
-  imports = map mkModule [ { name = "editor"; } { name = "visual editor"; } ];
+  imports = map mkModule [
+    { name = "editor"; }
+    { name = "visual editor"; }
+    { name = "pager"; }
+  ];
 }

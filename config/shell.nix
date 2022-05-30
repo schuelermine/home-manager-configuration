@@ -52,6 +52,7 @@ in {
   };
   home = {
     inherit editor;
+    pager = pkgs.most;
     packages = with pkgs; [
       bat
       bit
