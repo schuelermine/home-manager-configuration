@@ -1,8 +1,4 @@
-{ config, pkgs, lib, fish-functions, nix-lib, ... }:
-let
-  editor =
-    "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
-in {
+{ config, pkgs, lib, fish-functions, nix-lib, ... }: {
   imports = [ ./git.nix ];
   programs = {
     haskell = {
@@ -20,7 +16,7 @@ in {
     fish = {
       enable = true;
       shellAliases = {
-        nano = editor;
+        nano = config.home.editor;
         sl = "sl -e";
         ls = "exa --sort=type";
         ll = "ls --classify --long";
@@ -51,8 +47,9 @@ in {
     };
   };
   home = {
-    inherit editor;
-    pager = pkgs.most;
+    editor =
+      "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
+    pager = "most";
     packages = with pkgs; [
       bat
       bit
@@ -104,6 +101,7 @@ in {
       weechat
       whois
       with-shell
+      most
     ];
     file.jdk-link = {
       target = ".openjdk";
