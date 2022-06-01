@@ -19,8 +19,8 @@
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
   };
-  outputs =
-    { system-config, home-manager, fish-functions, nix-lib, tetris, blender, ... }: {
+  outputs = { system-config, home-manager, fish-functions, nix-lib, tetris
+    , blender, ... }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
@@ -29,9 +29,8 @@
           stateVersion = "21.11";
           configuration = ./config/home.nix;
           extraSpecialArgs = { inherit fish-functions nix-lib; };
-          extraModules = map (str: ./options + "/${str}") (builtins.attrNames
-            (nix-lib.attrs.filter (_: t: t == "regular")
-              (nix-lib.file.readDirRCollapsed ./options)))
+          extraModules = map (path: ./options + "/${path}")
+            (builtins.attrNames (builtins.readDir ./options))
             ++ # Overlays for packages
             [{
               nixpkgs.overlays =
