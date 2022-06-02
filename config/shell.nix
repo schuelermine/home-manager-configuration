@@ -49,7 +49,7 @@
   home = {
     editor =
       "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
-    pager = "most";
+    pager = "less -R";
     packages = with pkgs; [
       bat
       bit
@@ -101,7 +101,6 @@
       weechat
       whois
       with-shell
-      most
     ];
     file.jdk-link = {
       target = ".openjdk";
