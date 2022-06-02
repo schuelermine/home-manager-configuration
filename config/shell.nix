@@ -41,7 +41,6 @@
     fish = {
       enable = true;
       shellAliases = {
-        nano = config.home.editor;
         sl = "sl -e";
         ls = "exa --sort=type";
         ll = "ls --classify --long";
