@@ -1,6 +1,31 @@
 { config, pkgs, lib, fish-functions, nix-lib, ... }: {
   imports = [ ./git.nix ];
   programs = {
+    less = {
+      enable = true;
+      options = [ "-r" ];
+    };
+    nano = {
+      enable = true;
+      config = ''
+        set smarthome 
+        set boldtext
+        set tabstospaces
+        set historylog
+        set positionlog
+        set softwrap
+        set zap
+        set atblanks
+        set autoindent
+        set cutfromcursor
+        set linenumber
+        set mouse
+        set indicator
+        set afterends
+        set suspendable
+        set stateflags
+      '';
+    };
     haskell = {
       ghc.enable = true;
       cabal.enable = true;
@@ -47,9 +72,6 @@
     };
   };
   home = {
-    editor =
-      "nano --smarthome --boldtext --tabstospaces --historylog --positionlog --softwrap --zap --atblanks --autoindent --cutfromcursor --linenumbers --mouse --indicator --afterends --suspendable --stateflags";
-    pager = "less -R";
     packages = with pkgs; [
       bat
       bit
