@@ -1,7 +1,6 @@
 { config, pkgs, lib, ... }:
 with lib // import ../lib2.nix lib;
 let
-  mkPackageOption' = mkPackageOption pkgs;
   cfg = config.programs.haskell.ghc;
   pkgsConfigurable = cfg.package ? withPackages;
 in {
@@ -10,7 +9,7 @@ in {
       "the Glorious Glasgow Haskell Compilation System (compiler)" // {
         default = true;
       };
-    package = mkPackageOption' "GHC" {
+    package = mkPackageOption "GHC" {
       default = [ "ghc" ];
       example = "pkgs.haskell.packages.ghc921.ghc";
     };
