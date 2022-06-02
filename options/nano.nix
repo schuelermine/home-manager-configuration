@@ -17,7 +17,7 @@ in {
   };
   config.home = mkIf cfg.enable {
     packages = [ cfg.package ];
-    files.".nanorc".text = cfg.config;
+    file.".nanorc".text = cfg.config;
     sessionVariables."EDITOR" = "${cfg.package}";
   };
 }
