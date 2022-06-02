@@ -4,7 +4,7 @@ let cfg = config.programs.nano;
 in {
   options.programs.nano = {
     enable = mkEnableOption "nano";
-    package = mkPackageOption "nano" { };
+    package = mkPackageOption pkgs "nano" { };
     config = mkOption {
       type = lib.types.lines;
       description = ''

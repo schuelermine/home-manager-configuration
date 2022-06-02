@@ -9,7 +9,7 @@ in {
       "the Glorious Glasgow Haskell Compilation System (compiler)" // {
         default = true;
       };
-    package = mkPackageOption "GHC" {
+    package = mkPackageOption pkgs "GHC" {
       default = [ "ghc" ];
       example = "pkgs.haskell.packages.ghc921.ghc";
     };

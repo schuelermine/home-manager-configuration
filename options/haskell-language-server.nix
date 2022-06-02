@@ -5,7 +5,7 @@ in {
   options.programs.haskell.language-server = {
     enable = mkEnableOption "the Haskell Language Server";
     package =
-      mkPackageOption "HLS" { default = [ "haskell-language-server" ]; };
+      mkPackageOption pkgs "HLS" { default = [ "haskell-language-server" ]; };
   };
   config.home.packages = mkIf cfg.enable [ cfg.package ];
 }
