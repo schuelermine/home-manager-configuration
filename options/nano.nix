@@ -18,6 +18,6 @@ in {
   config.home = mkIf cfg.enable {
     packages = [ cfg.package ];
     file.".nanorc".text = cfg.config;
-    sessionVariables."EDITOR" = "${cfg.package}";
+    sessionVariables."EDITOR" = "${cfg.package}/bin/nano";
   };
 }

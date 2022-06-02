@@ -18,7 +18,6 @@
         set atblanks
         set autoindent
         set cutfromcursor
-        set linenumber
         set mouse
         set indicator
         set afterends

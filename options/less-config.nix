@@ -13,7 +13,7 @@ in {
   config.home = mkIf cfg.enable {
     sessionVariables = {
       "LESS" = builtins.concatStringsSep " " cfg.options;
-      "PAGER" = "${pkgs.less}";
+      "PAGER" = "${pkgs.less}/bin/less";
     };
   };
 }
