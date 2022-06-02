@@ -17,6 +17,7 @@
         set zap
         set atblanks
         set autoindent
+        set linenumbers
         set cutfromcursor
         set mouse
         set indicator
