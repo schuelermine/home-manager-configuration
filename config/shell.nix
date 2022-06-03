@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fish-functions, nix-lib, ... }: {
+{ config, pkgs, lib, fish-functions, nix-lib, nixos-repl-setup, ... }: {
   imports = [ ./git.nix ];
   programs = {
     less = {
@@ -8,7 +8,7 @@
     nano = {
       enable = true;
       config = ''
-        set smarthome 
+        set smarthome
         set boldtext
         set tabstospaces
         set historylog
@@ -71,6 +71,10 @@
     };
   };
   home = {
+    file."repl.nix".text = ''
+      let repl-setup = import ${nixos-repl-setup};
+      in repl-setup { source = "git+file:///etc/nixos"; isUrl = true; } // builtins
+    '';
     packages = with pkgs; [
       bat
       bit
@@ -123,9 +127,5 @@
       whois
       with-shell
     ];
-    file.jdk-link = {
-      target = ".openjdk";
-      source = "${pkgs.openjdk}";
-    };
   };
 }

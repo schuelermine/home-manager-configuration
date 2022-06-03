@@ -27,6 +27,7 @@
       "powershell.powerShellAdditionalExePaths" = {
         ${pkgs.powershell.version} = "${pkgs.powershell}/bin/pwsh";
       };
+      "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
 
       "files.insertFinalNewline" = true;
 

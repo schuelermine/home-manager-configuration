@@ -108,6 +108,22 @@
         "type": "github"
       }
     },
+    "nixos-repl-setup": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1647542729,
+        "narHash": "sha256-yMeYygnz02gtdcipfxpSvig12SIJibrwh0dTOZVXmP4=",
+        "owner": "schuelermine",
+        "repo": "nixos-repl-setup",
+        "rev": "ccebaaaf4858b7b1c005d2ec17806163b3a8d901",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "repo": "nixos-repl-setup",
+        "type": "github"
+      }
+    },
     "nixpkgs": {
       "locked": {
         "lastModified": 1653931853,
@@ -146,6 +162,7 @@
         "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
+        "nixos-repl-setup": "nixos-repl-setup",
         "system-config": "system-config",
         "tetris": "tetris"
       }
