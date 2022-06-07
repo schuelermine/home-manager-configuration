@@ -1,5 +1,5 @@
-nix-lib:
-with nix-lib; rec {
+{ lib, lib1 }:
+with lib // lib1; rec {
   impossible = throw "This error message should never occur.";
   mkRenamedSuperoptionModules = n1: n2: k:
     map (g:
