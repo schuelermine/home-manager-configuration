@@ -24,22 +24,6 @@
         "type": "github"
       }
     },
-    "fish-functions": {
-      "flake": false,
-      "locked": {
-        "lastModified": 1646838715,
-        "narHash": "sha256-0lTXr+Z3gSMB+QDZ308Hw4Q1BiXuIYqoXbRqG1S5pAg=",
-        "owner": "schuelermine",
-        "repo": "fish-functions",
-        "rev": "f83dc9c72dab701503a148f7391cdb0eca56add7",
-        "type": "github"
-      },
-      "original": {
-        "owner": "schuelermine",
-        "repo": "fish-functions",
-        "type": "github"
-      }
-    },
     "flake-compat": {
       "flake": false,
       "locked": {
@@ -211,7 +195,6 @@
     "root": {
       "inputs": {
         "blender": "blender",
-        "fish-functions": "fish-functions",
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
         "nixos-repl-setup": "nixos-repl-setup",
