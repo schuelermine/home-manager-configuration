@@ -31,7 +31,7 @@
         nixpkgsLib = nixpkgs.lib;
         includeNixpkgsLib = false;
       };
-      lib2 = import ./lib2 lib1;
+      lib2 = import ./lib2.nix lib1;
     in {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
