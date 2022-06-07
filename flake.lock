@@ -163,6 +163,10 @@
         "home-manager": "home-manager",
         "nix-lib": "nix-lib",
         "nixos-repl-setup": "nixos-repl-setup",
+        "nixpkgs": [
+          "system-config",
+          "nixpkgs"
+        ],
         "system-config": "system-config",
         "tetris": "tetris"
       }

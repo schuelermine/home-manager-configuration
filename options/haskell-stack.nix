@@ -1,5 +1,5 @@
-{ config, pkgs, lib, ... }:
-with lib // import ../lib2.nix lib;
+{ config, pkgs, lib, lib1, lib2, ... }:
+with builtins // lib // lib1 // lib2;
 let cfg = config.programs.haskell.stack;
 in {
   options.programs.haskell.stack = {

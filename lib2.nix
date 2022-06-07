@@ -1,34 +1,6 @@
-nixpkgs-lib:
-with nixpkgs-lib // builtins; rec {
+nix-lib:
+with nix-lib; rec {
   impossible = throw "This error message should never occur.";
-  guardKey = cond: name: if cond then name else null;
-  guardKeyNull = value: guardKey (value != null);
-  id = x: x;
-  compose = f1: f2: x: f1 (f2 x);
-  compose12 = f: g: x: f (g x x);
-  compose21 = g: f1: f2: x: g (f1 x) (f2 x);
-  composeN = foldl' compose id;
-  dupArgs = f: x: f x x;
-  sandwich = x: xs: [ x ] ++ xs ++ [ x ];
-  mkList = x: xs: [ x ] ++ xs;
-  reList = f1: f2: xs: mkList (f1 (head xs)) (f2 (tail xs));
-  onList = f: compose21 f head tail;
-  mapHead = f: xs: mkList (f (head xs)) (tail xs);
-  mkNestedAttrs = path: value:
-    if path == [ ] then
-      value
-    else {
-      ${head path} = mkNestedAttrs (tail path) value;
-    };
-  filterSegments = compose concatLists
-    (map (x: if isList x then x else if x == "" then [ ] else [ x ]));
-  splitChars = str: filterSegments (split "" str);
-  concatStrings = foldl' (c1: c2: c1 + c2) "";
-  asChars = f: str: concatStrings (f (splitChars str));
-  capitalize = asChars (mapHead toUpper);
-  wrap = x: if isList x then x else [ x ];
-  words = str: filterSegments (split " " str);
-  snakeCase = str: concatStrings (reList id (map capitalize) (words str));
   mkRenamedSuperoptionModules = n1: n2: k:
     map (g:
       let gs = wrap g;
@@ -73,7 +45,7 @@ with nixpkgs-lib // builtins; rec {
         type = types.nullOr types.package;
         default = defaultPackage;
         defaultText = literalExpression defaultPackageText;
-        ${guardKeyNull packageExample "example"} =
+        ${guardNull packageExample "example"} =
           literalExpression packageExample;
         description = ''
           Package providing ${providedText}. This package will be installed to your profile.
@@ -84,7 +56,7 @@ with nixpkgs-lib // builtins; rec {
         type = keyType;
         default = defaultKey;
         defaultText = literalExpression defaultKeyText;
-        ${guardKeyNull keyExample "example"} = literalExpression keyExample;
+        ${guardNull keyExample "example"} = literalExpression keyExample;
         description =
           "${initialKeyText} of ${providedText} within the package.";
       };

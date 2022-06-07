@@ -1,6 +1,7 @@
-{ config, pkgs, lib, ... }:
+{ config, pkgs, lib, lib1, lib2, ... }:
+with builtins // lib // lib1 // lib2;
 let cfg = config.gnome.cursorTheme;
-in with lib // import ../lib2.nix lib; {
+in {
   imports = [
     (mkProvidesModule {
       providedText = "the cursor theme";

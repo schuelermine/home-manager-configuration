@@ -4,6 +4,7 @@
   # license = builtins.readFile ./LICENSE;
   inputs = {
     system-config.url = "git+file:///etc/nixos?ref=b0";
+    nixpkgs.follows = "system-config/nixpkgs";
     nix-lib.url = "github:schuelermine/nix-lib/b0";
     home-manager = {
       url = "github:nix-community/home-manager";
@@ -24,7 +25,14 @@
     };
   };
   outputs = { system-config, home-manager, fish-functions, nixos-repl-setup
-    , nix-lib, tetris, blender, ... }: {
+    , nix-lib, tetris, blender, nixpkgs, ... }:
+    let
+      lib1 = nix-lib.lib {
+        nixpkgsLib = nixpkgs.lib;
+        includeNixpkgsLib = false;
+      };
+      lib2 = import ./lib2 lib1;
+    in {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           system = "x86_64-linux";
@@ -33,7 +41,7 @@
           stateVersion = "21.11";
           configuration = ./config/home.nix;
           extraSpecialArgs = {
-            inherit fish-functions nix-lib nixos-repl-setup;
+            inherit fish-functions nixos-repl-setup lib1 lib2;
           };
           extraModules = map (path: ./options + "/${path}")
             (builtins.attrNames (builtins.readDir ./options))
@@ -42,7 +50,6 @@
               nixpkgs.overlays =
                 [ blender.overlays.default tetris.overlays.default ];
             }];
-          # TODO Fix this horrendous mess (& re-develop nix-lib)
         };
     };
 }
