@@ -10,10 +10,6 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
-    fish-functions = {
-      flake = false;
-      url = "github:schuelermine/fish-functions";
-    };
     nixos-repl-setup = {
       flake = false;
       url = "github:schuelermine/nixos-repl-setup";
@@ -24,8 +20,8 @@
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
   };
-  outputs = { system-config, home-manager, fish-functions, nixos-repl-setup
-    , nix-lib, tetris, blender, nixpkgs, ... }:
+  outputs = { system-config, home-manager, nixos-repl-setup, nix-lib, tetris
+    , blender, nixpkgs, ... }:
     let
       lib1 = nix-lib.lib {
         nixpkgsLib = nixpkgs.lib;
@@ -43,9 +39,7 @@
           username = "anselmschueler";
           stateVersion = "21.11";
           configuration = ./config/home.nix;
-          extraSpecialArgs = {
-            inherit fish-functions nixos-repl-setup lib1 lib2;
-          };
+          extraSpecialArgs = { inherit nixos-repl-setup lib1 lib2; };
           extraModules = map (path: ./options + "/${path}")
             (builtins.attrNames (builtins.readDir ./options))
             ++ # Overlays for packages

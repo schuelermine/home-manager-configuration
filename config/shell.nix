@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fish-functions, lib1, nixos-repl-setup, ... }: {
+{ config, pkgs, lib, lib1, nixos-repl-setup, ... }: {
   imports = [ ./git.nix ];
   programs = {
     less = {
@@ -51,16 +51,7 @@
         icat = "kitty +kitten icat";
         uni = "kitty +kitten unicode_input";
       };
-      functions = lib1.attrs.mapX (filename: type:
-        if type == "regular" then
-          let matches = builtins.match "(.+)\\.fish" filename;
-          in if matches != null && builtins.length matches == 1 then {
-            ${builtins.elemAt matches 0} =
-              builtins.readFile "${fish-functions}/${filename}";
-          } else
-            { }
-        else
-          { }) (lib1.file.readDirRCollapsed "${fish-functions}");
+      functions = { }; # TODO Migrate fish-functions o’er ’ere
       prompt = builtins.readFile ../source/fish_prompt.fish;
       shellInit = builtins.concatStringsSep "\n" [
         (builtins.readFile ../source/colors.fish)
