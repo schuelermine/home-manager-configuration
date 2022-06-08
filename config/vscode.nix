@@ -37,6 +37,8 @@
         "editor.tabSize" = 2;
         "editor.defaultFormatter" = "brettm12345.nixfmt-vscode";
       };
+
+      "[haskell]" = { "editor.tabSize" = 2; };
     };
   };
 }
