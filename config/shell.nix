@@ -29,7 +29,7 @@
     haskell = {
       ghc = {
         enable = true;
-        package = pkgs.haskell.compiler.ghc923;
+        package = pkgs.haskellPackages.ghc923.ghc;
         packages = hkgs: with hkgs; [ primes singletons singletons-base ];
       };
       cabal.enable = true;
