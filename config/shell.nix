@@ -27,15 +27,9 @@
       '';
     };
     haskell = {
-      ghc = {
-        enable = true;
-        package = pkgs.haskell.packages.ghc923.ghc;
-      };
+      ghc.enable = true;
       cabal.enable = true;
-      language-server = {
-        enable = true;
-        package = pkgs.haskell.packages.ghc923.haskell-language-server;
-      };
+      language-server.enable = true;
     };
     zoxide = {
       enable = true;
