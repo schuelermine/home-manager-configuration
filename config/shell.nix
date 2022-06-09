@@ -27,7 +27,10 @@
       '';
     };
     haskell = {
-      ghc.enable = true;
+      ghc = {
+        enable = true;
+        packages = hkgs: [ primes singletons singletons-base ];
+      };
       cabal.enable = true;
       language-server.enable = true;
     };
