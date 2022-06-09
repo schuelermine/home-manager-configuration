@@ -32,7 +32,10 @@
         package = pkgs.haskell.packages.ghc923.ghc;
       };
       cabal.enable = true;
-      language-server.enable = true;
+      language-server = {
+        enable = true;
+        package = pkgs.haskell.packages.ghc923.haskell-language-server;
+      };
     };
     zoxide = {
       enable = true;
