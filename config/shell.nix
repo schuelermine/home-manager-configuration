@@ -1,4 +1,4 @@
-{ config, pkgs, lib, lib1, nixos-repl-setup, ... }: {
+{ config, pkgs, lib, nixos-repl-setup, ... }: {
   imports = [ ./git.nix ];
   programs = {
     less = {
