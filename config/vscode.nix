@@ -29,8 +29,10 @@
       };
       "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
 
-      "files.insertFinalNewline" = true;
+      "editor.inlineSuggest.enabled" = true;
+      "editor.acceptSuggestionOnEnter" = "off";
 
+      "files.insertFinalNewline" = true;
       "editor.insertSpaces" = true;
 
       "[nix]" = {
