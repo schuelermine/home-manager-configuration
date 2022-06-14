@@ -86,7 +86,6 @@
       gnuapl
       jacinda
       jc
-      jd
       jp
       jq
       links2
