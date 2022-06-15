@@ -226,11 +226,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1655297928,
-        "narHash": "sha256-glzPmjrMO/QUW3blElb6Rf79PGgMI2jRHwI9aJVrkD0=",
+        "lastModified": 1655298101,
+        "narHash": "sha256-zmuSw7X37KSopWZqhzkhkyloQoL7LDJ668/MkPsXb2M=",
         "owner": "schuelermine",
         "repo": "ret",
-        "rev": "885468b3ad5597093801e60882c426a3907b478a",
+        "rev": "04335584ad0148ca52dbce017f341f5e6675d475",
         "type": "github"
       },
       "original": {
