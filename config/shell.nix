@@ -106,6 +106,7 @@
       powershell
       procs
       python310
+      ret
       ripgrep
       sl
       sqlite

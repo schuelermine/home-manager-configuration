@@ -42,6 +42,20 @@
     },
     "flake-utils": {
       "locked": {
+        "lastModified": 1653893745,
+        "narHash": "sha256-0jntwV3Z8//YwuOjzhV2sgJJPt+HY6KhU7VZUL0fKZQ=",
+        "owner": "numtide",
+        "repo": "flake-utils",
+        "rev": "1ed9fb1935d260de5fe1c2f7ee0ebaae17ed2fa1",
+        "type": "github"
+      },
+      "original": {
+        "id": "flake-utils",
+        "type": "indirect"
+      }
+    },
+    "flake-utils_2": {
+      "locked": {
         "lastModified": 1642700792,
         "narHash": "sha256-XqHrk7hFb+zBvRg6Ghl+AZDq03ov6OshJLiSWOoX5es=",
         "owner": "numtide",
@@ -130,6 +144,20 @@
     },
     "nixpkgs": {
       "locked": {
+        "lastModified": 1654953433,
+        "narHash": "sha256-TwEeh4r50NdWHFAHQSyjCk2cZxgwUfcCCAJOhPdXB28=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "90cd5459a1fd707819b9a3fb9c852beaaac3b79a",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_2": {
+      "locked": {
         "lastModified": 1655130522,
         "narHash": "sha256-5dzlxE4okyu+M39yeVtHWQXzDZQxFF5rUB1iY9R6Lb4=",
         "owner": "NixOS",
@@ -144,7 +172,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1643169865,
         "narHash": "sha256-+KIpNRazbc8Gac9jdWCKQkFv9bjceaLaLhlwqUEYu8c=",
@@ -192,6 +220,25 @@
         "type": "gitlab"
       }
     },
+    "ret": {
+      "inputs": {
+        "flake-utils": "flake-utils",
+        "nixpkgs": "nixpkgs"
+      },
+      "locked": {
+        "lastModified": 1655297928,
+        "narHash": "sha256-glzPmjrMO/QUW3blElb6Rf79PGgMI2jRHwI9aJVrkD0=",
+        "owner": "schuelermine",
+        "repo": "ret",
+        "rev": "885468b3ad5597093801e60882c426a3907b478a",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "repo": "ret",
+        "type": "github"
+      }
+    },
     "root": {
       "inputs": {
         "blender": "blender",
@@ -202,6 +249,7 @@
           "system-config",
           "nixpkgs"
         ],
+        "ret": "ret",
         "system-config": "system-config",
         "tetris": "tetris"
       }
@@ -209,7 +257,7 @@
     "system-config": {
       "inputs": {
         "nix-lib": "nix-lib_2",
-        "nixpkgs": "nixpkgs"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1655244257,
@@ -228,8 +276,8 @@
     },
     "tetris": {
       "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_2"
+        "flake-utils": "flake-utils_2",
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1652962342,

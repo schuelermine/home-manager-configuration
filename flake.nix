@@ -19,9 +19,10 @@
       url = "github:schuelermine/nix-warez/blender-improved?dir=blender";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
+    ret.url = "github:schuelermine/ret";
   };
   outputs = { system-config, home-manager, nixos-repl-setup, nix-lib, tetris
-    , blender, nixpkgs, ... }:
+    , blender, ret, nixpkgs, ... }:
     let
       lib1 = nix-lib.lib {
         nixpkgsLib = nixpkgs.lib;
@@ -44,8 +45,11 @@
             (builtins.attrNames (builtins.readDir ./options))
             ++ # Overlays for packages
             [{
-              nixpkgs.overlays =
-                [ blender.overlays.default tetris.overlays.default ];
+              nixpkgs.overlays = [
+                blender.overlays.default
+                tetris.overlays.default
+                ret.overlays.default
+              ];
             }];
         };
     };
