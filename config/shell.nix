@@ -27,8 +27,29 @@
       '';
     };
     haskell = {
-      ghc.enable = true;
+      ghc = {
+        enable = true;
+        packages = hkgs:
+          with hkgs;
+          [ # Core libraries
+            array
+            bytestring
+            deepseq
+            directory
+            filepath
+            mtl
+            primitive
+            process
+            random
+            stm
+            template-haskell
+            text
+            unix
+            vector
+          ] ++ [ monad-coroutine ];
+      };
       cabal.enable = true;
+      stack.enable = true;
       language-server.enable = true;
     };
     zoxide = {
