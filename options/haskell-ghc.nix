@@ -15,6 +15,7 @@ in {
     };
     packages = mkOption {
       type = types.functionTo (types.listOf types.package);
+      apply = x: if !builtins.isFunction x then _: x else x;
       description = "The Haskell packages to install for GHC";
       default = hkgs: [ ];
       defaultText = literalExpression "hkgs: [ ]";
