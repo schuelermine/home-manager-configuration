@@ -31,22 +31,7 @@
         enable = true;
         packages = hkgs:
           with hkgs;
-          [ # Core libraries
-            array
-            bytestring
-            deepseq
-            directory
-            filepath
-            mtl
-            primitive
-            process
-            random
-            stm
-            template-haskell
-            text
-            unix
-            vector
-          ] ++ [ monad-coroutine ];
+          [ primitive random vector ] ++ [ monad-coroutine ];
       };
       cabal.enable = true;
       stack.enable = true;
