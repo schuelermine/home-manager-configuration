@@ -29,9 +29,7 @@
     haskell = {
       ghc = {
         enable = true;
-        packages = hkgs:
-          with hkgs;
-          [ primitive random vector ] ++ [ monad-coroutine ];
+        packages = hkgs: with hkgs; [ primitive random vector monad-coroutine ];
       };
       cabal.enable = true;
       stack.enable = true;
