@@ -96,9 +96,10 @@
       lolcat
       lr
       lua
-      unzip
       moreutils
       neofetch
+      nix-index
+      nix-top
       nixfmt
       nixpkgs-fmt
       nms
@@ -118,6 +119,7 @@
       toilet
       trash-cli
       unicode-paracode
+      unzip
       weechat
       whois
       with-shell
