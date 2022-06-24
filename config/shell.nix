@@ -43,8 +43,14 @@
     direnv.enable = true;
     nushell = {
       enable = true;
-      configFile.source = ../source/config.nu;
-      envFile.source = ../source/env.nu;
+      configFile.text = builtins.concatStringsSep "\n" [
+        (builtins.readFile ../source/config.default.nu)
+        (builtins.readFile ../source/config.nu)
+      ];
+      envFile.text = builtins.concatStringsSep "\n" [
+        (builtins.readFile ../source/env.default.nu)
+        (builtins.readFile ../source/env.nu)
+      ];
     };
     fish = {
       enable = true;
@@ -63,9 +69,7 @@
       prompt = builtins.readFile ../source/prompt.fish;
       shellInit = builtins.concatStringsSep "\n" [
         (builtins.readFile ../source/colors.fish)
-        ''
-          set fish_features stderr-nocaret qmark-noglob regex-easyesc ampersand-nobg-in-token
-        ''
+        (builtins.readFile ../source/features.fish)
       ];
     };
   };

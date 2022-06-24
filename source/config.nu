@@ -1,5 +1,3 @@
-let-env PROMPT_INDICATOR = "$ "
-
 def random-choice [] {
   let $xs = $in;
   let $len = ($xs | length);
