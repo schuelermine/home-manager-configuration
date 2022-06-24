@@ -43,18 +43,8 @@
     direnv.enable = true;
     nushell = {
       enable = true;
-      configFile.text = ''
-        def random-choice [] {
-          let $xs = $in;
-          let $len = ($xs | length);
-          $xs | select (random integer 0..($len - 1))
-        }
-
-        def column-exists? [name] { $name in ($in | columns) }
-
-        def-env cd-v [$cmd] { cd (dirname (realpath (which $cmd).path)) }
-      '';
-      envFile.text = "";
+      configFile.source = ../source/config.nu;
+      envFile.source = ../source/env.nu;
     };
     fish = {
       enable = true;
@@ -70,7 +60,7 @@
         uni = "kitty +kitten unicode_input";
       };
       functions = { }; # TODO Migrate fish-functions o’er ’ere
-      prompt = builtins.readFile ../source/fish_prompt.fish;
+      prompt = builtins.readFile ../source/prompt.fish;
       shellInit = builtins.concatStringsSep "\n" [
         (builtins.readFile ../source/colors.fish)
         ''
