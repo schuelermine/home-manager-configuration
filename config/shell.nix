@@ -41,7 +41,11 @@
     };
     exa.enable = true;
     direnv.enable = true;
-    nushell.enable = true;
+    nushell = {
+      enable = true;
+      configFile.text = "";
+      envFile.text = "";
+    };
     fish = {
       enable = true;
       shellAliases = {

@@ -9,17 +9,16 @@
       },
       "locked": {
         "dir": "blender",
-        "lastModified": 1652618113,
-        "narHash": "sha256-H6BarEZhvxCgklOy1AnLbC6NhLcedZglNiZVExbAfxo=",
-        "owner": "schuelermine",
+        "lastModified": 1654777471,
+        "narHash": "sha256-MaFjE7StlSGn6Nt4In7h8H6A6Yinn6iUa95luFvTU0c=",
+        "owner": "edolstra",
         "repo": "nix-warez",
-        "rev": "ff68a714aa798c016049e3a780b8d6510b02b188",
+        "rev": "60cff69c394cb9beefdda7602053c39bb8d635aa",
         "type": "github"
       },
       "original": {
         "dir": "blender",
-        "owner": "schuelermine",
-        "ref": "blender-improved",
+        "owner": "edolstra",
         "repo": "nix-warez",
         "type": "github"
       }

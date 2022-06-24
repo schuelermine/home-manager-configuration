@@ -16,7 +16,7 @@
     };
     tetris.url = "github:schuelermine/tetris/add-nix-build";
     blender = {
-      url = "github:schuelermine/nix-warez/blender-improved?dir=blender";
+      url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
     ret.url = "github:schuelermine/ret";
