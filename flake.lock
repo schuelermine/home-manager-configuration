@@ -72,7 +72,10 @@
     "home-manager": {
       "inputs": {
         "flake-compat": "flake-compat",
-        "nixpkgs": "nixpkgs",
+        "nixpkgs": [
+          "system-config",
+          "nixpkgs"
+        ],
         "nmd": "nmd",
         "nmt": "nmt",
         "utils": "utils"
@@ -141,22 +144,6 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1654230545,
-        "narHash": "sha256-8Vlwf0x8ow6pPOK2a04bT+pxIeRnM1+O0Xv9/CuDzRs=",
-        "owner": "nixos",
-        "repo": "nixpkgs",
-        "rev": "236cc2971ac72acd90f0ae3a797f9f83098b17ec",
-        "type": "github"
-      },
-      "original": {
-        "owner": "nixos",
-        "ref": "nixos-unstable",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
-    "nixpkgs_2": {
-      "locked": {
         "lastModified": 1654953433,
         "narHash": "sha256-TwEeh4r50NdWHFAHQSyjCk2cZxgwUfcCCAJOhPdXB28=",
         "owner": "NixOS",
@@ -169,7 +156,7 @@
         "type": "indirect"
       }
     },
-    "nixpkgs_3": {
+    "nixpkgs_2": {
       "locked": {
         "lastModified": 1655624069,
         "narHash": "sha256-7g1zwTdp35GMTERnSzZMWJ7PG3QdDE8VOX3WsnOkAtM=",
@@ -185,7 +172,7 @@
         "type": "github"
       }
     },
-    "nixpkgs_4": {
+    "nixpkgs_3": {
       "locked": {
         "lastModified": 1643169865,
         "narHash": "sha256-+KIpNRazbc8Gac9jdWCKQkFv9bjceaLaLhlwqUEYu8c=",
@@ -236,7 +223,7 @@
     "ret": {
       "inputs": {
         "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs"
       },
       "locked": {
         "lastModified": 1655448775,
@@ -270,7 +257,7 @@
     "system-config": {
       "inputs": {
         "nix-lib": "nix-lib_2",
-        "nixpkgs": "nixpkgs_3"
+        "nixpkgs": "nixpkgs_2"
       },
       "locked": {
         "lastModified": 1655848515,
@@ -290,7 +277,7 @@
     "tetris": {
       "inputs": {
         "flake-utils": "flake-utils_2",
-        "nixpkgs": "nixpkgs_4"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1652962342,

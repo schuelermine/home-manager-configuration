@@ -34,8 +34,9 @@
       };
     in {
       homeConfigurations.anselmschueler =
-        home-manager.lib.homeManagerConfiguration {
+        home-manager.lib.homeManagerConfiguration rec {
           system = "x86_64-linux";
+          pkgs = import nixpkgs { inherit system; };
           homeDirectory = "/home/anselmschueler";
           username = "anselmschueler";
           stateVersion = "21.11";

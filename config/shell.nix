@@ -83,6 +83,7 @@
       execline
       fd
       figlet
+      fortune
       fq
       fzf
       gh
