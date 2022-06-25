@@ -101,6 +101,7 @@
       jc
       jp
       jq
+      libguestfs
       links2
       lolcat
       lr
@@ -108,6 +109,7 @@
       moreutils
       neofetch
       nix-index
+      nix-info
       nix-top
       nixfmt
       nixpkgs-fmt
@@ -115,6 +117,7 @@
       nnn
       nodejs_latest
       num-utils
+      moreutils
       openjdk
       pick
       powershell
