@@ -13,7 +13,7 @@
     monospaceFont = {
       package = pkgs.ubuntu_font_family;
       name = "Ubuntu Mono";
-      size = 11;
+      size = 12;
     };
     documentFont = {
       package = pkgs.fira;
