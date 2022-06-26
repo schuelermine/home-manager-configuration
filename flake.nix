@@ -37,7 +37,7 @@
         home-manager.lib.homeManagerConfiguration rec {
           pkgs = import nixpkgs { system = "x86_64-linux"; };
           extraSpecialArgs = { inherit nixos-repl-setup lib1 lib2; };
-          modules = map (path: ./options + "/${path}")
+          modules = map (path: ./config + "/${path}")
             (builtins.attrNames (builtins.readDir ./config))
             ++ map (path: ./options + "/${path}")
             (builtins.attrNames (builtins.readDir ./options)) ++ [{
