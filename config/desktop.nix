@@ -11,8 +11,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.fira-code;
-      name = "Fira Code";
+      package = pkgs.ubuntu_font_family;
+      name = "Ubuntu Mono";
       size = 11;
     };
     documentFont = {
