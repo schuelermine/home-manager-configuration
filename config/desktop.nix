@@ -1,5 +1,4 @@
 { config, pkgs, lib, ... }: {
-  imports = [ ./kitty.nix ./vscode.nix ];
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [
       appindicator

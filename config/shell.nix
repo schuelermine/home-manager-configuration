@@ -1,5 +1,4 @@
 { config, pkgs, lib, nixos-repl-setup, ... }: {
-  imports = [ ./git.nix ];
   programs = {
     less = {
       enable = true;

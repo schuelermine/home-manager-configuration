@@ -35,17 +35,12 @@
     in {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration rec {
-          system = "x86_64-linux";
-          pkgs = import nixpkgs { inherit system; };
-          homeDirectory = "/home/anselmschueler";
-          username = "anselmschueler";
-          stateVersion = "21.11";
-          configuration = ./config/home.nix;
+          pkgs = import nixpkgs { system = "x86_64-linux"; };
           extraSpecialArgs = { inherit nixos-repl-setup lib1 lib2; };
-          extraModules = map (path: ./options + "/${path}")
-            (builtins.attrNames (builtins.readDir ./options))
-            ++ # Overlays for packages
-            [{
+          modules = map (path: ./options + "/${path}")
+            (builtins.attrNames (builtins.readDir ./config))
+            ++ map (path: ./options + "/${path}")
+            (builtins.attrNames (builtins.readDir ./options)) ++ [{
               nixpkgs.overlays = [
                 blender.overlays.default
                 tetris.overlays.default
