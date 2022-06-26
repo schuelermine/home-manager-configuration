@@ -6,6 +6,7 @@
       "update.mode" = "none";
 
       "editor.fontFamily" = config.gnome.monospaceFont.name;
+      "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
 
       "window.zoomLevel" = 1;

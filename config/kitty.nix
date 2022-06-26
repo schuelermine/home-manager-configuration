@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.kitty = {
     enable = true;
-    font = config.gnome.monospaceFont // { size = 14; };
+    font = config.gnome.monospaceFont;
     keybindings = {
       "ctrl+tab" = "next_tab";
       "ctrl+shift+tab" = "previous_tab";
