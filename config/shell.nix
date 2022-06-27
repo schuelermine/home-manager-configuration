@@ -96,6 +96,7 @@
       gh
       glow
       gnuapl
+      haskellPackages.hoogle
       jacinda
       jc
       jp
