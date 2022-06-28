@@ -11,6 +11,7 @@
 
       "window.zoomLevel" = 1;
       "window.titleBarStyle" = "custom";
+      "window.dialogStyle" = "custom";
       "window.menuBarVisibility" = "compact";
 
       "workbench.productIconTheme" = "icons-carbon";
