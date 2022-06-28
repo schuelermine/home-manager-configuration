@@ -9,10 +9,11 @@
       "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
 
-      "window.zoomLevel" = 1;
       "window.titleBarStyle" = "custom";
       "window.dialogStyle" = "custom";
+      "files.simpleDialog.enable" = true;
       "window.menuBarVisibility" = "compact";
+      "window.zoomLevel" = 1;
 
       "workbench.productIconTheme" = "icons-carbon";
       "workbench.colorTheme" = "IBM Carbon Color Theme";
