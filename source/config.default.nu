@@ -179,7 +179,7 @@ let default_theme = {
 # The default config record. This is where much of your global configuration is setup.
 let-env config = {
   filesize_metric: false
-  table_mode: rounded # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
+  table_mode: light # basic, compact, compact_double, light, thin, with_love, rounded, reinforced, heavy, none, other
   use_ls_colors: true
   rm_always_trash: false
   color_config: $default_theme
