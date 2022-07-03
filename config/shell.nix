@@ -94,6 +94,7 @@
       cmatrix
       cowsay
       deno
+      duf
       execline
       fd
       figlet
@@ -114,6 +115,7 @@
       lr
       lua
       moreutils
+      ncdu
       neofetch
       nix-index
       nix-info
@@ -123,6 +125,7 @@
       nms
       nnn
       nodejs_latest
+      nodePackages.typescript
       num-utils
       moreutils
       openjdk
@@ -135,6 +138,7 @@
       sl
       sqlite
       tetris
+      tldr
       toilet
       trash-cli
       unicode-paracode
