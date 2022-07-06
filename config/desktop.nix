@@ -11,8 +11,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.jetbrains-mono;
-      name = "JetBrains Mono";
+      package = pkgs.fixedsys-excelsior;
+      name = "Fixedsys Excelsior";
       size = 14;
     };
     documentFont = {
