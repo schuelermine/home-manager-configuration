@@ -102,6 +102,7 @@
       fq
       fzf
       gh
+      gitui
       glow
       gnuapl
       haskellPackages.hoogle

@@ -68,10 +68,10 @@
     transmission-gtk
     obs-studio
     asciinema
-    gitui
     apostrophe
     drawio
     blender_3_1
+    tangram
   ];
   fonts.fonts = with pkgs; [ zilla-slab ];
   fonts.fontconfig.enable = true;
