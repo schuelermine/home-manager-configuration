@@ -11,8 +11,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.jetbrains-mono;
-      name = "JetBrains Mono";
+      package = pkgs.ubuntu_font_family;
+      name = "Ubuntu Mono";
       size = 14;
     };
     documentFont = {
