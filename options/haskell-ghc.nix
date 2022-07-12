@@ -9,9 +9,8 @@ in {
       "the Glorious Glasgow Haskell Compilation System (compiler)" // {
         default = true;
       };
-    package = mkPackageOption pkgs "GHC" {
+    package = mkPackageOption config.programs.haskell.haskellPackages "GHC" {
       default = [ "ghc" ];
-      example = "pkgs.haskell.packages.ghc921.ghc";
     };
     packages = mkOption {
       type = types.functionTo (types.listOf types.package);

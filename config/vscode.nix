@@ -25,7 +25,7 @@
         "path" = "${pkgs.openjdk}/lib/openjdk";
       }];
       "haskell.serverExecutablePath" =
-        "${pkgs.haskell-language-server}/bin/haskell-language-server";
+        "${config.programs.haskell.haskellPackages.haskell-language-server}/bin/haskell-language-server";
       "makefile.makePath" = "${pkgs.gnumake}/bin/make";
       "powershell.powerShellAdditionalExePaths" = {
         ${pkgs.powershell.version} = "${pkgs.powershell}/bin/pwsh";
