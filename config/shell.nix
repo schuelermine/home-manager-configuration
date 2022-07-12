@@ -28,6 +28,7 @@
     haskell = {
       ghc = {
         enable = true;
+        package = pkgs.haskell.packages.ghc923.ghc;
         packages = hkgs:
           with hkgs; [
             primitive
