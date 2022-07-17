@@ -10,9 +10,9 @@ in {
     default = [ ];
     example = ''[ "-R" ]'';
   };
-  config.home = mkIf cfg.enable {
+  config = mkIf cfg.enable {
     systemd.user.sessionVariables."LESS" =
       builtins.concatStringsSep " " cfg.options;
-    pager = "${pkgs.less}/bin/less";
+    home.pager = "${pkgs.less}/bin/less";
   };
 }
