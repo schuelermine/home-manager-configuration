@@ -26,7 +26,7 @@ let
         '';
       };
       config.home = {
-        sessionVariables = {
+        systemd.user.sessionVariables = {
           ${guardNull cfg varName} =
             if isString cfg then cfg else toString cfg.executable;
         };
