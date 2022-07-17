@@ -1,5 +1,5 @@
-{ pkgs, lib, ... }:
-with lib // builtins // import ../lib2.nix lib;
+{ pkgs, lib, lib1, lib2, ... }:
+with builtins // lib // lib1 // lib2;
 let
   mkModule = { name, varName ? toUpper (head (split " " name))
     , optionName ? snakeCase name }:
@@ -27,7 +27,7 @@ let
       };
       config.home = {
         sessionVariables = {
-          ${guardKeyNull cfg varName} =
+          ${guardNull cfg varName} =
             if isString cfg then cfg else toString cfg.executable;
         };
         packages = mkIf (isAttrs cfg && cfg.package != null) [ cfg.package ];
