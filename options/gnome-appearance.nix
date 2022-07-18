@@ -1,5 +1,5 @@
-{ config, pkgs, lib, lib1, lib2, ... }:
-with builtins // lib // lib1 // lib2;
+{ config, pkgs, lib, lib1, ... }:
+with builtins // lib // lib1;
 let cfg = config.gnome;
 in {
   imports = [

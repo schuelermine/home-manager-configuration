@@ -1,5 +1,5 @@
-{ pkgs, lib, lib1, lib2, ... }:
-with builtins // lib // lib1 // lib2;
+{ pkgs, lib, lib1, ... }:
+with builtins // lib // lib1;
 let
   mkModule = { name, varName ? toUpper (head (split " " name))
     , optionName ? snakeCase name }:
