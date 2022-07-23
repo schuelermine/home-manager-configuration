@@ -5,8 +5,5 @@
     homeDirectory = "/home/anselmschueler";
     username = "anselmschueler";
     stateVersion = "21.11";
-    packages = with pkgs; [
-      flatpak
-    ];
   };
 }
