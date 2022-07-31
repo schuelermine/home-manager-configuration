@@ -6,6 +6,6 @@
 
   config = lib.mkIf (config.gtk.enable && config.gtk.useThemeSessionVariable
     && !builtins.elem config.gtk.theme.name or null [ null "" ]) {
-      systemd.user.sessionVariables.GTK_THEME = config.gtk.theme.name;
+      home.sessionVariables.GTK_THEME = config.gtk.theme.name;
     };
 }

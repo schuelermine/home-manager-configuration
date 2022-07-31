@@ -28,7 +28,7 @@ let
       config = {
         home.packages =
           mkIf (isAttrs cfg && cfg.package != null) [ cfg.package ];
-        systemd.user.sessionVariables = {
+        home.sessionVariables = {
           ${guardNull cfg varName} =
             if isString cfg then cfg else toString cfg.executable;
         };
