@@ -140,9 +140,7 @@
       sl
       sqlite
       tetris
-      tldr
       toilet
-      trash-cli
       unicode-paracode
       unzip
       weechat
