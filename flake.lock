@@ -1,5 +1,20 @@
 {
   "nodes": {
+    "base-modules": {
+      "locked": {
+        "lastModified": 1659726414,
+        "narHash": "sha256-vC3+B0d1djaytFhkA69lUuWAQaAk0tLe1W6rp4WvzHE=",
+        "owner": "schuelermine",
+        "repo": "nixos-base-modules",
+        "rev": "fbb09d364cb441b727f61f2eb8320b7aac76bd60",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "repo": "nixos-base-modules",
+        "type": "github"
+      }
+    },
     "blender": {
       "inputs": {
         "nixpkgs": [
@@ -9,11 +24,11 @@
       },
       "locked": {
         "dir": "blender",
-        "lastModified": 1658405965,
-        "narHash": "sha256-Be/2Fmq4vZIv/o1OFW1pcGEgfv0Rhg0WSxtSBfoz0QU=",
+        "lastModified": 1659558036,
+        "narHash": "sha256-+Y+SXjUztrNKmkCuatvXNYymwHtx3+eyKq6mxOWpNPE=",
         "owner": "edolstra",
         "repo": "nix-warez",
-        "rev": "d683d1f01ecacd0083f158f6b7c3c5f7008ef5e1",
+        "rev": "a793946aa8b994e25cfe232593eb3a7c3207821d",
         "type": "github"
       },
       "original": {
@@ -138,11 +153,11 @@
     },
     "nixpkgs_2": {
       "locked": {
-        "lastModified": 1659305579,
-        "narHash": "sha256-SFeQTmh7hc9Y2fSkooHaoS8mDfPa04sfmUCtQ8MA6Pg=",
+        "lastModified": 1659522808,
+        "narHash": "sha256-HBcM19nGhI3IWwPNVlYb0MZ8VW6iKp4JbAVkeIHVykc=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "5857574d45925585baffde730369414319228a84",
+        "rev": "168d1c578909dc143ba52dbed661c36e76b12b36",
         "type": "github"
       },
       "original": {
@@ -204,15 +219,16 @@
     },
     "system-config": {
       "inputs": {
+        "base-modules": "base-modules",
         "nix-lib": "nix-lib_2",
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1659477322,
-        "narHash": "sha256-8efi7IGjycR0JT4u9Up3irN9jus80LROpfPz8TG6yiQ=",
+        "lastModified": 1659732207,
+        "narHash": "sha256-YKP8MDp3nB1a3evT341puXgINpqCH5wkM8E8unbZjBM=",
         "ref": "b0",
-        "rev": "ae12f4e9c331792d4b42a1319c378d61b3bc74b9",
-        "revCount": 184,
+        "rev": "56d523100ee86e27e4d3a2ed8728a61245545445",
+        "revCount": 189,
         "type": "git",
         "url": "file:///etc/nixos"
       },
