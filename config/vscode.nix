@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.vscode = {
     enable = true;
-    package = pkgs.vscode-fhs;
+    package = pkgs.vscode;
     userSettings = {
       "update.mode" = "none";
 
