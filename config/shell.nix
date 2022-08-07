@@ -91,6 +91,7 @@
       boxes
       browsh
       btop
+      cargo
       chafa
       cmatrix
       cowsay
@@ -136,6 +137,7 @@
       procs
       python310
       ret
+      rustc
       ripgrep
       sl
       sqlite
