@@ -40,7 +40,8 @@ in {
         if cfg.cargoHome == null then ".cargo" else cfg.cargoHome
       }/config.toml".source = (tomlFormat.generate "cargo-config" cfg.settings);
     };
-    sessionVariables.CARGO_HOME = mkIf (cfg.cargoHome != null)
-      "${config.home.homeDirectory}/${cfg.cargoHome}";
+    sessionVariables = mkIf (cfg.cargoHome != null) {
+      CARGO_HOME = "${config.home.homeDirectory}/${cfg.cargoHome}";
+    };
   };
 }

@@ -42,6 +42,12 @@
       stack.enable = true;
       language-server.enable = true;
     };
+    rust = {
+      rustc.enable = true;
+      cargo.enable = true;
+      clippy.enable = true;
+      rustfmt.enable = true;
+    };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
@@ -91,7 +97,6 @@
       boxes
       browsh
       btop
-      cargo
       chafa
       cmatrix
       cowsay
@@ -137,8 +142,6 @@
       procs
       python310
       ret
-      rustc
-      rustfmt
       ripgrep
       sl
       sqlite
