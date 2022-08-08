@@ -1,4 +1,4 @@
-{ config, pkgs, lib, lib1 }:
+{ config, pkgs, lib, lib1, ... }:
 with builtins // lib // lib1;
 let
   cfg = config.programs.rust.rustfmt;
