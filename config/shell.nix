@@ -138,6 +138,7 @@
       python310
       ret
       rustc
+      rustfmt
       ripgrep
       sl
       sqlite
