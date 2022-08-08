@@ -5,5 +5,5 @@ in {
   options.systemd.user.copySessionVariables = mkEnableOption
     "copying all session variables to the systemd session variables";
   config.systemd.user.sessionVariables =
-    mkIf cfg.copySessionVariables config.home.user;
+    mkIf cfg.copySessionVariables config.home.sessionVariables;
 }
