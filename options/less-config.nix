@@ -11,8 +11,9 @@ in {
     example = ''[ "-R" ]'';
   };
   config = mkIf cfg.enable {
-    systemd.user.sessionVariables."LESS" =
-      builtins.concatStringsSep " " cfg.options;
-    home.pager = "${pkgs.less}/bin/less";
+    home = {
+      sessionVariables."LESS" = builtins.concatStringsSep " " cfg.options;
+      pager = "${pkgs.less}/bin/less";
+    };
   };
 }

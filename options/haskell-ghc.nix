@@ -6,9 +6,7 @@ let
 in {
   options.programs.haskell.ghc = {
     enable = mkEnableOption
-      "the Glorious Glasgow Haskell Compilation System (compiler)" // {
-        default = true;
-      };
+      "the Glorious Glasgow Haskell Compilation System (compiler)";
     package = mkPackageOption config.programs.haskell.haskellPackages "GHC" {
       default = [ "ghc" ];
     };
@@ -20,15 +18,26 @@ in {
       defaultText = literalExpression "hkgs: [ ]";
       example = literalExpression "hkgs: [ hkgs.primes ]";
     };
+    ghciConfig = mkOption {
+      type = types.nullOr types.lines;
+      description = "The contents of the <code>.ghci</code> file";
+      default = null;
+      defaultText = literalExpression "null";
+      example = literalExpression ''
+        :set +s
+      '';
+    };
   };
-  config = {
-    home.packages = mkIf cfg.enable [
+  config = mkIf cfg.enable {
+    home.packages = [
       (if pkgsConfigurable then
         cfg.package.withPackages cfg.packages
       else
         cfg.package)
     ];
-    warnings = mkIf (cfg.enable && !pkgsConfigurable) [''
+    xdg.configFile.".ghci" =
+      mkIf (cfg.ghciConfig != null) { text = cfg.ghciConfig; };
+    warnings = mkIf (!pkgsConfigurable) [''
       You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
       This disables specifying packages via programs.haskell.ghc.packages.
     ''];

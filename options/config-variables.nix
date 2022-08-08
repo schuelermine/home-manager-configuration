@@ -25,10 +25,9 @@ let
           Can be a string or a submodule specifying a <code>package</code> and an <code>executable</code>.
         '';
       };
-      config = {
-        home.packages =
-          mkIf (isAttrs cfg && cfg.package != null) [ cfg.package ];
-        systemd.user.sessionVariables = {
+      config.home = {
+        packages = mkIf (isAttrs cfg && cfg.package != null) [ cfg.package ];
+        sessionVariables = {
           ${guardNull cfg varName} =
             if isString cfg then cfg else toString cfg.executable;
         };

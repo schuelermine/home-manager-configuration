@@ -6,4 +6,5 @@
     username = "anselmschueler";
     stateVersion = "21.11";
   };
+  systemd.user.copySessionVariables = true;
 }
