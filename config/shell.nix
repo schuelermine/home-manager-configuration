@@ -47,7 +47,7 @@
       cargo.enable = true;
       clippy.enable = true;
       rustfmt.enable = true;
-      rls.enable = true;
+      rust-analyzer.enable = true;
     };
     zoxide = {
       enable = true;
