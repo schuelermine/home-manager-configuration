@@ -26,22 +26,21 @@
       '';
     };
     haskell = {
-      ghcup.enable = true;
-      # haskellPackages = pkgs.haskell.packages.ghc923;
-      # ghc = {
-      #   enable = true;
-      #   packages = hkgs:
-      #     with hkgs; [
-      #       primitive
-      #       random
-      #       vector
-      #       monad-coroutine
-      #       Boolean
-      #     ];
-      # };
-      # cabal.enable = true;
-      # stack.enable = true;
-      # language-server.enable = true;
+      haskellPackages = pkgs.haskell.packages.ghc923;
+      ghc = {
+        enable = true;
+        packages = hkgs:
+          with hkgs; [
+            primitive
+            random
+            vector
+            monad-coroutine
+            Boolean
+          ];
+      };
+      cabal.enable = true;
+      stack.enable = true;
+      language-server.enable = true;
     };
     rust.rustup.enable = true;
     zoxide = {
