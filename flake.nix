@@ -19,10 +19,14 @@
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
+    rust-overlay = {
+      url = "github:oxalica/rust-overlay";
+      inputs.nixpkgs.follows = "system-config/nixpkgs";
+    };
     ret.url = "github:schuelermine/ret";
   };
   outputs = { system-config, home-manager, nixos-repl-setup, nix-lib, tetris
-    , blender, ret, nixpkgs, ... }:
+    , blender, ret, nixpkgs, rust-overlay, ... }:
     let
       lib1 = nix-lib.lib {
         nixpkgsLib = nixpkgs.lib;
@@ -41,6 +45,7 @@
                 blender.overlays.default
                 tetris.overlays.default
                 ret.overlays.default
+                rust-overlay.overlays.default
               ];
             }];
         };

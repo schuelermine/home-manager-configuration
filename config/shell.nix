@@ -43,11 +43,13 @@
       language-server.enable = true;
     };
     rust = {
+      toolchainPackages = pkgs.rust-bin.stable.latest;
       rustc.enable = true;
       cargo.enable = true;
       clippy.enable = true;
       rustfmt.enable = true;
       rust-analyzer.enable = true;
+      rust-src.enable = true;
     };
     zoxide = {
       enable = true;
