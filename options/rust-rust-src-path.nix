@@ -13,4 +13,7 @@ in {
     example = literalExpression
       ''"''${config.programs.rust.toolchainPackages.rustPlatform.rustLibSrc}"'';
   };
+  config.home.sessionVariables = mkIf (cfg.exposeRustSrcLocation != null) {
+    "RUST_SRC_PATH" = cfg.exposeRustSrcLocation;
+  };
 }
