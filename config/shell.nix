@@ -42,7 +42,15 @@
       stack.enable = true;
       language-server.enable = true;
     };
-    rust.rustup.enable = true;
+    rust = {
+      rustc.enable = true;
+      cargo.enable = true;
+      rustfmt.enable = true;
+      clippy.enable = true;
+      rust-analyzer.enable = true;
+      exposeRustSrcLocation =
+        "${config.programs.rust.toolchainPackages.rustPlatform.rustLibSrc}";
+    };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
