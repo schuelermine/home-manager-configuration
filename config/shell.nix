@@ -21,7 +21,6 @@
         set mouse
         set indicator
         set afterends
-        set suspendable
         set stateflags
       '';
     };
