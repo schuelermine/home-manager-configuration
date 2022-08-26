@@ -1,6 +1,11 @@
+# LICENSE
+
+(C) Copyright 2022 Anselm Schüler
+
 ====
 
-All code in this repository except for the code contained within the “source” directory is licenced under the Apache Licence:
+All code in this repository except for the code contained within the “source” directory and the “.git” directory is licenced under the Apache Licence, which is listed below.
+Additionally, the files “source/colors.fish”, “source/commands.fish”, “source/config.nu”, “source/env.nu” and “source/features.fish” are also licenced under the Apache Licence:
 
 ====
 
@@ -330,7 +335,7 @@ This General Public License does not permit incorporating your program into prop
 
 ====
 
-The file “source/colors.fish” is licenced under the MIT Licence:
+The files “source/colors.fish”, “source/config.default.nu” and “source/env.default.nu” are licenced under the MIT Licence:
 
 ====
 
@@ -344,6 +349,4 @@ THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR I
 
 ====
 
-The files that make up the history of this repository are stored in the “.git” directory, and are licenced under the same licence terms, except that a section in the file “options/fish-prompt.nix” copied verbatim from the Fish Shell source code enclosed by “''” on both sides is licenced under the GNU General Public Licence Version 2.
-
-If you are unsure about the licencing of the past versions of this repository, please refrain from copying it.
+The files that make up the history of this repository are stored in the “.git” directory, and are not licenced for redistribution. All rights to them are reserved.

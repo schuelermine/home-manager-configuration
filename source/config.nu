@@ -7,3 +7,5 @@ def random-choice [] {
 def column-exists? [name] { $name in ($in | columns) }
 
 def-env cd-v [$cmd] { cd (dirname (realpath (which $cmd).path)) }
+
+def-env ret { cd (ret) }

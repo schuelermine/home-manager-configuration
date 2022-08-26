@@ -82,10 +82,11 @@
       };
       functions = { }; # TODO Migrate fish-functions o’er ’ere
       prompt = builtins.readFile ../source/prompt.fish;
-      shellInit = builtins.concatStringsSep "\n" [
-        (builtins.readFile ../source/colors.fish)
-        (builtins.readFile ../source/features.fish)
-      ];
+      shellInit = builtins.concatStringsSep "\n" (map builtins.readFile [
+        ../source/colors.fish
+        ../source/features.fish
+        ../source/commands.fish
+      ]);
     };
   };
   home = {
