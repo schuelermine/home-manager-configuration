@@ -71,7 +71,6 @@
     apostrophe
     drawio
     blender_3_2
-    gnome-frog
   ];
   fonts.fonts = with pkgs; [ zilla-slab ];
   fonts.fontconfig.enable = true;

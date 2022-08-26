@@ -144,7 +144,7 @@
       powershell
       procs
       python310
-      ret
+      haskellPackages.ret
       ripgrep
       sl
       sqlite
