@@ -31,6 +31,8 @@
         ${pkgs.powershell.version} = "${pkgs.powershell}/bin/pwsh";
       };
       "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
+      "rust-analyzer.server.path" =
+        "${config.programs.rust.rust-analyzer.package}/bin/rust-analyzer";
 
       "editor.inlineSuggest.enabled" = true;
       "editor.acceptSuggestionOnEnter" = "off";
