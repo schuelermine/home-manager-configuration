@@ -45,6 +45,8 @@
         "editor.defaultFormatter" = "brettm12345.nixfmt-vscode";
       };
 
+      "[rust]" = { "editor.formatOnSave" = true; };
+
       "[haskell]" = { "editor.tabSize" = 2; };
     };
   };
