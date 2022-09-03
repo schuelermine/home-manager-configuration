@@ -34,6 +34,8 @@
       "rust-analyzer.server.path" =
         "${config.programs.rust.rust-analyzer.package}/bin/rust-analyzer";
 
+      "gitlens.codeLens.enabled" = false;
+
       "editor.inlineSuggest.enabled" = true;
       "editor.acceptSuggestionOnEnter" = "off";
 
