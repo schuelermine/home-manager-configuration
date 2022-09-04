@@ -35,6 +35,7 @@
             vector
             monad-coroutine
             Boolean
+            QuickCheck
           ];
       };
       cabal.enable = true;
