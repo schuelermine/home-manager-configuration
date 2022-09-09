@@ -25,7 +25,7 @@
       '';
     };
     haskell = {
-      haskellPackages = pkgs.haskell.packages.ghc924;
+      haskellPackages = pkgs.haskell.packages.ghc942;
       ghc = {
         enable = true;
         packages = hkgs:
