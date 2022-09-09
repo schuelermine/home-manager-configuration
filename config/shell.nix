@@ -26,18 +26,7 @@
     };
     haskell = {
       haskellPackages = pkgs.haskell.packages.ghc942;
-      ghc = {
-        enable = true;
-        packages = hkgs:
-          with hkgs; [
-            primitive
-            random
-            vector
-            monad-coroutine
-            Boolean
-            QuickCheck
-          ];
-      };
+      ghc.enable = true;
       cabal.enable = true;
       stack.enable = true;
       language-server.enable = true;
