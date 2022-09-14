@@ -46,6 +46,7 @@
         "editor.tabSize" = 2;
         "editor.defaultFormatter" = "brettm12345.nixfmt-vscode";
       };
+      "nix.enableLanguageServer" = true;
 
       "[rust]" = { "editor.formatOnSave" = true; };
 

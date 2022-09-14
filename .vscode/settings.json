@@ -1,17 +1,7 @@
 {
-    "editor.tabSize": 2,
     "[nix]": {
-        "editor.defaultFormatter": "brettm12345.nixfmt-vscode",
+        "editor.tabSize": 2,
         "editor.formatOnSave": true
     },
-    "cSpell.words": [
-        "builtins",
-        "dconf",
-        "nixos",
-        "nixpkgs",
-        "pkgs"
-    ],
-    "cSpell.enableFiletypes": [
-        "nix"
-    ]
+    "nix.formatterPath": "nixfmt",
 }
