@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  nixpkgs.config.allowUnfreePredicate = (_: true);
+  nixpkgs.config.allowUnfree = true;
   programs.home-manager.enable = true;
   home = {
     homeDirectory = "/home/anselmschueler";
