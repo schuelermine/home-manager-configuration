@@ -50,7 +50,6 @@
   };
   home.packages = with pkgs; [
     spotify
-    github-desktop
     gnome.dconf-editor
     libqalculate
     lutris
