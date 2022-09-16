@@ -95,7 +95,6 @@
       deno
       duf
       execline
-      fd
       figlet
       fortune
       fq
