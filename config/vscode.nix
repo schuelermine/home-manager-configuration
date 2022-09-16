@@ -42,15 +42,12 @@
       "files.insertFinalNewline" = true;
       "editor.insertSpaces" = true;
 
-      "[nix]" = {
-        "editor.tabSize" = 2;
-        "editor.defaultFormatter" = "brettm12345.nixfmt-vscode";
-      };
+      "[nix]"."editor.tabSize" = 2;
       "nix.enableLanguageServer" = true;
 
-      "[rust]" = { "editor.formatOnSave" = true; };
+      "[rust]"."editor.formatOnSave" = true;
 
-      "[haskell]" = { "editor.tabSize" = 2; };
+      "[haskell]"."editor.tabSize" = 2;
     };
   };
 }
