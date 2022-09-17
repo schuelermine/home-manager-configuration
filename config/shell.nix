@@ -25,6 +25,7 @@
       '';
     };
     haskell = {
+      haskellPackages = pkgs.haskell.packages.ghc924;
       ghc.enable = true;
       cabal.enable = true;
       stack.enable = true;
