@@ -61,7 +61,6 @@
     musescore
     inkscape
     audacity
-    rnix-lsp
     kdenlive
     virt-manager
     transmission-gtk
@@ -71,6 +70,6 @@
     drawio
     blender_3_2
   ];
-  fonts.fonts = with pkgs; [ zilla-slab ];
+  fonts.fonts = with pkgs; [ zilla-slab fira ];
   fonts.fontconfig.enable = true;
 }

@@ -37,8 +37,7 @@
       rustfmt.enable = true;
       clippy.enable = true;
       rust-analyzer.enable = true;
-      exposeRustSrcLocation =
-        "${config.programs.rust.toolchainPackages.rustPlatform.rustLibSrc}";
+      exposeRustSrcLocation = true;
     };
     zoxide = {
       enable = true;
@@ -121,8 +120,6 @@
       nix-index
       nix-info
       nix-top
-      nixfmt
-      nixpkgs-fmt
       nms
       nnn
       nodejs_latest
