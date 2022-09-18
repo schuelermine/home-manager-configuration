@@ -69,7 +69,6 @@
         icat = "kitty +kitten icat";
         uni = "kitty +kitten unicode_input";
       };
-      functions = { }; # TODO Migrate fish-functions o’er ’ere
       prompt = builtins.readFile ../source/prompt.fish;
       shellInit = builtins.concatStringsSep "\n" (map builtins.readFile [
         ../source/colors.fish
