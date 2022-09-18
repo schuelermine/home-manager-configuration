@@ -1,7 +1,5 @@
 {
     "[nix]": {
-        "editor.tabSize": 2,
         "editor.formatOnSave": true
     },
-    "nix.formatterPath": "nixfmt",
 }

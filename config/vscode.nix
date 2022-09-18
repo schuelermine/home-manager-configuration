@@ -44,8 +44,8 @@
 
       "[nix]"."editor.tabSize" = 2;
       "nix.enableLanguageServer" = true;
-      "nix.formatterPath" = "${pkgs.nixfmt}";
-      "nix.serverPath" = "${pkgs.rnix-lsp}";
+      "nix.formatterPath" = "${pkgs.nixfmt}/bin/nixfmt";
+      "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
 
       "[rust]"."editor.formatOnSave" = true;
 
