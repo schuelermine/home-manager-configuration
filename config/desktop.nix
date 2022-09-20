@@ -6,8 +6,8 @@
       blur-my-shell
     ];
     font = {
-      #package = pkgs.fira;
-      name = "Fairfax Hax HD";
+      package = pkgs.fira;
+      name = "Fira Sans";
       size = 11;
     };
     monospaceFont = {
