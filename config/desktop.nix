@@ -11,8 +11,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.fira;
-      name = "Fira Code";
+      #package = pkgs.fira;
+      name = "Fairfax Hax HD";
       size = 14;
     };
     documentFont = {
