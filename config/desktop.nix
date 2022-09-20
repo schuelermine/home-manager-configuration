@@ -8,7 +8,7 @@
     font = {
       package = pkgs.fira;
       name = "Fira Sans";
-      size = 14;
+      size = 11;
     };
     monospaceFont = {
       #package = pkgs.fira;
