@@ -13,7 +13,7 @@
     monospaceFont = {
       #package = pkgs.fira;
       name = "Fairfax Hax HD";
-      size = 14;
+      size = 16;
     };
     documentFont = {
       package = pkgs.fira;
