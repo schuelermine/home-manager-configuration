@@ -45,17 +45,7 @@
     };
     exa.enable = true;
     direnv.enable = true;
-    nushell = {
-      enable = true;
-      configFile.text = builtins.concatStringsSep "\n" [
-        (builtins.readFile ../source/config.default.nu)
-        (builtins.readFile ../source/config.nu)
-      ];
-      envFile.text = builtins.concatStringsSep "\n" [
-        (builtins.readFile ../source/env.default.nu)
-        (builtins.readFile ../source/env.nu)
-      ];
-    };
+    nushell.enable = true;
     fish = {
       enable = true;
       shellAliases = {
