@@ -1,9 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.kitty = {
     enable = true;
-    font = config.gnome.monospaceFont // {
-      name = "Fairfax SM HD";
-    };
+    font = config.gnome.monospaceFont;
     keybindings = {
       "ctrl+tab" = "next_tab";
       "ctrl+shift+tab" = "previous_tab";
