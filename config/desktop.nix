@@ -69,6 +69,7 @@
     apostrophe
     drawio
     blender_3_2
+    steam
   ];
   fonts.fonts = with pkgs; [ zilla-slab fira ];
   fonts.fontconfig.enable = true;
