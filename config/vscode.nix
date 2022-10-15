@@ -16,7 +16,6 @@
       "window.zoomLevel" = 1;
 
       "workbench.productIconTheme" = "icons-carbon";
-      "workbench.colorTheme" = "IBM Carbon Color Theme";
       "workbench.iconTheme" = "vs-nomo-dark";
 
       "java.configuration.runtimes" = [{
