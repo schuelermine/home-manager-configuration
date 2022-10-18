@@ -3,7 +3,7 @@
     enable = true;
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extension; [
-
+      ms-vscode.cpptools
     ];
     package = pkgs.vscode;
     userSettings = {
