@@ -3,7 +3,7 @@
     enable = true;
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
-      ms-vscode.cpptools-extension-pack
+      ms-vscode.cpptools
       jnoortheen.nix-ide
     ];
     package = pkgs.vscode;
