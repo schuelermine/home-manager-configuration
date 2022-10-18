@@ -1,7 +1,8 @@
 { config, pkgs, lib, lib1, ... }:
 with builtins // lib // lib1;
 let cfg = config.gnome;
-in {
+in
+{
   imports = [
     (mkProvidesModule {
       providedText = "the custom shell theme";
@@ -12,12 +13,13 @@ in {
       keyExample = ''"Yaru"'';
       prefix = [ "gnome" "shellTheme" ];
       onlyIf = cfg.shellTheme.enable;
-      extraModules =
-        [{ options.enable = mkEnableOption "custom GNOME shell themes"; }];
     })
     (mkAliasOptionModule [ "gnome" "appTheme" ] [ "gtk" "theme" ])
     (mkAliasOptionModule [ "gnome" "iconTheme" ] [ "gtk" "iconTheme" ])
   ];
+  options.gnome.shellTheme = {
+    enable = mkEnableOption "custom GNOME shell themes";
+  };
   config = mkMerge [
     (mkIf cfg.shellTheme.enable {
       gnome.extensions.enabledExtensions = [ pkgs.gnomeExtensions.user-themes ];

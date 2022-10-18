@@ -1,6 +1,10 @@
 { config, pkgs, lib, ... }: {
   programs.vscode = {
     enable = true;
+    immutableExtensionsDir = true;
+    extensions = with pkgs.vscode-extension; [
+
+    ];
     package = pkgs.vscode;
     userSettings = {
       "update.mode" = "none";
@@ -11,44 +15,8 @@
 
       "window.titleBarStyle" = "custom";
       "window.dialogStyle" = "custom";
-      "files.simpleDialog.enable" = true;
       "window.menuBarVisibility" = "compact";
       "window.zoomLevel" = 1;
-
-      "workbench.productIconTheme" = "icons-carbon";
-      "workbench.iconTheme" = "vs-nomo-dark";
-
-      "java.configuration.runtimes" = [{
-        "default" = true;
-        "name" = "JavaSE-17";
-        "path" = "${pkgs.openjdk}/lib/openjdk";
-      }];
-      "haskell.serverExecutablePath" =
-        "${config.programs.haskell.haskellPackages.haskell-language-server}/bin/haskell-language-server";
-      "makefile.makePath" = "${pkgs.gnumake}/bin/make";
-      "powershell.powerShellAdditionalExePaths" = {
-        ${pkgs.powershell.version} = "${pkgs.powershell}/bin/pwsh";
-      };
-      "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
-      "rust-analyzer.server.path" =
-        "${config.programs.rust.rust-analyzer.package}/bin/rust-analyzer";
-
-      "gitlens.codeLens.enabled" = false;
-
-      "editor.inlineSuggest.enabled" = true;
-      "editor.acceptSuggestionOnEnter" = "off";
-
-      "files.insertFinalNewline" = true;
-      "editor.insertSpaces" = true;
-
-      "[nix]"."editor.tabSize" = 2;
-      "nix.enableLanguageServer" = true;
-      "nix.formatterPath" = "${pkgs.nixfmt}/bin/nixfmt";
-      "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
-
-      "[rust]"."editor.formatOnSave" = true;
-
-      "[haskell]"."editor.tabSize" = 2;
     };
   };
 }
