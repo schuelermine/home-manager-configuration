@@ -20,6 +20,10 @@
       "window.dialogStyle" = "custom";
       "window.menuBarVisibility" = "compact";
       "window.zoomLevel" = 1;
+
+      "scm.diffDecorationsGutterPattern" = {
+        modified = false;
+      };
     };
   };
 }
