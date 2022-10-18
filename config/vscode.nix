@@ -2,9 +2,6 @@
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
-    extensions = with pkgs.vscode-extensions; [
-      ms-vscode.cpptools
-    ];
     package = pkgs.vscode;
     userSettings = {
       "update.mode" = "none";
