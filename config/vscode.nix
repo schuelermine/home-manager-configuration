@@ -7,7 +7,6 @@
       mkhl.direnv
       github.vscode-pull-request-github
       streetsidesoftware.code-spell-checker
-      mhutchie.git-graph
     ];
     package = pkgs.vscode;
     userSettings = {
