@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.vscode = {
     enable = true;
-    immutableExtensionsDir = true;
+    mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extension; [
 
     ];
