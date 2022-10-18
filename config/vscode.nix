@@ -2,6 +2,13 @@
   programs.vscode = {
     enable = true;
     mutableExtensionsDir = false;
+    extensions = with pkgs.vscode-extensions; [
+      editorconfig.editorconfig
+      mkhl.direnv
+      github.vscode-pull-request-github
+      streetsidesoftware.code-spell-checker
+      mhutchie.git-graph
+    ];
     package = pkgs.vscode;
     userSettings = {
       "update.mode" = "none";
