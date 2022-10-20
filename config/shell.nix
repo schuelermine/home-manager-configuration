@@ -59,7 +59,12 @@
         icat = "kitty +kitten icat";
         uni = "kitty +kitten unicode_input";
       };
-      prompt = builtins.readFile ../source/prompt.fish;
+      functions = {
+        fish_prompt = builtins.readFile ../source/prompt.fish;
+        fish_right_prompt = ''
+          prompt_login
+        '';
+      };
       shellInit = builtins.concatStringsSep "\n" (map builtins.readFile [
         ../source/colors.fish
         ../source/features.fish

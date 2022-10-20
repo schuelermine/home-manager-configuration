@@ -26,4 +26,15 @@ set -l status_color (set_color $fish_color_status)
 set -l statusb_color (set_color $bold_flag $fish_color_status)
 set -l prompt_status (__fish_print_pipestatus "[" "]" "|" "$status_color" "$statusb_color" $last_pipestatus)
 
-echo -n -s (set_color $color_cwd) (prompt_pwd) $normal (fish_vcs_prompt) $normal " "$prompt_status $suffix " "
+function _prompt_with_pwd
+        string join "" (set_color $color_cwd) $argv[1] $normal (fish_vcs_prompt) $normal " " $prompt_status $suffix " "
+end
+
+set long_prompt (_prompt_with_pwd (prompt_pwd --dir-length=0))
+set short_prompt (_prompt_with_pwd (prompt_pwd))
+
+if test (string length --visible $long_prompt) -gt (math $COLUMNS / 2)
+    echo -n $long_prompt
+else
+    echo -n $short_prompt
+end
