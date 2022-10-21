@@ -88,7 +88,6 @@
       fortune
       fq
       fzf
-      gcc
       gh
       gitui
       glow
