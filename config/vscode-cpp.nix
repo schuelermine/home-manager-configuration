@@ -4,7 +4,7 @@
       ms-vscode.cpptools
     ];
     userSettings = {
-      "C_Cpp.formatting" = "clang-format";
+      "C_Cpp.formatting" = "clangFormat";
     };
   };
 }
