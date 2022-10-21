@@ -9,6 +9,7 @@
       github.vscode-pull-request-github
       streetsidesoftware.code-spell-checker
     ];
+    package = pkgs.vscode;
     userSettings = {
       "update.mode" = "none";
 
