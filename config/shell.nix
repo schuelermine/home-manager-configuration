@@ -89,25 +89,17 @@
       fq
       fzf
       gh
-      gitui
       glow
-      gnuapl
       haskellPackages.hoogle
-      jacinda
       jc
-      jp
       jq
-      libguestfs
       links2
       lolcat
-      lr
       lua
       moreutils
       ncdu
       neofetch
       nix-index
-      nix-info
-      nix-top
       nms
       nnn
       nodejs_latest
