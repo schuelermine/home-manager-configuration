@@ -16,6 +16,8 @@
       "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
 
+      "files.insertFinalNewline" = true;
+
       "window.titleBarStyle" = "custom";
       "window.dialogStyle" = "custom";
       "window.menuBarVisibility" = "compact";
