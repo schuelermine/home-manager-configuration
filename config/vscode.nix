@@ -21,7 +21,9 @@
       "window.menuBarVisibility" = "compact";
       "window.zoomLevel" = 1;
 
-      "scm.diffDecorationsGutterPattern" = { };
+      "scm.diffDecorationsGutterPattern" = {
+        modified = false;
+      };
     };
   };
 }
