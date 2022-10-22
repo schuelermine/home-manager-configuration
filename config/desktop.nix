@@ -52,7 +52,6 @@
     gnome.dconf-editor
     libqalculate
     lutris
-    polymc
     discord
     element-desktop
     tdesktop
