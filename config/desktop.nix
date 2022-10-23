@@ -38,7 +38,7 @@
       name = "Yaru";
     };
   };
-  gtk.useThemeSessionVariable = true;
+  gtk.useThemeSessionVariable = false;
   qt = {
     enable = true;
     platformTheme = "gnome";
