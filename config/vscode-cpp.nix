@@ -5,6 +5,8 @@
     ];
     userSettings = {
       "C_Cpp.formatting" = "clangFormat";
+      "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
+      "makefile.makePath" = "${pkgs.gnumake}/bin/make";
     };
   };
 }

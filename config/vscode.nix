@@ -16,7 +16,11 @@
       "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
 
+      "editor.inlineSuggest.enabled" = true;
+      "editor.acceptSuggestionOnEnter" = "off";
+
       "files.insertFinalNewline" = true;
+      "editor.insertSpaces" = true;
 
       "window.titleBarStyle" = "custom";
       "window.dialogStyle" = "custom";
