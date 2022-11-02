@@ -8,6 +8,7 @@
       mkhl.direnv
       ms-vscode.hexeditor
       streetsidesoftware.code-spell-checker
+      redhat.vscode-yaml
     ];
     package = pkgs.vscode;
     userSettings = {
