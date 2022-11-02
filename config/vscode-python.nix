@@ -8,5 +8,8 @@
       ms-toolsai.vscode-jupyter-cell-tags
       ms-toolsai.vscode-jupyter-slideshow
     ];
+    userSettings = {
+      "python.pythonPath" = "${pkgs.python3}/bin/python";
+    };
   };
 }

@@ -4,5 +4,9 @@
       haskell.haskell
       justusadam.language-haskell
     ];
+    userSettings = {
+      "haskell.serverExecutablePath" =
+        "${config.programs.haskell.haskellPackages.haskell-language-server}/bin/haskell-language-server";
+    };
   };
 }
