@@ -5,7 +5,7 @@ let
     mkOption {
       type = hm.types.fontType;
       default = null;
-      description = "The monospace font to use in GNOME and applications.";
+      description = desc;
     };
   possiblyFontName = font:
     mkIf (font != null) (font.name

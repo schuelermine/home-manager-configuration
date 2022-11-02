@@ -1,5 +1,5 @@
-{ config, pkgs, lib, lib1, ... }:
-with builtins // lib // lib1;
+{ config, pkgs, lib, ... }:
+with builtins // lib;
 let cfg = config.systemd.user;
 in {
   options.systemd.user.copySessionVariables = mkEnableOption

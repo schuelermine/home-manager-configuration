@@ -1,5 +1,5 @@
-{ config, pkgs, lib, lib1, ... }:
-with builtins // lib // lib1;
+{ config, pkgs, lib, ... }:
+with builtins // lib;
 let
   cfg = config.programs.rust.cargo;
   tomlFormat = pkgs.formats.toml { };
