@@ -54,8 +54,6 @@
         l- = "ls --classify --long --all";
         cd = "z";
         c = "bat";
-        icat = "kitty +kitten icat";
-        uni = "kitty +kitten unicode_input";
       };
       prompt = builtins.readFile ../source/prompt.fish;
       shellInit = builtins.concatStringsSep "\n" (map builtins.readFile [
