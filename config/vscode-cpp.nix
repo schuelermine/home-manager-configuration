@@ -2,9 +2,10 @@
   programs.vscode = {
     extensions = with pkgs.vscode-extensions; [
       llvm-vs-code-extensions.vscode-clangd
+      ms-vscode.cmake-tools
       ms-vscode.cpptools
-      twxs.cmake
       ms-vscode.makefile-tools
+      twxs.cmake
     ];
     userSettings = {
       "clangd.path" = "${pkgs.clang-tools}/bin/clangd";

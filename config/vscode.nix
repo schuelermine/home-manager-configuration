@@ -4,8 +4,9 @@
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
       editorconfig.editorconfig
-      mkhl.direnv
       github.vscode-pull-request-github
+      mkhl.direnv
+      ms-vscode.hexeditor
       streetsidesoftware.code-spell-checker
     ];
     package = pkgs.vscode;
