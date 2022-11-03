@@ -10,7 +10,7 @@
       streetsidesoftware.code-spell-checker
       redhat.vscode-yaml
     ];
-    package = pkgs.vscode;
+    package = pkgs.vscodium;
     userSettings = {
       "update.mode" = "none";
 
