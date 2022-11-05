@@ -1,6 +1,15 @@
 { config, pkgs, lib, ... }: {
   programs.vscode = {
     enable = true;
+    mutableExtensionsDir = false;
+    extensions = with pkgs.vscode-extensions; [
+      editorconfig.editorconfig
+      github.vscode-pull-request-github
+      mkhl.direnv
+      ms-vscode.hexeditor
+      streetsidesoftware.code-spell-checker
+      redhat.vscode-yaml
+    ];
     package = pkgs.vscode;
     userSettings = {
       "update.mode" = "none";
@@ -9,46 +18,20 @@
       "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
 
-      "window.titleBarStyle" = "custom";
-      "window.dialogStyle" = "custom";
-      "files.simpleDialog.enable" = true;
-      "window.menuBarVisibility" = "compact";
-      "window.zoomLevel" = 1;
-
-      "workbench.productIconTheme" = "icons-carbon";
-      "workbench.iconTheme" = "vs-nomo-dark";
-
-      "java.configuration.runtimes" = [{
-        "default" = true;
-        "name" = "JavaSE-17";
-        "path" = "${pkgs.openjdk}/lib/openjdk";
-      }];
-      "haskell.serverExecutablePath" =
-        "${config.programs.haskell.haskellPackages.haskell-language-server}/bin/haskell-language-server";
-      "makefile.makePath" = "${pkgs.gnumake}/bin/make";
-      "powershell.powerShellAdditionalExePaths" = {
-        ${pkgs.powershell.version} = "${pkgs.powershell}/bin/pwsh";
-      };
-      "cmake.cmakePath" = "${pkgs.cmake}/bin/cmake";
-      "rust-analyzer.server.path" =
-        "${config.programs.rust.rust-analyzer.package}/bin/rust-analyzer";
-
-      "gitlens.codeLens.enabled" = false;
-
       "editor.inlineSuggest.enabled" = true;
       "editor.acceptSuggestionOnEnter" = "off";
 
       "files.insertFinalNewline" = true;
       "editor.insertSpaces" = true;
 
-      "[nix]"."editor.tabSize" = 2;
-      "nix.enableLanguageServer" = true;
-      "nix.formatterPath" = "${pkgs.nixfmt}/bin/nixfmt";
-      "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
+      "window.titleBarStyle" = "custom";
+      "window.dialogStyle" = "custom";
+      "window.menuBarVisibility" = "compact";
+      "window.zoomLevel" = 1;
 
-      "[rust]"."editor.formatOnSave" = true;
-
-      "[haskell]"."editor.tabSize" = 2;
+      "scm.diffDecorationsGutterPattern" = {
+        modified = false;
+      };
     };
   };
 }
