@@ -2,11 +2,11 @@
   "nodes": {
     "base-modules": {
       "locked": {
-        "lastModified": 1666980845,
-        "narHash": "sha256-0G6fasMn5e/SQW73aMxV2ASYPBmSBMpvbMkvgGTT3Os=",
+        "lastModified": 1667674721,
+        "narHash": "sha256-jr47A0gMKN+0Q5/D+V4HWD4IflsoEhBSpWmpN95fPao=",
         "owner": "schuelermine",
         "repo": "nixos-base-modules",
-        "rev": "8472cc0a04a99f95530957f9b1df0f71219a4904",
+        "rev": "a04f472b9305ea05047fe56546828b8891d04a4c",
         "type": "github"
       },
       "original": {
@@ -62,11 +62,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1667386877,
-        "narHash": "sha256-CP8CbIiykhevS9KsFO5kKP7CfrnGjORhvkHV6PMyh90=",
+        "lastModified": 1667618048,
+        "narHash": "sha256-pKgavGAXBiugdKd93Z3A8hGpUmc3wkTSHlzqXd1cTo0=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "916811c8f9ef37beb7705150d76cc88ce79466fd",
+        "rev": "c728307482dacc9b2720b8036292b166c7865fa9",
         "type": "github"
       },
       "original": {
@@ -125,11 +125,11 @@
     },
     "nixpkgs": {
       "locked": {
-        "lastModified": 1666959691,
-        "narHash": "sha256-TRpWA3t8ata79HOGtFd5dDCl1kJQmIE16PDF53/Hcxo=",
+        "lastModified": 1667482890,
+        "narHash": "sha256-pua0jp87iwN7NBY5/ypx0s9L9CG49Ju/NI4wGwurHc4=",
         "owner": "NixOS",
         "repo": "nixpkgs",
-        "rev": "448a599c49978c2794401bfc3a2e1fba1a8663be",
+        "rev": "a2a777538d971c6b01c6e54af89ddd6567c055e8",
         "type": "github"
       },
       "original": {
@@ -176,11 +176,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1667074026,
-        "narHash": "sha256-WUxKiRjTMPUqFXScteoI/g6Wue6AlO+niCGqWDyubNY=",
+        "lastModified": 1667675253,
+        "narHash": "sha256-hNNhzcud7dh3+Qt+/rCx0UlHWfDVG/bjKCj0NxbkFOE=",
         "ref": "b0",
-        "rev": "b0bfb0c19dad0b10dde7984fa657138aa419f6fc",
-        "revCount": 224,
+        "rev": "857c10823bed714d56739a7b2a315e3833ec67da",
+        "revCount": 228,
         "type": "git",
         "url": "file:///etc/nixos"
       },
