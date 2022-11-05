@@ -7,5 +7,12 @@
       vscjava.vscode-java-test
       vscjava.vscode-maven
     ];
+    userSettings = {
+      "java.configuration.runtimes" = [{
+        "default" = true;
+        "name" = "JavaSE-17";
+        "path" = "${pkgs.openjdk}/lib/openjdk";
+      }];
+    };
   };
 }
