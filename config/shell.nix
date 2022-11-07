@@ -28,7 +28,6 @@
       haskellPackages = pkgs.haskell.packages.ghc942;
       ghc.enable = true;
       cabal.enable = true;
-      stack.enable = true;
     };
     rust = {
       rustc.enable = true;
