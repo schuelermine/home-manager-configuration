@@ -6,7 +6,7 @@
     ];
     userSettings = {
       "haskell.serverExecutablePath" =
-        "${config.programs.haskell.haskellPackages.haskell-language-server}/bin/haskell-language-server";
+        "${pkgs.haskellPackages.haskell-language-server}/bin/haskell-language-server-wrapper";
     };
   };
 }
