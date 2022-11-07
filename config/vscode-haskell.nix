@@ -4,6 +4,10 @@
       haskell.haskell
       justusadam.language-haskell
     ];
+    userSettings = {
+      "haskell.serverExecutablePath" =
+        "${config.programs.haskell.language-server.package}/bin/haskell-language-server-wrapper";
+    };
   };
   programs.haskell.language-server.enable = true;
 }

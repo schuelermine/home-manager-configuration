@@ -25,7 +25,7 @@
       '';
     };
     haskell = {
-      haskellPackages = pkgs.haskell.packages.ghc924;
+      ghcVersionName = "9.2.4";
       ghc.enable = true;
       cabal.enable = true;
     };

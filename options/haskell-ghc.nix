@@ -2,7 +2,10 @@
 with builtins // lib;
 let
   cfg = config.programs.haskell.ghc;
-  pkgsConfigurable = cfg.package ? withPackages;
+  pkgConfigurable = cfg.package ? withPackages;
+  pkgConfigured = if pkgConfigurable
+    then cfg.package.withPackages cfg.packages
+    else cfg.package;
 in {
   options.programs.haskell.ghc = {
     enable = mkEnableOption
@@ -29,15 +32,10 @@ in {
     };
   };
   config = mkIf cfg.enable {
-    home.packages = [
-      (if pkgsConfigurable then
-        cfg.package.withPackages cfg.packages
-      else
-        cfg.package)
-    ];
+    home.packages = [ pkgConfigured ];
     xdg.configFile.".ghci" =
       mkIf (cfg.ghciConfig != null) { text = cfg.ghciConfig; };
-    warnings = mkIf (!pkgsConfigurable) [''
+    warnings = mkIf (!pkgConfigurable) [''
       You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
       This disables specifying packages via programs.haskell.ghc.packages.
     ''];
