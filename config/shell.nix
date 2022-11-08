@@ -34,7 +34,6 @@
       cargo.enable = true;
       rustfmt.enable = true;
       clippy.enable = true;
-      exposeRustSrcLocation = true;
     };
     zoxide = {
       enable = true;
