@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  programs.vscode = {
+  programs.vscode = rec {
     enable = true;
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
@@ -18,9 +18,16 @@
       "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
 
-      "editor.inlineSuggest.enabled" = true;
-      "editor.acceptSuggestionOnEnter" = "off";
+      "editor.codeLensFontFamily" = userSettings."editor.fontFamily";
+      "editor.codeLensFontSize" = userSettings."editor.fontSize";
 
+      "editor.inlayHints.enabled" = true;
+
+      "editor.bracketPairColorization.enabled" = true;
+      "editor.stickyScroll.enabled" = true;
+
+      "editor.acceptSuggestionOnEnter" = "off";
+      
       "files.insertFinalNewline" = true;
       "editor.insertSpaces" = true;
 
