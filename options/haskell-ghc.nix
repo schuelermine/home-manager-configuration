@@ -36,7 +36,7 @@ in {
     };
   };
   config = mkIf cfg.enable {
-    home.packages = [ pkg ];
+    home.packages = [ cfg.package ];
     xdg.configFile.".ghci" =
       mkIf (cfg.ghciConfig != null) { text = cfg.ghciConfig; };
   };
