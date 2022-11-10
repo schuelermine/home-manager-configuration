@@ -24,17 +24,6 @@
         set stateflags
       '';
     };
-    haskell = {
-      ghcVersionName = "9.2.4";
-      ghc.enable = true;
-      cabal.enable = true;
-    };
-    rust = {
-      rustc.enable = true;
-      cargo.enable = true;
-      rustfmt.enable = true;
-      clippy.enable = true;
-    };
     zoxide = {
       enable = true;
       enableFishIntegration = true;
@@ -100,7 +89,6 @@
       nodePackages.typescript
       num-utils
       moreutils
-      openjdk
       pick
       powershell
       procs
