@@ -27,7 +27,7 @@
       "editor.stickyScroll.enabled" = true;
 
       "editor.acceptSuggestionOnEnter" = "off";
-      
+
       "files.insertFinalNewline" = true;
       "editor.insertSpaces" = true;
 
@@ -36,9 +36,7 @@
       "window.menuBarVisibility" = "compact";
       "window.zoomLevel" = 1;
 
-      "scm.diffDecorationsGutterPattern" = {
-        modified = false;
-      };
+      "scm.diffDecorationsGutterPattern" = { modified = false; };
     };
   };
 }

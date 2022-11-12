@@ -12,7 +12,5 @@
       clippy.enable = true;
     };
   };
-  home.packages = with pkgs; [
-    openjdk
-  ];
+  home.packages = with pkgs; [ openjdk ];
 }

@@ -1,8 +1,7 @@
 { config, pkgs, lib, ... }:
 with builtins // lib;
 let cfg = config.programs.rust;
-in
-{
+in {
   options.programs.rust.exposeRustSrcLocation = mkOption {
     type = types.either types.bool (types.nullOr types.path);
     apply = x:

@@ -1,8 +1,7 @@
 { config, pkgs, lib, lib1, ... }:
 with builtins // lib // lib1;
 let cfg = config.gnome;
-in
-{
+in {
   imports = [
     (mkProvidesModule {
       providedText = "the custom shell theme";
