@@ -9,7 +9,7 @@
       ms-toolsai.vscode-jupyter-slideshow
     ];
     userSettings = {
-      "mypy.dmypyExecutable" = "${pkgs.mypy}/bin/mypy";
+      "mypy.dmypyExecutable" = "${pkgs.mypy}/bin/dmypy";
       "python.pythonPath" = "${pkgs.python3}/bin/python";
     };
   };
