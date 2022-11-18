@@ -3,12 +3,16 @@
     enable = true;
     mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
+      bmalehorn.vscode-fish
       editorconfig.editorconfig
+      firefox-devtools.vscode-firefox-debug
       github.vscode-pull-request-github
       mkhl.direnv
       ms-vscode.hexeditor
-      streetsidesoftware.code-spell-checker
+      redhat.vscode-xml
       redhat.vscode-yaml
+      streetsidesoftware.code-spell-checker
+      thenuprojectcontributors.vscode-nushell-lang
     ];
     package = pkgs.vscode;
     userSettings = {
@@ -30,6 +34,9 @@
 
       "files.insertFinalNewline" = true;
       "editor.insertSpaces" = true;
+
+      "terminal.integrated.cursorStyle" = "line";
+      "terminal.external.linuxExec" = "blackbox";
 
       "window.titleBarStyle" = "custom";
       "window.dialogStyle" = "custom";

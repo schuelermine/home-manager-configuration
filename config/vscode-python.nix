@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.vscode = {
     extensions = with pkgs.vscode-extensions; [
-      ms-pyright.pyright
+      matangover.mypy
       ms-python.python
       ms-toolsai.jupyter
       ms-toolsai.jupyter-renderers
