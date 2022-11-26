@@ -13,6 +13,7 @@
       redhat.vscode-yaml
       streetsidesoftware.code-spell-checker
       thenuprojectcontributors.vscode-nushell-lang
+      sonarsource.sonarlint-vscode
     ];
     package = pkgs.vscode;
     userSettings = {
