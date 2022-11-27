@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: {
   programs = {
     haskell = {
-      ghcVersionName = "9.2.4";
+      ghcVersionName = "9.0.2";
       ghc.enable = true;
       cabal.enable = true;
     };
