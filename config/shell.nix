@@ -2,7 +2,7 @@
   programs = {
     less = {
       enable = true;
-      options = [ "-r" ];
+      options = [ "-r" "-S" ];
     };
     nano = {
       enable = true;
