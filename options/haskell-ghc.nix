@@ -8,7 +8,8 @@ in {
     package = mkPackageOption config.programs.haskell.haskellPackages "GHC" {
       default = [ "ghc" ];
     } // {
-      apply = pkg: if pkg ? withPackages then
+      apply = pkg:
+        if pkg ? withPackages then
           pkg.withPackages cfg.packages
         else
           trace ''

@@ -1,15 +1,12 @@
 { config, pkgs, lib, ... }:
 with builtins // lib;
-let
-  cfg = config.programs.haskell;
+let cfg = config.programs.haskell;
 in {
   options.programs.haskell = {
     ghcVersionName = mkOption {
       type = with types; nullOr str;
       apply = opt:
-        if opt != null
-        then replaceStrings [ "." ] [ "" ] opt
-        else null;
+        if opt != null then replaceStrings [ "." ] [ "" ] opt else null;
       description = ''
         The GHC version to use.
         Setting this value automatically sets <option>programs.haskell.haskellPackages</option>.

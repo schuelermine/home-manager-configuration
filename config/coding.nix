@@ -14,6 +14,11 @@
     python = {
       versionName = "3.11";
       enable = true;
+      packages = pypkgs: with pypkgs; [
+        hypothesis
+      ];
+      mypy.enable = true;
+      pytest.enable = true;
     };
   };
   home.packages = with pkgs; [ openjdk ];

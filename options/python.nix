@@ -1,15 +1,12 @@
 { config, pkgs, lib, ... }:
 with builtins // lib;
-let
-  cfg = config.programs.python;
+let cfg = config.programs.python;
 in {
   options.programs.python = {
     versionName = mkOption {
       type = with types; nullOr str;
       apply = opt:
-        if opt != null
-        then replaceStrings [ "." ] [ "" ] opt
-        else null;
+        if opt != null then replaceStrings [ "." ] [ "" ] opt else null;
       description = ''
         The Python version to use.
         Setting this value automatically sets <option>programs.python.pythonPackages</option>.
@@ -33,7 +30,8 @@ in {
     package = mkPackageOption cfg.pythonPackages "Python interpreter" {
       default = [ "python" ];
     } // {
-      apply = pkg: if pkg ? withPackages then
+      apply = pkg:
+        if pkg ? withPackages then
           pkg.withPackages cfg.packages
         else
           trace ''
@@ -46,7 +44,6 @@ in {
       apply = x: if !isFunction x then _: x else x;
       description = ''
         The Python packages to install for the Python interpreter.
-        This installs the packages for the Python interpreter only, not in your actual user profile.
       '';
       default = pkgs: [ ];
       defaultText = literalExpression "pkgs: [ ]";
