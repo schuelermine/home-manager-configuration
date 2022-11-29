@@ -12,10 +12,11 @@
       clippy.enable = true;
     };
     python = {
-      versionName = "3.11";
+      versionName = "3.10";
       enable = true;
       packages = pypkgs: with pypkgs; [
         hypothesis
+        click
       ];
       mypy.enable = true;
       pytest.enable = true;
