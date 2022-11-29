@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: {
   programs = {
     haskell = {
-      ghcVersionName = "9.0.2";
+      ghcVersionName = "9.4.2";
       ghc.enable = true;
       cabal.enable = true;
     };
@@ -10,6 +10,10 @@
       cargo.enable = true;
       rustfmt.enable = true;
       clippy.enable = true;
+    };
+    python = {
+      versionName = "3.11";
+      enable = true;
     };
   };
   home.packages = with pkgs; [ openjdk ];

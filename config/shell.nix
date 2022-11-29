@@ -92,7 +92,6 @@
       pick
       powershell
       procs
-      python310
       haskellPackages.ret
       ripgrep
       sl

@@ -8,25 +8,27 @@ in {
     package = mkPackageOption config.programs.haskell.haskellPackages "GHC" {
       default = [ "ghc" ];
     } // {
-      apply = pkg:
-        if pkg ? withPackages then
+      apply = pkg: if pkg ? withPackages then
           pkg.withPackages cfg.packages
         else
           trace ''
-            You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages utility function.
-            This disables specifying packages via programs.haskell.ghc.packages.
+            You have provided a package as programs.haskell.ghc.package that doesn't have the withPackages function.
+            This disables specifying packages via programs.haskell.ghc.packages unless you manually install them.
           '' pkg;
     };
     packages = mkOption {
-      type = types.functionTo (types.listOf types.package);
-      apply = x: if !builtins.isFunction x then _: x else x;
-      description = "The Haskell packages to install for GHC";
+      type = with types; functionTo (listOf package);
+      apply = x: if !isFunction x then _: x else x;
+      description = ''
+        The Haskell packages to install for GHC.
+        This installs the packages for GHC only, not in your actual user profile.
+      '';
       default = hkgs: [ ];
       defaultText = literalExpression "hkgs: [ ]";
       example = literalExpression "hkgs: [ hkgs.primes ]";
     };
     ghciConfig = mkOption {
-      type = types.nullOr types.lines;
+      type = with types; nullOr lines;
       description = "The contents of the <code>.ghci</code> file";
       default = null;
       defaultText = literalExpression "null";
