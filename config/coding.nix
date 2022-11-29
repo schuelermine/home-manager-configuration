@@ -10,25 +10,13 @@
           :set +s
         '';
       };
-      cabal = {
-        enable = true;
-        config = "";
-      };
-      stack = {
-        enable = true;
-        settings = { };
-      };
+      cabal.enable = true;
+      stack.enable = true;
     };
     rust = {
       rustc.enable = true;
-      cargo = {
-        enable = true;
-        settings = { };
-      };
-      rustfmt = {
-        enable = true;
-        settings = { };
-      };
+      cargo.enable = true;
+      rustfmt.enable = true;
       clippy.enable = true;
     };
     python = {
@@ -37,13 +25,10 @@
       packages = pypkgs: with pypkgs; [ hypothesis click libcst ];
       mypy = {
         enable = true;
-        settings = { };
+        settings.mypy.strict = true;
       };
       pytest.enable = true;
-      pip = {
-        enable = true;
-        settings = { };
-      };
+      pip.enable = true;
     };
   };
   home.packages = with pkgs; [ openjdk ];

@@ -17,7 +17,7 @@ in {
       defaultText = literalExpression "null";
       example = literalExpression ''
         {
-          timeout = 60;
+          global.timeout = 60;
         }
       '';
     };

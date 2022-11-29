@@ -17,7 +17,7 @@ in {
       defaultText = literalExpression "null";
       example = literalExpression ''
         {
-          strict = true;
+          mypy.strict = true;
         }
       '';
     };
