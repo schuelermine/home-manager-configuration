@@ -3,7 +3,7 @@ with builtins // lib;
 let cfg = config.programs.rust;
 in {
   options.programs.rust.toolchainPackages = mkOption {
-    type = types.attrsOf types.anything;
+    type = with types; lazyAttrsOf raw;
     description = "The Rust toolchain package set to use";
     default = pkgs.rust.packages.stable;
     defaultText = literalExpression "pkgs.rust.packages.stable";

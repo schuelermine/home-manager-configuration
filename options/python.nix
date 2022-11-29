@@ -13,14 +13,14 @@ in {
       description = ''
         The Python version to use.
         Setting this value automatically sets <option>programs.python.pythonPackages</option>.
-        The value is automatically stripped of spaces to match nixpkgs naming convention.
+        The value is automatically stripped of periods to match nixpkgs naming convention.
       '';
       default = null;
       defaultText = literalExpression "null";
       example = literalExpression ''"311"'';
     };
     pythonPackages = mkOption {
-      type = with types; attrsOf package;
+      type = with types; lazyAttrsOf raw;
       description = "The Python package set to use.";
       default = if cfg.versionName != null then
         pkgs."python${cfg.versionName}Packages"

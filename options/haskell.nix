@@ -13,14 +13,14 @@ in {
       description = ''
         The GHC version to use.
         Setting this value automatically sets <option>programs.haskell.haskellPackages</option>.
-        The value is automatically stripped of spaces to match nixpkgs naming convention.
+        The value is automatically stripped of periods to match nixpkgs naming convention.
       '';
       default = null;
       defaultText = literalExpression "null";
       example = literalExpression ''"942"'';
     };
     haskellPackages = mkOption {
-      type = with types; attrsOf package;
+      type = with types; lazyAttrsOf raw;
       description = "The Haskell package set to use.";
       default = if cfg.ghcVersionName != null then
         pkgs.haskell.packages."ghc${cfg.ghcVersionName}"
