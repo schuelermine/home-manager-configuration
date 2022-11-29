@@ -17,6 +17,7 @@
       packages = pypkgs: with pypkgs; [
         hypothesis
         click
+        libcst
       ];
       mypy.enable = true;
       pytest.enable = true;
