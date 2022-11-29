@@ -4,9 +4,8 @@ let cfg = config.programs.python.pytest;
 in {
   options.programs.python.pytest = {
     enable = mkEnableOption "pytest";
-    package = mkPackageOption config.programs.python.pythonPackages "pytest" { };
+    package =
+      mkPackageOption config.programs.python.pythonPackages "pytest" { };
   };
-  config = {
-    programs.python.packages = mkIf cfg.enable (_: [ cfg.package ]);
-  };
+  config = { programs.python.packages = mkIf cfg.enable (_: [ cfg.package ]); };
 }

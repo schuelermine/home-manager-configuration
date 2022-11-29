@@ -11,8 +11,7 @@ in {
     settings = mkOption {
       type = types.nullOr tomlFormat.type;
       description = ''
-        Configuration written to <code>$CARGO_HOME/config.toml</code>.
-        Defaults to <code>$HOME/.cargo/config.toml</code>.
+        Configuration written to <code>$HOME/.cargo/config.toml</code>.
         If set to <code>null</code>, no file will be generated.
       '';
       default = null;
@@ -23,25 +22,11 @@ in {
         }
       '';
     };
-    cargoHome = mkOption {
-      type = types.nullOr types.str;
-      description = ''
-        The value of the <code>$CARGO_HOME</code> environment variable, relative to your home directory.
-        If set to <code>null</code>, remains unset.
-      '';
-      default = null;
-      defaultText = literalExpression "null";
-    };
   };
   config.home = mkIf cfg.enable {
     packages = [ cfg.package ];
-    file = mkIf (cfg.settings != null) {
-      "${
-        if cfg.cargoHome == null then ".cargo" else cfg.cargoHome
-      }/config.toml".source = (tomlFormat.generate "cargo-config" cfg.settings);
-    };
-    sessionVariables = mkIf (cfg.cargoHome != null) {
-      CARGO_HOME = "${config.home.homeDirectory}/${cfg.cargoHome}";
+    file.".cargo/config.toml" = mkIf (cfg.settings != null) {
+      source = tomlFormat.generate "cargo-config" cfg.settings;
     };
   };
 }

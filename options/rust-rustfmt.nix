@@ -26,9 +26,8 @@ in {
   };
   config = mkIf cfg.enable {
     home.packages = [ cfg.package ];
-    xdg.configFile = mkIf (cfg.settings != null) {
-      "rustfmt/rustfmt.toml".source =
-        tomlFormat.generate "rustfmt-config" cfg.settings;
+    xdg.configFile."rustfmt/rustfmt.toml" = mkIf (cfg.settings != null) {
+      source = tomlFormat.generate "rustfmt-config" cfg.settings;
     };
   };
 }

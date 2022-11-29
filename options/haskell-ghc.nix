@@ -30,7 +30,10 @@ in {
     };
     ghciConfig = mkOption {
       type = with types; nullOr lines;
-      description = "The contents of the <code>.ghci</code> file";
+      description = ''
+        The contents of the <code>.ghci</code> file.
+        If set to <code>null</code>, no file will be generated.
+      '';
       default = null;
       defaultText = literalExpression "null";
       example = literalExpression ''
@@ -38,9 +41,8 @@ in {
       '';
     };
   };
-  config = mkIf cfg.enable {
-    home.packages = [ cfg.package ];
-    xdg.configFile.".ghci" =
-      mkIf (cfg.ghciConfig != null) { text = cfg.ghciConfig; };
+  config.home = mkIf cfg.enable {
+    packages = [ cfg.package ];
+    file.".ghci" = mkIf (cfg.ghciConfig != null) { text = cfg.ghciConfig; };
   };
 }
