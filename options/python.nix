@@ -17,7 +17,7 @@ in {
       example = literalExpression ''"311"'';
     };
     pythonPackages = mkOption {
-      type = with types; lazyAttrsOf raw;
+      type = types.raw;
       description = "The Python package set to use.";
       default = if cfg.versionName != null then
         pkgs."python${cfg.versionName}Packages"

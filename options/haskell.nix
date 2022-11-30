@@ -17,7 +17,7 @@ in {
       example = literalExpression ''"942"'';
     };
     haskellPackages = mkOption {
-      type = with types; lazyAttrsOf raw;
+      type = types.raw;
       description = "The Haskell package set to use.";
       default = if cfg.ghcVersionName != null then
         pkgs.haskell.packages."ghc${cfg.ghcVersionName}"
