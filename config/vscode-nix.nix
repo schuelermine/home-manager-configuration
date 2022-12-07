@@ -4,7 +4,8 @@
     userSettings = {
       "[nix]"."editor.tabSize" = 2;
       "nix.enableLanguageServer" = true;
-      "nix.serverPath" = "${pkgs.rnix-lsp}/bin/rnix-lsp";
+      "nix.serverPath" = "${pkgs.nil}/bin/nil";
+      "nix.serverSettings".nil.formatting.command = [ "${pkgs.nixfmt}/bin/nixfmt" ];
     };
   };
 }

@@ -13,6 +13,13 @@
         "name" = "JavaSE-17";
         "path" = "${pkgs.openjdk}/lib/openjdk";
       }];
+      "java.jdt.ls.java.home" = "${pkgs.openjdk}/lib/openjdk";
+      "files.exclude" = {
+        "**/.classpath" = true;
+        "**/.project" = true;
+        "**/.settings" = true;
+        "**/.factorypath" = true;
+      };
     };
   };
 }

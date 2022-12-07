@@ -26,7 +26,7 @@
       "editor.codeLensFontFamily" = userSettings."editor.fontFamily";
       "editor.codeLensFontSize" = userSettings."editor.fontSize";
 
-      "editor.inlayHints.enabled" = true;
+      "editor.inlayHints.enabled" = "on";
 
       "editor.bracketPairColorization.enabled" = true;
       "editor.stickyScroll.enabled" = true;
@@ -37,7 +37,6 @@
       "editor.insertSpaces" = true;
 
       "terminal.integrated.cursorStyle" = "line";
-      "terminal.external.linuxExec" = "blackbox";
 
       "window.titleBarStyle" = "custom";
       "window.dialogStyle" = "custom";

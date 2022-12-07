@@ -19,9 +19,10 @@
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
+    xhmm.url = "github:schuelermine/xhmm";
   };
   outputs = { system-config, home-manager, nixos-repl-setup, nix-lib, tetris
-    , blender, nixpkgs, ... }:
+    , blender, nixpkgs, xhmm, ... }:
     let
       lib1 = nix-lib.lib {
         nixpkgsLib = nixpkgs.lib;
@@ -29,10 +30,11 @@
       };
     in {
       homeConfigurations.anselmschueler =
-        home-manager.lib.homeManagerConfiguration rec {
+        home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = "x86_64-linux"; };
           extraSpecialArgs = { inherit nixos-repl-setup lib1; };
-          modules = map (path: ./config + "/${path}")
+          modules = [ xhmm.homeManagerModules.all ]
+            ++ map (path: ./config + "/${path}")
             (builtins.attrNames (builtins.readDir ./config))
             ++ map (path: ./options + "/${path}")
             (builtins.attrNames (builtins.readDir ./options)) ++ [{

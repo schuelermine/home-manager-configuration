@@ -25,10 +25,8 @@
       packages = pypkgs: with pypkgs; [ hypothesis click libcst ];
       mypy = {
         enable = true;
-        settings.mypy.strict = true;
       };
       pytest.enable = true;
-      pip.enable = true;
     };
   };
   home.packages = with pkgs; [ openjdk ];

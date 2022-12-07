@@ -24,11 +24,11 @@
       },
       "locked": {
         "dir": "blender",
-        "lastModified": 1666610385,
-        "narHash": "sha256-MXCHz3pcI4hGRnrt3sNqZFSlT9eJKSZ9xbuCjFg/R9w=",
+        "lastModified": 1670431220,
+        "narHash": "sha256-CGNhtgpHaoPkX04XLIb1pRyUS4AS48E+aSCUy7Arp/I=",
         "owner": "edolstra",
         "repo": "nix-warez",
-        "rev": "87f577ae7ba471236a86b758bb0da83e034ce54c",
+        "rev": "98a2c08bd0f1145fc25ca825a072e61fef08cf0f",
         "type": "github"
       },
       "original": {
@@ -62,18 +62,17 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1669826937,
-        "narHash": "sha256-FSmhuha5hY7bzNlTQDc0MTRSfmP2kgOK/16mMDx9CqM=",
-        "ref": "add/programming-languages",
-        "rev": "de1caf40caa807bc22b63a268ee30e40b05ed0ab",
-        "revCount": 2399,
-        "type": "git",
-        "url": "file:///home/anselmschueler/Code-External/home-manager"
+        "lastModified": 1670280307,
+        "narHash": "sha256-3x+0whP1nCz5adQMIsBA3L9fI/ABOpRUJdbw0AmxBnU=",
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "rev": "2af0d07678fc15612345e0dd55337550dcf6465f",
+        "type": "github"
       },
       "original": {
-        "ref": "add/programming-languages",
-        "type": "git",
-        "url": "file:///home/anselmschueler/Code-External/home-manager"
+        "owner": "nix-community",
+        "repo": "home-manager",
+        "type": "github"
       }
     },
     "nix-lib": {
@@ -167,7 +166,8 @@
           "nixpkgs"
         ],
         "system-config": "system-config",
-        "tetris": "tetris"
+        "tetris": "tetris",
+        "xhmm": "xhmm"
       }
     },
     "system-config": {
@@ -223,6 +223,21 @@
       "original": {
         "owner": "numtide",
         "repo": "flake-utils",
+        "type": "github"
+      }
+    },
+    "xhmm": {
+      "locked": {
+        "lastModified": 1670433546,
+        "narHash": "sha256-nIvPBZrprATooBU4WfsbTxzVlNktF67GeDCQalEzbNw=",
+        "owner": "schuelermine",
+        "repo": "xhmm",
+        "rev": "55285b21490a5d44938fbc9a7b6a1f24998b5899",
+        "type": "github"
+      },
+      "original": {
+        "owner": "schuelermine",
+        "repo": "xhmm",
         "type": "github"
       }
     }

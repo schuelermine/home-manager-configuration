@@ -65,7 +65,7 @@
     asciinema
     apostrophe
     drawio
-    blender_3_2
+    blender_3_4
     steam
   ];
   fonts.fonts = with pkgs; [ zilla-slab fira ];

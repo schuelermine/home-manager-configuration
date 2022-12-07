@@ -7,9 +7,9 @@
       ];
       userSettings = {
         "haskell.serverExecutablePath" =
-          "${config.programs.haskell.language-server.package}/bin/haskell-language-server-wrapper";
+          "${config.programs.haskell.hls.package}/bin/haskell-language-server-wrapper";
       };
     };
-    haskell.language-server.enable = true;
+    haskell.hls.enable = true;
   };
 }
