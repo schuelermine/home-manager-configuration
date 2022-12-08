@@ -1,11 +1,7 @@
-{ config, pkgs, lib, lib1, ... }:
-with builtins // lib // lib1;
+{ config, pkgs, lib, ... }:
+with builtins // lib;
 let cfg = config.gnome.extensions;
 in {
-  imports = mkRenamedSuperoptionModules "gnome" [ "gnome" "extensions" ] [
-    "enabledExtensions"
-    "extraExtensions"
-  ];
   options.gnome.extensions = {
     enable = mkEnableOption "GNOME shell extensions" // {
       default = length cfg.enabledExtensions != 0;

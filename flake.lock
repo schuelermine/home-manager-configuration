@@ -91,22 +91,6 @@
         "type": "github"
       }
     },
-    "nix-lib_2": {
-      "locked": {
-        "lastModified": 1658176965,
-        "narHash": "sha256-egjGnBG8dav04AKQmHxR9zhRiLIAlT5tD4ZD8E5LDnI=",
-        "owner": "schuelermine",
-        "repo": "nix-lib",
-        "rev": "fe724063e361e90c42fdd84f2c15020b9c42da8b",
-        "type": "github"
-      },
-      "original": {
-        "owner": "schuelermine",
-        "ref": "b0",
-        "repo": "nix-lib",
-        "type": "github"
-      }
-    },
     "nixos-repl-setup": {
       "flake": false,
       "locked": {
@@ -159,7 +143,6 @@
       "inputs": {
         "blender": "blender",
         "home-manager": "home-manager",
-        "nix-lib": "nix-lib",
         "nixos-repl-setup": "nixos-repl-setup",
         "nixpkgs": [
           "system-config",
@@ -173,7 +156,7 @@
     "system-config": {
       "inputs": {
         "base-modules": "base-modules",
-        "nix-lib": "nix-lib_2",
+        "nix-lib": "nix-lib",
         "nixpkgs": "nixpkgs"
       },
       "locked": {

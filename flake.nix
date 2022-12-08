@@ -5,7 +5,6 @@
   inputs = {
     system-config.url = "git+file:///etc/nixos?ref=b0";
     nixpkgs.follows = "system-config/nixpkgs";
-    nix-lib.url = "github:schuelermine/nix-lib/b0";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
@@ -21,18 +20,12 @@
     };
     xhmm.url = "github:schuelermine/xhmm";
   };
-  outputs = { system-config, home-manager, nixos-repl-setup, nix-lib, tetris
-    , blender, nixpkgs, xhmm, ... }:
-    let
-      lib1 = nix-lib.lib {
-        nixpkgsLib = nixpkgs.lib;
-        includeNixpkgsLib = false;
-      };
-    in {
+  outputs = { system-config, home-manager, nixos-repl-setup, tetris
+    , blender, nixpkgs, xhmm, ... }: {
       homeConfigurations.anselmschueler =
         home-manager.lib.homeManagerConfiguration {
           pkgs = import nixpkgs { system = "x86_64-linux"; };
-          extraSpecialArgs = { inherit nixos-repl-setup lib1; };
+          extraSpecialArgs = { inherit nixos-repl-setup; };
           modules = [ xhmm.homeManagerModules.all ]
             ++ map (path: ./config + "/${path}")
             (builtins.attrNames (builtins.readDir ./config))

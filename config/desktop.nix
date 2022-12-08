@@ -27,13 +27,12 @@
     shellTheme = {
       package = pkgs.yaru-theme;
       name = "Yaru-dark";
-      enable = true;
     };
-    appTheme = {
+    gtkAppTheme = {
       package = pkgs.yaru-theme;
       name = "Yaru-dark";
     };
-    iconTheme = {
+    gtkIconTheme = {
       package = pkgs.yaru-theme;
       name = "Yaru";
     };
