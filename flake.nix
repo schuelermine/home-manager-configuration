@@ -18,7 +18,7 @@
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
     };
-    xhmm.url = "github:schuelermine/xhmm";
+    xhmm.url = "github:schuelermine/xhmm/b0";
   };
   outputs = { system-config, home-manager, nixos-repl-setup, tetris
     , blender, nixpkgs, xhmm, ... }: {
