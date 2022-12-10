@@ -14,6 +14,7 @@
       streetsidesoftware.code-spell-checker
       thenuprojectcontributors.vscode-nushell-lang
       sonarsource.sonarlint-vscode
+      bungcip.better-toml
     ];
     package = pkgs.vscode;
     userSettings = {
