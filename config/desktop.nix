@@ -39,10 +39,9 @@
   };
   qt = {
     enable = true;
-    platformTheme = "gnome";
     style = {
-      package = pkgs.adwaita-qt;
-      name = "adwaita-dark";
+      package = pkgs.breeze-qt5;
+      name = "breeze";
     };
   };
   home.packages = with pkgs; [
