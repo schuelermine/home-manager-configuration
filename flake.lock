@@ -18,7 +18,6 @@
     "blender": {
       "inputs": {
         "nixpkgs": [
-          "system-config",
           "nixpkgs"
         ]
       },
@@ -56,7 +55,6 @@
     "home-manager": {
       "inputs": {
         "nixpkgs": [
-          "system-config",
           "nixpkgs"
         ],
         "utils": "utils"
@@ -123,6 +121,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-test": {
+      "locked": {
+        "lastModified": 1670939106,
+        "narHash": "sha256-wY41YrBohTmIBYLMHpytW3u/7w2seeRIvDClsVdvovQ=",
+        "owner": "eadwu",
+        "repo": "nixpkgs",
+        "rev": "ba51fe35987656ca98f1238f1460e6443357d606",
+        "type": "github"
+      },
+      "original": {
+        "owner": "eadwu",
+        "ref": "vscode-with-extensions/extensions-json",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs_2": {
       "locked": {
         "lastModified": 1643169865,
@@ -148,6 +162,7 @@
           "system-config",
           "nixpkgs"
         ],
+        "nixpkgs-test": "nixpkgs-test",
         "system-config": "system-config",
         "tetris": "tetris",
         "xhmm": "xhmm"

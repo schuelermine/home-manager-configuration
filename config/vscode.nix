@@ -1,4 +1,11 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, nixpkgs-test, ... }: {
+  nixpkgs.overlays = [
+    (_: _: {
+      vscode = nixpkgs-test.vscode;
+      vscode-extensions =
+        nixpkgs-test.vscode-extensions;
+    })
+  ];
   programs.vscode = rec {
     enable = true;
     mutableExtensionsDir = false;
