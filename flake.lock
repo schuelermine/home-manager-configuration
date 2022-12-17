@@ -24,11 +24,11 @@
       },
       "locked": {
         "dir": "blender",
-        "lastModified": 1670431220,
-        "narHash": "sha256-CGNhtgpHaoPkX04XLIb1pRyUS4AS48E+aSCUy7Arp/I=",
+        "lastModified": 1671194603,
+        "narHash": "sha256-u+FxSGDqK5Xw49ssJjAgnDFDrPFXCNhs74c54X+0zh4=",
         "owner": "edolstra",
         "repo": "nix-warez",
-        "rev": "98a2c08bd0f1145fc25ca825a072e61fef08cf0f",
+        "rev": "8b3c350e1632571c549ff304c290ae124d328cb5",
         "type": "github"
       },
       "original": {
@@ -62,11 +62,11 @@
         "utils": "utils"
       },
       "locked": {
-        "lastModified": 1670513770,
-        "narHash": "sha256-muL74fsbGA8K8WlZSPNWddOiuBnC54kAajncX6nXrh4=",
+        "lastModified": 1671209729,
+        "narHash": "sha256-zxn1eA/rMi2DOx43V7q87bGaDzvL7CMVY/Ti7lJ92DQ=",
         "owner": "nix-community",
         "repo": "home-manager",
-        "rev": "054d9e3187ca00479e8036dc0e92900a384f30fd",
+        "rev": "7d55a72d4c1df694e87a41a7e6c9a7b6e9a40ca3",
         "type": "github"
       },
       "original": {
@@ -211,11 +211,11 @@
     },
     "xhmm": {
       "locked": {
-        "lastModified": 1670520880,
-        "narHash": "sha256-Nd9UR5Vrs6pP+hdmFDE8Xbs3BVVgXhyVCCoCMOI9ZxY=",
+        "lastModified": 1670521371,
+        "narHash": "sha256-sC9RH3AjC9dLicUOCulsSjuYiecpm++ZOT8oH+3jqCQ=",
         "owner": "schuelermine",
         "repo": "xhmm",
-        "rev": "a8b81a1136173be905a73d4e0c754de253b8b1a2",
+        "rev": "d465f216879f9ef9477281cf82ce16334697509f",
         "type": "github"
       },
       "original": {
