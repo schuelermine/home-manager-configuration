@@ -1,7 +1,7 @@
 { config, lib, pkgs, ... }: {
   programs = {
     haskell = {
-      ghcVersionName = "9.4.2";
+      ghcVersionName = "9.0.2";
       ghc = {
         enable = true;
         ghciConfig = ''
@@ -29,5 +29,5 @@
       pytest.enable = true;
     };
   };
-  home.packages = with pkgs; [ openjdk ];
+  home.packages = with pkgs; [ openjdk clang ];
 }
