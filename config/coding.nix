@@ -28,5 +28,5 @@
       pytest.enable = true;
     };
   };
-  home.packages = with pkgs; [ openjdk clang ];
+  home.packages = with pkgs; [ openjdk clang lldb ];
 }
