@@ -6,6 +6,7 @@
         "[rust]"."editor.formatOnSave" = true;
         "rust-analyzer.server.path" =
           "${config.programs.rust.rust-analyzer.package}/bin/rust-analyzer";
+        "rust-analyzer.checkOnSave.command" = "clippy";
       };
     };
     rust.exposeRustSrcLocation = true;

@@ -10,8 +10,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.go-font;
-      name = "Go Mono";
+      package = pkgs.fira;
+      name = "Fira Code";
       size = 14;
     };
     documentFont = {
