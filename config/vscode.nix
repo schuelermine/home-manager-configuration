@@ -1,5 +1,5 @@
 { config, pkgs, lib, ... }: {
-  programs.vscode = rec {
+  programs.vscode = {
     enable = true;
     mutableExtensionsDir = true;
     extensions = with pkgs.vscode-extensions; [
@@ -23,9 +23,6 @@
       "editor.fontFamily" = config.gnome.monospaceFont.name;
       "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
-
-      "editor.codeLensFontFamily" = userSettings."editor.fontFamily";
-      "editor.codeLensFontSize" = userSettings."editor.fontSize";
 
       "editor.inlayHints.enabled" = "on";
 
