@@ -10,5 +10,6 @@
           "${config.programs.haskell.hls.package}/bin/haskell-language-server-wrapper";
       };
     };
+    haskell.hls.enable = true;
   };
 }
