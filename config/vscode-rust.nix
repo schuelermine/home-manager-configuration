@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, lib, fenix, ... }: {
   programs = {
     vscode = {
       extensions = with pkgs.vscode-extensions; [ rust-lang.rust-analyzer ];
@@ -9,6 +9,6 @@
         "rust-analyzer.checkOnSave.command" = "check";
       };
     };
-    rust.exposeRustSrcLocation = true;
+    rust.exposeRustSrcLocation = "${fenix.latest.rust-src}";
   };
 }

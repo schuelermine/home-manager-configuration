@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, fenix, ... }: {
   programs = {
     haskell = {
       ghc = {
@@ -12,12 +12,7 @@
       cabal.enable = true;
       stack.enable = true;
     };
-    rust = {
-      rustc.enable = true;
-      cargo.enable = true;
-      rustfmt.enable = true;
-      clippy.enable = true;
-    };
+    rust.customToolchain.toolchainPackage = fenix.complete.toolchain;
     python = {
       versionName = "3.10";
       enable = true;
