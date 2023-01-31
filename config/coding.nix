@@ -12,7 +12,7 @@
       cabal.enable = true;
       stack.enable = true;
     };
-    rust.customToolchain.toolchainPackage = fenix.complete.toolchain;
+    rust.customToolchain.toolchainPackage = fenix.stable.toolchain;
     python = {
       versionName = "3.10";
       enable = true;
