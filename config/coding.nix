@@ -12,7 +12,7 @@
       cabal.enable = true;
       stack.enable = true;
     };
-    rust.customToolchain.toolchainPackage = fenix.complete.toolchain;
+    rust.customToolchain.toolchainPackage = fenix.stable.toolchain;
     python = {
       versionName = "3.10";
       enable = true;
@@ -23,5 +23,5 @@
       pytest.enable = true;
     };
   };
-  home.packages = with pkgs; [ openjdk clang lldb ];
+  home.packages = with pkgs; [ openjdk clang gdb ];
 }
