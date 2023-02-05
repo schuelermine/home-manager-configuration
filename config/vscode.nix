@@ -24,6 +24,10 @@
       "editor.fontSize" = config.gnome.monospaceFont.size;
       "editor.fontLigatures" = true;
 
+      "sonarlint.ls.javaHome" = "${pkgs.openjdk}/lib/openjdk";
+
+      "workbench.colorTheme" = "Default Dark+ Experimental";
+
       "editor.inlayHints.enabled" = "on";
 
       "editor.bracketPairColorization.enabled" = true;
