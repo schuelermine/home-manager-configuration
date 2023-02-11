@@ -1,4 +1,4 @@
-{ config, lib, pkgs, ... }: {
+{ config, lib, pkgs, fenix, ... }: {
   programs = {
     haskell = {
       ghc = {
@@ -12,12 +12,7 @@
       cabal.enable = true;
       stack.enable = true;
     };
-    rust = {
-      rustc.enable = true;
-      cargo.enable = true;
-      rustfmt.enable = true;
-      clippy.enable = true;
-    };
+    rust.customToolchain.toolchainPackage = fenix.stable.toolchain;
     python = {
       versionName = "3.10";
       enable = true;
@@ -28,5 +23,5 @@
       pytest.enable = true;
     };
   };
-  home.packages = with pkgs; [ openjdk clang lldb ];
+  home.packages = with pkgs; [ openjdk clang gdb ];
 }
