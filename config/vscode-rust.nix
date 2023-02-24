@@ -6,8 +6,7 @@
         "[rust]"."editor.formatOnSave" = true;
         "rust-analyzer.server.path" =
           "${config.programs.rust.rust-analyzer.package}/bin/rust-analyzer";
-        "rust-analyzer.checkOnSave.command" = "check";
-        "rust-analyzer.inlayHints.maxLength" = 25;
+        "rust-analyzer.inlayHints.maxLength" = 15;
       };
     };
     rust.exposeRustSrcLocation = "${fenix.latest.rust-src}";
