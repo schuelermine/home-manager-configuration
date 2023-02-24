@@ -65,6 +65,7 @@
     drawio
     blender_3_4
     steam
+    steamtinkerlaunch
   ];
   fonts.fonts = with pkgs; [ zilla-slab fira ];
   fonts.fontconfig.enable = true;
