@@ -57,52 +57,18 @@
     '';
     packages = with pkgs; [
       bat
-      bit
-      boxes
-      browsh
-      btop
-      chafa
-      cmatrix
-      cowsay
-      deno
-      duf
-      execline
-      figlet
-      fortune
-      fq
       fzf
       gh
       glow
-      haskellPackages.hoogle
-      jc
       jq
       links2
       lolcat
       lua
       moreutils
-      ncdu
-      neofetch
-      nix-index
-      nms
-      nnn
-      nodejs_latest
-      nodePackages.typescript
-      num-utils
-      moreutils
-      pick
-      powershell
       procs
       haskellPackages.ret
       ripgrep
-      sl
-      sqlite
-      tetris
-      toilet
       unicode-paracode
-      unzip
-      weechat
-      whois
-      with-shell
     ];
   };
 }

@@ -16,11 +16,9 @@
     python = {
       versionName = "3.10";
       enable = true;
-      packages = pypkgs: with pypkgs; [ hypothesis click libcst ];
       mypy = {
         enable = true;
       };
-      pytest.enable = true;
     };
   };
   home.packages = with pkgs; [ openjdk clang gdb ];

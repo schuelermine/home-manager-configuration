@@ -13,7 +13,6 @@
       flake = false;
       url = "github:schuelermine/nixos-repl-setup";
     };
-    tetris.url = "github:schuelermine/tetris/add-nix-build";
     blender = {
       url = "github:edolstra/nix-warez?dir=blender";
       inputs.nixpkgs.follows = "system-config/nixpkgs";
@@ -24,7 +23,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { system-config, home-manager, nixos-repl-setup, tetris, blender
+  outputs = { system-config, home-manager, nixos-repl-setup, blender
     , nixpkgs, xhmm, fenix, ... }:
     let system = "x86_64-linux";
     in {
@@ -41,7 +40,7 @@
             ++ map (path: ./options + "/${path}")
             (builtins.attrNames (builtins.readDir ./options)) ++ [{
               nixpkgs.overlays =
-                [ blender.overlays.default tetris.overlays.default ];
+                [ blender.overlays.default ];
             }];
         };
     };
