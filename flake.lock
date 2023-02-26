@@ -2,11 +2,11 @@
   "nodes": {
     "base-modules": {
       "locked": {
-        "lastModified": 1673869251,
-        "narHash": "sha256-xNdxNW4U4azEZ2nzKgJod58DISelbhW1m2hRTe1cDNc=",
+        "lastModified": 1677427138,
+        "narHash": "sha256-NxXHBMkJeZiXyCYqsXtIupcc87pXIU94L08K8TIAc58=",
         "owner": "schuelermine",
         "repo": "nixos-base-modules",
-        "rev": "347a501ca6f33246c1d5d69a24f52d8f868380fd",
+        "rev": "8d33598e6f0e1ed9bcc112f2ac73094806adaaf7",
         "type": "github"
       },
       "original": {
@@ -56,21 +56,6 @@
       "original": {
         "owner": "nix-community",
         "repo": "fenix",
-        "type": "github"
-      }
-    },
-    "flake-utils": {
-      "locked": {
-        "lastModified": 1642700792,
-        "narHash": "sha256-XqHrk7hFb+zBvRg6Ghl+AZDq03ov6OshJLiSWOoX5es=",
-        "owner": "numtide",
-        "repo": "flake-utils",
-        "rev": "846b2ae0fc4cc943637d3d1def4454213e203cba",
-        "type": "github"
-      },
-      "original": {
-        "owner": "numtide",
-        "repo": "flake-utils",
         "type": "github"
       }
     },
@@ -144,22 +129,6 @@
         "type": "github"
       }
     },
-    "nixpkgs_2": {
-      "locked": {
-        "lastModified": 1643169865,
-        "narHash": "sha256-+KIpNRazbc8Gac9jdWCKQkFv9bjceaLaLhlwqUEYu8c=",
-        "owner": "NixOS",
-        "repo": "nixpkgs",
-        "rev": "945ec499041db73043f745fad3b2a3a01e826081",
-        "type": "github"
-      },
-      "original": {
-        "owner": "NixOS",
-        "ref": "945ec49",
-        "repo": "nixpkgs",
-        "type": "github"
-      }
-    },
     "root": {
       "inputs": {
         "blender": "blender",
@@ -171,7 +140,6 @@
           "nixpkgs"
         ],
         "system-config": "system-config",
-        "tetris": "tetris",
         "xhmm": "xhmm"
       }
     },
@@ -199,11 +167,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1677421231,
-        "narHash": "sha256-TxmPCv+JA9mYvaqCE1xEo7haHOItEFfOEKX/mQ5+SH4=",
+        "lastModified": 1677427175,
+        "narHash": "sha256-qc024v32+Oagq3fNVdwDBXEqWYe1Zu9cTWrgzWuwBaM=",
         "ref": "b0",
-        "rev": "da0a7ac8ecf8b892abf9d508b79e8c5a64b7f7db",
-        "revCount": 259,
+        "rev": "7b88b6ecd41b9de85d68593cd27718e98ad77ba4",
+        "revCount": 260,
         "type": "git",
         "url": "file:///etc/nixos"
       },
@@ -211,26 +179,6 @@
         "ref": "b0",
         "type": "git",
         "url": "file:///etc/nixos"
-      }
-    },
-    "tetris": {
-      "inputs": {
-        "flake-utils": "flake-utils",
-        "nixpkgs": "nixpkgs_2"
-      },
-      "locked": {
-        "lastModified": 1652962342,
-        "narHash": "sha256-oRRjlUsIBXU+SVIpz7rVgZpr0X+7k/gTNIOqVrQu3lE=",
-        "owner": "schuelermine",
-        "repo": "tetris",
-        "rev": "c1866ad2314be33186ef7bf688fd4c7945388413",
-        "type": "github"
-      },
-      "original": {
-        "owner": "schuelermine",
-        "ref": "add-nix-build",
-        "repo": "tetris",
-        "type": "github"
       }
     },
     "utils": {
