@@ -69,6 +69,7 @@
       haskellPackages.ret
       ripgrep
       unicode-paracode
+      libqalculate
     ];
   };
 }

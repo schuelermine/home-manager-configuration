@@ -46,24 +46,11 @@
   };
   home.packages = with pkgs; [
     spotify
-    gnome.dconf-editor
-    libqalculate
-    lutris
     discord
     element-desktop
-    tdesktop
     signal-desktop
-    musescore
-    inkscape
-    audacity
-    kdenlive
-    virt-manager
-    transmission-gtk
-    obs-studio
     asciinema
     apostrophe
-    drawio
-    blender_3_4
     steam
   ];
   fonts.fonts = with pkgs; [ zilla-slab fira ];
