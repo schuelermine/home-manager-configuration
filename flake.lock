@@ -15,29 +15,6 @@
         "type": "github"
       }
     },
-    "blender": {
-      "inputs": {
-        "nixpkgs": [
-          "system-config",
-          "nixpkgs"
-        ]
-      },
-      "locked": {
-        "dir": "blender",
-        "lastModified": 1672481321,
-        "narHash": "sha256-jEsTHCUtRxBgm5aAHg9itT3aBIvYf14LmXc5maX3b88=",
-        "owner": "edolstra",
-        "repo": "nix-warez",
-        "rev": "048fb146cc637729bc7de7807f0fe4849876de23",
-        "type": "github"
-      },
-      "original": {
-        "dir": "blender",
-        "owner": "edolstra",
-        "repo": "nix-warez",
-        "type": "github"
-      }
-    },
     "fenix": {
       "inputs": {
         "nixpkgs": [
@@ -131,7 +108,6 @@
     },
     "root": {
       "inputs": {
-        "blender": "blender",
         "fenix": "fenix",
         "home-manager": "home-manager",
         "nixos-repl-setup": "nixos-repl-setup",
