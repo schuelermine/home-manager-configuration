@@ -53,6 +53,4 @@
     apostrophe
     steam
   ];
-  fonts.fonts = with pkgs; [ zilla-slab fira ];
-  fonts.fontconfig.enable = true;
 }
