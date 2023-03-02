@@ -10,8 +10,8 @@
       size = 11;
     };
     monospaceFont = {
-      package = pkgs.go-font;
-      name = "Go Mono";
+      package = pkgs.source-code-pro;
+      name = "Source Code Pro";
       size = 14;
     };
     documentFont = {

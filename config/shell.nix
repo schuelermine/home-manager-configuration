@@ -61,9 +61,6 @@
       gh
       glow
       jq
-      links2
-      lolcat
-      lua
       moreutils
       procs
       haskellPackages.ret
