@@ -2,7 +2,7 @@
   programs = {
     less = {
       enable = true;
-      options = [ "-r" ];
+      options = [ "-Jm" ];
     };
     nano = {
       enable = true;
@@ -51,6 +51,7 @@
     };
   };
   home = {
+    sessionVariables.MANPAGER = "${pkgs.most}/bin/most";
     file."repl.nix".text = ''
       let repl-setup = import ${nixos-repl-setup};
       in repl-setup { source = "git+file:///etc/nixos"; isUrl = true; } // builtins
