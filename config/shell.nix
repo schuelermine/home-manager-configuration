@@ -2,7 +2,7 @@
   programs = {
     less = {
       enable = true;
-      options = [ "-Rm" ];
+      options = [ "-Rm" "--use-color" ];
     };
     nano = {
       enable = true;
