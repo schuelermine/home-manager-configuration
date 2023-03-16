@@ -49,7 +49,6 @@
     discord
     element-desktop
     signal-desktop
-    asciinema
     apostrophe
     steam
   ];

@@ -57,17 +57,8 @@
       in repl-setup { source = "git+file:///etc/nixos"; isUrl = true; } // builtins
     '';
     packages = with pkgs; [
-      bat
-      fzf
-      gh
-      glow
-      jq
-      moreutils
-      procs
       haskellPackages.ret
-      ripgrep
-      unicode-paracode
-      libqalculate
+      asciinema
     ];
   };
 }
