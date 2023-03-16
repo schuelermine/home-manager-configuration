@@ -1,7 +1,7 @@
 { config, pkgs, lib, ... }: {
   programs.vscode = {
     enable = true;
-    mutableExtensionsDir = true;
+    mutableExtensionsDir = false;
     extensions = with pkgs.vscode-extensions; [
       bmalehorn.vscode-fish
       editorconfig.editorconfig
