@@ -40,9 +40,9 @@
 
       "terminal.integrated.cursorStyle" = "line";
 
-      "window.titleBarStyle" = "custom";
-      "window.dialogStyle" = "custom";
-      "window.menuBarVisibility" = "compact";
+      "window.titleBarStyle" = "native";
+      "window.dialogStyle" = "native";
+      "window.menuBarVisibility" = "hidden";
       "window.zoomLevel" = 1;
 
       "scm.diffDecorationsGutterPattern" = { modified = false; };
