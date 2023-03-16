@@ -16,7 +16,7 @@
       sonarsource.sonarlint-vscode
       bungcip.better-toml
     ];
-    package = pkgs.vscode;
+    package = pkgs.vscodium;
     userSettings = {
       "update.mode" = "none";
 
