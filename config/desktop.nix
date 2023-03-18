@@ -24,5 +24,6 @@
     signal-desktop
     apostrophe
     steam
+    prismlauncher
   ];
 }
