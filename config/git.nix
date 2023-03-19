@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   programs = {
     git = {
       userEmail = "mail@anselmschueler.com";

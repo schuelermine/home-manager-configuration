@@ -1,4 +1,4 @@
-{ config, lib, pkgs, fenix, ... }: {
+{ pkgs, fenix, ... }: {
   programs = {
     haskell = {
       ghc = {

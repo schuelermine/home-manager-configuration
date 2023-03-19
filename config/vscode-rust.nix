@@ -1,4 +1,4 @@
-{ config, pkgs, lib, fenix, ... }: {
+{ config, pkgs, fenix, ... }: {
   programs = {
     vscode = {
       extensions = with pkgs.vscode-extensions; [ rust-lang.rust-analyzer ];

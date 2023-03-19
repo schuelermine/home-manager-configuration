@@ -1,4 +1,4 @@
-{ config, pkgs, lib, nixos-repl-setup, ... }: {
+{ pkgs, nixos-repl-setup, ... }: {
   programs = {
     less = {
       enable = true;

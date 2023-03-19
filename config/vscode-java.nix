@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   programs.vscode = {
     extensions = with pkgs.vscode-extensions; [
       redhat.java

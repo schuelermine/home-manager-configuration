@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{
   nixpkgs.config.allowUnfreePredicate = (_: true);
   programs.home-manager.enable = true;
   home = {

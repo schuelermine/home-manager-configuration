@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ pkgs, ... }: {
   gnome = {
     extensions.enabledExtensions = with pkgs.gnomeExtensions; [
       appindicator

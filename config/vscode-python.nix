@@ -1,4 +1,4 @@
-{ config, pkgs, lib, ... }: {
+{ config, pkgs, ... }: {
   programs.vscode = {
     extensions = with pkgs.vscode-extensions; [
       matangover.mypy
