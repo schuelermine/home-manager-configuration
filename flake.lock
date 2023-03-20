@@ -110,11 +110,11 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1679312014,
-        "narHash": "sha256-qqHTvvJcIoKDDXAh7Uv4mxY6UGiynHlpzZUC7FQTh1I=",
+        "lastModified": 1679327417,
+        "narHash": "sha256-77D1IknIcZJSDDn6cBVpHjK/lqCpfFRaswC6V6OLyFY=",
         "owner": "schuelermine",
         "repo": "nixos-configuration",
-        "rev": "02ef27f78311e0d3c70435a8ac83bfbf5f030244",
+        "rev": "9b73a672059697dee6e1f2f16fae2bec9047e16b",
         "type": "github"
       },
       "original": {
