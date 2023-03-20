@@ -19,8 +19,7 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
   };
-  outputs = { system-config, home-manager, nixos-repl-setup
-    , nixpkgs, xhmm, fenix, ... }:
+  outputs = { home-manager, nixos-repl-setup, nixpkgs, xhmm, fenix, ... }:
     let system = "x86_64-linux";
     in {
       homeConfigurations.anselmschueler =
@@ -30,9 +29,8 @@
             inherit nixos-repl-setup;
             fenix = fenix.packages.${system};
           };
-          modules = [ xhmm.homeManagerModules.all ]
-            ++ map (path: ./config + "/${path}")
-            (builtins.attrNames (builtins.readDir ./config));
+          modules = [ xhmm.homeManagerModules.all ] ++ (with builtins;
+            map (path: ./config + "/${path}") (attrNames (readDir ./config)));
         };
     };
 }
