@@ -54,7 +54,7 @@
     sessionVariables.MANPAGER = "${pkgs.most}/bin/most";
     file."repl.nix".text = ''
       let repl-setup = import ${nixos-repl-setup};
-      in repl-setup { source = "git+file:///etc/nixos"; isUrl = true; } // builtins
+      in repl-setup { source = "git+https://github.com/schuelermine/nixos-configuration"; isUrl = true; } // builtins
     '';
     packages = with pkgs; [
       haskellPackages.ret
