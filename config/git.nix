@@ -6,12 +6,7 @@
       enable = true;
       delta.enable = true;
       package = pkgs.gitFull;
-      extraConfig = {
-        init.defaultBranch = "b0";
-        safe.directory = [
-          "/etc/nixos"
-        ];
-      };
+      extraConfig.init.defaultBranch = "b0";
     };
     gh = {
       enable = true;
