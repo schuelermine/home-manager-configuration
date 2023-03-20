@@ -112,16 +112,15 @@
       "locked": {
         "lastModified": 1678997013,
         "narHash": "sha256-12hNg+frarpWfIOglQhJXo3RHTMwrTN5Bx9C3YEpfQw=",
-        "ref": "b0",
+        "owner": "schuelermine",
+        "repo": "nixos-configuration",
         "rev": "ea7da1e59b242345e1258cb5c9811cc14eed0ab7",
-        "revCount": 270,
-        "type": "git",
-        "url": "file:///etc/nixos"
+        "type": "github"
       },
       "original": {
-        "ref": "b0",
-        "type": "git",
-        "url": "file:///etc/nixos"
+        "owner": "schuelermine",
+        "repo": "nixos-configuration",
+        "type": "github"
       }
     },
     "utils": {
