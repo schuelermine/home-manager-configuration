@@ -2,7 +2,7 @@
   programs.vscode = {
     extensions = with pkgs.vscode-extensions; [
       matangover.mypy
-      # ms-python.python
+      ms-python.python
       ms-pyright.pyright
       ms-toolsai.jupyter
       ms-toolsai.jupyter-renderers
